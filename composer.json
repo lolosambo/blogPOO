@@ -1,0 +1,18 @@
+{
+    "name": "lolosambo/blog",
+    "require": {
+        "symfony/http-foundation": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "lolosambo",
+            "email": "lolosambo2@gmail.com"
+        }
+    ],
+
+    "autoload":{
+        "psr-4" : {
+            "" : "src"
+        }
+    }
+}
