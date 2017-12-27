@@ -1,0 +1,233 @@
+body
+{
+
+	background-color : #1C272f;
+
+}
+
+.no-padding > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.left_col
+{
+	background-color : #5D6162;
+	min-height: 1000px !important;
+}
+
+.right_col
+{
+	background-color : #A5AAAD;
+	min-height: 1000px !important;
+}
+
+.footer
+{
+	background-color : #426276;
+}
+
+.admin_header
+{
+	background-color : #3A4F62;
+	height : 80px;
+	text-align: center;
+}
+
+p
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 13px;
+	margin-left: 15px;
+	margin-right: 15px;
+	line-height: 23px;
+}
+
+h2
+{
+
+padding-top: 20px;
+color : #ffffff !important;
+
+}
+h6
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 13px;
+	height: 50px;
+	padding-top : 15px;
+	text-align: center;
+}
+
+
+form
+{
+	margin-top: 10px;
+	margin-left:15px;
+	margin-bottom : 15px;
+}
+
+button
+{
+	margin-left:15px;
+	
+}
+
+
+
+.users
+{
+	background-color : #B6B0B6;
+}
+
+.users_head
+{
+	background-color : #694E67;
+
+
+}
+
+.users h6
+{
+	background-color : #694E67;
+	color : #FFECDF;
+
+}
+
+.users b
+{
+	color : #694E67;
+	
+}
+
+.users em
+{
+	background-color : #694E67;
+	color : #FFECDF;
+	font-size : 10px;
+
+}
+
+
+
+.posts
+{
+	background-color : #E0E4DC;
+}
+
+.posts_head
+{
+	background-color : #748966;
+	
+}
+
+.posts h6
+{
+	background-color : #748966;
+	color : #FFF3DF;
+	
+}
+
+.posts a
+{
+	color : #BF7A00;
+	text-decoration: none;
+
+}
+
+.posts b
+{
+	color : #748966;
+
+}
+
+.posts em
+{
+	background-color : #748966;
+	color : #FFF3DF;
+	font-size : 10px;
+	padding: 5px;
+	margin-bottom : 15px;
+	
+}
+
+
+
+.valComments
+{
+background-color : #FEF2E1;
+}
+
+.valComments_head
+{
+	background-color : #977C55;
+}
+
+.valComments h6
+{
+	background-color : #977C55;
+	color : #FFECDF;
+}
+
+.valComments a
+{
+	color : #0A377F;
+	text-decoration: none;
+
+}
+
+.valComments b
+{
+	color : #977C55;
+
+}
+
+.valComments em
+{
+	background-color : #977C55;
+	color : #FFECDF;
+	font-size: 10px;
+	padding: 5px;
+	margin-bottom : 15px;
+}
+
+
+
+.unvalComments
+{
+background-color : #C9CDD1;
+}
+
+.unvalComments_head
+{
+	background-color : #3A4F62;
+}
+
+.unvalComments h6
+{
+	background-color : #3A4F62;
+	color : #FFECDF;
+}
+
+.unvalComments a
+{
+	color : #007965;
+	text-decoration: none;
+}
+
+.unvalComments b
+{
+	color : #3A4F62;
+}
+
+.unvalComments em
+{
+	background-color : #3A4F62;
+	color : #FFECDF;
+	font-size: 10px;
+	padding: 5px;
+	margin-bottom : 15px;
+}
+
+
+

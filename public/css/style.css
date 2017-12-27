@@ -1,0 +1,686 @@
+body
+{
+	background-color: #d0c5bf;
+
+}
+
+.content
+{
+padding-top: 30px; 
+background-color: #375472;
+}
+
+
+
+
+/* HEADER SECTION */
+
+.header
+{
+	text-align: center;
+}
+
+.header h1
+{
+	font-family: 'Oswald', sans-serif;
+	color: #0c243d;
+	font-size: 68px;
+}
+
+.header h2
+{
+	font-family: 'Oswald', sans-serif;
+	color: #babdc0;
+	font-size: 50px;
+	background-color: #375472 !important;
+	width : 100% !important;
+}
+
+.header h5
+{
+	font-family: 'Oswald', sans-serif;
+	color: #ffbb02;
+	font-size: 25px !important;
+
+}
+
+.header h4
+{
+	font-family: 'Oswald', sans-serif;
+	color: #ffbb02;
+	font-size: 18px !important;
+
+}
+
+.lolo
+{
+ 
+ background-image: url('../images/header.png');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+
+
+ 
+}
+
+.navbar-custom {
+    background-color: #0C1722;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+/* for dropdown only - change the color of droodown */
+.navbar-custom .dropdown-menu {
+    background-color: #ff5500;
+}
+.navbar-custom .dropdown-item {
+    color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+
+
+.cv
+{
+padding-top: 20px;
+
+	
+}
+
+.network
+{
+background-color: orange;
+display: block;
+width: 100%;
+max-height: 100px;
+margin-top: 40px;
+
+}
+
+/* LOGIN SECTION */
+
+.connexion
+{
+
+width: 100%;
+background-color: #375472;
+padding: 10px;
+
+}
+
+
+.connexion h3
+{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 25;
+	color : #ffbb02;
+
+}
+
+.connexion a {
+	font-size: 15px;
+	color : #ffbb02 !important;
+}
+
+.connexion p {
+	font-size: 15px;
+	color : #ffffff;
+	text-align: center;
+}
+
+.connexion form
+{
+display:block;
+width: 250px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.connexion input
+{
+
+background-color: #ffffff;
+border: 1px #0c243d solid;
+height: 30px;
+
+}
+
+.connexion label
+{
+	font-family: 'Quicksand', sans-serif;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+
+/* QUOTE SECTION */
+
+.quote {
+  
+  
+  color: #222222;
+  padding: 20px;
+  padding-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+
+}
+.quote p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 90%;
+}
+.quote cite {
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 200;
+  opacity: 0.8;
+}
+.quote:before {
+  font-family: Georgia, serif;
+  content: "“";
+  position: absolute;
+  top: -30px;
+  left: 5px;
+  font-size: 5em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
+}
+.quote:after {
+  font-family: Georgia, serif;
+  content: "”";
+  position: absolute;
+  bottom: -20px;
+  line-height: 100px;
+  right: 32px;
+  font-size: 5em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
+}
+
+
+
+
+
+/* POSTS LIST SECTION */
+
+.post 
+{
+background-color : #DBE0E5;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 5px;
+}
+
+
+.thumbnail
+{
+display: block;
+background-size: cover;
+height: 250px;
+padding-top : 15px;
+}
+
+.post p
+{
+	color: #000000;
+}
+
+.post h1
+{
+	color: #375472;
+	font-size: 27px;
+	
+}
+
+.post h3
+{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+	font-size: 15px;
+	color : #d0c5bf;
+
+}
+
+.post_content
+{
+margin-left: 15px;
+margin-right: 15px;
+
+}
+
+.post_info
+{
+background-color: #0C1722;
+
+}
+
+.post_info p
+{
+margin-top : 15px;
+text-align : left;
+font-size: 12px;
+color: #ffffff;
+
+}
+
+.post_info b
+{
+	color: #ffbb02;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+
+/* SINGLE POST SECTION */
+
+.post_single
+{
+width : 80%;
+margin-bottom: 10px;
+padding-top: 30px;
+padding-left : 15px;
+padding-bottom : 20px;
+padding-right : 15px;
+margin-left : 20px; 
+
+background-color: #DBE0E5;
+
+
+}
+
+
+.post_single_thumbnail
+{
+display: block;
+background-size: cover;
+height: 100%;
+min-height: 150px;
+padding-top: 15px;
+
+}
+
+.post_single_intro
+{
+	padding-top: 15px;
+	margin-right: 15px;
+}
+
+.post_single h1
+{
+	color: #375472;
+	font-size: 30px;
+	margin-top: -37px;
+	margin-left: 0px;
+	
+	
+}
+
+.post_single_content
+{
+margin-top: 15px;
+}
+
+.post_single_info
+{
+background-color: #ffbb02;
+line-height: 5px;
+margin-top : -10px;
+margin-bottom: 10px;
+
+}
+
+
+.post_single_info p
+{
+margin-top : 15px;
+padding-left: 10px;
+text-align : left;
+font-size: 12px;
+font-style: italic;
+color: #000000;
+
+
+}
+
+.post_single_info b
+{
+	color: #ff7f02;
+	font-weight: bold;
+	font-size: 12px;
+	font-style: italic;
+}
+
+
+
+
+
+/* COMMENTS SECTION */
+
+.comment
+{
+background-color : #ffffff;
+width: 70%;
+border: 2px #375472 solid; 
+border-radius: 10px;
+margin-left : 17px;
+
+
+}
+
+.comment p
+{
+padding-left: 10px;
+padding-right: 10px;
+
+}
+
+.comment_info 
+{
+background-color: #ffbb02;
+line-height: 30px;
+padding-left: 15px;
+
+}
+
+.comment_info p
+{
+color: #ffffff;
+}
+
+.comment_info b
+{
+color: #375472;
+}
+
+
+.comment_form
+{
+	margin-left : 17px;
+}
+
+.comment_form label
+{
+	color : #ffbb02;
+	font-size: 18px;
+}
+
+.comment_form textarea
+{
+	background-color : #ffffff;
+}
+
+
+/* ECRITURES */
+
+p
+{
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+	text-align: justify;
+
+
+}
+
+
+h1
+{
+	font-family: 'Oswald', sans-serif;
+	font-weight: bolder;
+	font-size: 25;
+	color : #375472;
+
+}
+
+
+h2
+{
+	font-family: 'Oswald', sans-serif;
+	color: #ffffff;
+	font-weight: bolder;
+	font-size: 30;
+	background-color: #836f60;
+	padding-left: 10px;
+	width: 40%;
+	
+
+}
+
+h3
+{
+	font-family: 'Muli', sans-serif;
+	font-weight: bolder;
+	font-size: 17px;
+	color : #3d3531;
+	text-align: justify;
+
+}
+
+h4
+{
+	font-family: 'Oswald', sans-serif;
+	font-weight: bolder;
+	font-size: 20px;
+	color : #ffbb02;
+
+}
+
+
+
+/* LINKS */
+
+a
+{
+
+	color : #ffbb02;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover
+{
+
+	color : #FF7400;
+}
+
+a:visited
+{
+	color : #FFB700;
+}
+
+
+/* FORMS */
+
+
+form
+{
+
+	width: 100%;
+}
+
+
+fieldset
+{
+
+background-color: #FFF6F0; 
+border: 3px solid #836f60;
+border-radius: 20px;
+
+}
+
+legend
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	color: #ffffff;
+	font-weight: bolder;
+	background-color: #836f60;
+	border-radius: 30px;
+	padding: 3  15 5 15px;
+}
+
+label
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	vertical-align: middle;
+}
+
+input
+{
+
+background-color: #ffffff;
+border: 1px #375472 solid;
+border-radius: 5px ;
+height: 30px;
+
+}
+
+select
+{
+
+font-family: 'Quicksand', sans-serif;
+font-size: 15px;
+background-color: #ffffff;
+border: 2px #375472 solid;
+border-radius: 5px ;
+height: 30px;
+width: 170px;
+
+}
+
+input[type=radio]
+{
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+input[type=checkbox]
+{
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-left: 10px;
+
+}
+
+
+textarea
+{
+
+width: 60%;
+height: 100px;
+background-color: #ffffff;
+border: 2px #375472 solid;
+border-radius: 5px ;
+
+}
+
+.btn-warning
+{
+	background-color : #375472 !important;
+	border-color: #001020 !important;
+	color : #ffffff;
+}
+
+.btn-default
+{
+	background-color : #ffbb02 !important;
+	border-color: #001020 !important;
+	color : #000000;
+}
+
+.contactForm
+{
+
+	background-color: #7F9AB5;
+	padding: 30px;
+}
+
+
+.confirmation
+{
+
+font-family: 'Quicksand', sans-serif;
+font-size: 20px;
+font-weight : bolder;
+color: #836f60;
+background-color: #375472;
+padding: 0 10 10 10;
+
+
+}
+
+/* FOOTER SECTION */
+
+.footer
+{
+	background-color: #0c243d;
+	height : 300px;
+	width: 100%;
+}
+
+.footer_col_1 p
+{
+color : #ffffff;
+line-height: 0.7px;
+margin-top : 20px;
+font-size: 12px;
+
+}
+
+.footer_col_1 a
+{
+
+line-height: 0.5px;
+margin-top : 30px;
+font-size: 13px;
+
+}
+
+.footer_col_2
+{
+
+
+}
+
+
+.footer_col_3
+{
+
+background-image: url('http://www.b-log-lille.fr/p5/public/images/carte.png');
+background-size: cover;
+}
+
+
+
+

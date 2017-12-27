@@ -1,6 +1,6 @@
 <?php 
 
-namespace src\database\;
+namespace blog\database;
 use \PDO;
 
 class Database
@@ -34,16 +34,17 @@ class Database
 		{
 			$pdo = new PDO('mysql:host=localhost;dbname=bloglilldqocrp5', 'root', 'root');
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$pdo = $this->pdo;
+			$this->pdo = $pdo;
 		}
 		return $this->pdo;
 	}
 
 
-	public function query($statement)
+	public function query($req)
 	{
-		$req = $this->getPdo()->query($statement);
-		return $req;
+		$query = $this->getPdo()->query($req);
+		// $data = $query->fetch();
+		return $query;
 	}
 
 
