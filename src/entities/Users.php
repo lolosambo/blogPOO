@@ -1,5 +1,6 @@
 <?php
 
+namespace blog\entities;
 
 class Users
 {
@@ -14,8 +15,16 @@ class Users
 	private $inscr_date;
 
 
+// CONSTRUCTOR & HYDRATATION
 
+	use blog\traits\hydrate; 
 
+	public function __construct(array $data)
+	{
+
+		$this->hydrate($data);
+
+	}
 
 // GETTERS---------------------------------
 
@@ -110,6 +119,10 @@ class Users
 			$this->id_role = $idRole;
 		}
 	}
+
+
+
+
 
 
 }

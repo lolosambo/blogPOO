@@ -1,3 +1,14 @@
+<?php
+
+require '../vendor/autoload.php';
+use p5\managers\SessionManager;
+use p5\managers\UsersManager;
+
+
+$sessionMan = new SessionManager();
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,25 +22,34 @@
 
 <?php
 
-require '../vendor/autoload.php';
 
 
-$db= new blog\database\Database();
-
-$req = $db->query('SELECT * FROM Users');
-
-while($data = $req->fetch(PDO::FETCH_OBJ))
-{
-
-echo $data->pseudo.'<br>';
-
-}
+// require('../src/controlers/frontend/main_controler.php');
 
 
 
+$manager = new UsersManager;
 
- 
+// $data = $manager->getUser(113);
 
+
+// echo $data->mail;
+
+$sessionMan->setSession('pseudo', 'Autre exemple');
+
+echo $sessionMan->getSession('pseudo');
 ?>
+
+<form action='' method='POST'>
+	<input type="text" name='name'/>
+	<input type="text" name='password'/>
+	<input type="text" name='mail'/>
+	<button type="submit">Valider</button>
+
+</form>
+
+
+
+
 </body>
 </html>
