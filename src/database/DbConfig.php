@@ -7,26 +7,21 @@ class DbConfig
 	
 	private $dbConfig;
 
-	public function __contruct()
+	public function __construct()
 	{
 		$this->loadConfigFile();
 	}
 
 	private function loadConfigFile()
 	{
-		$file = require __DIR__ . '/DbLogin.php';
-		$this->dbConfig = $file;
-		
+		$this->dbConfig = require __DIR__ . '/DbLogin.php';
+			
 	}
 
 	public function getConfig()
 	{
 		return $this->dbConfig;
 	}
-
-	
-
-
 
 }
 

@@ -1,21 +1,26 @@
 <?php
-
+session_cache_limiter('private_no_expire, must-revalidate');
+session_start(); 
 require '../vendor/autoload.php';
-use p5\managers\SessionManager;
+
+use p5\managers\PostsManager;
 use p5\managers\UsersManager;
+use p5\controllers\frontend\UsersController;
+use p5\controllers\frontend\PostsController;
+use p5\controllers\frontend\PaginationController;
 
 
-$sessionMan = new SessionManager();
-
+$postcont= new PostsController();
+$postman = new PostsManager();
+$userman = new UsersManager();
+$usercont = new UsersController();
+$pagincont = new PaginationController();
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" type="text/css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" type="text/css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" type="text/css"/>
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	
 
 </head>
 <body>
@@ -24,30 +29,75 @@ $sessionMan = new SessionManager();
 
 
 
-// require('../src/controlers/frontend/main_controler.php');
+
+if (isset($_GET['action']))
+{
+	if (($_GET['action'] == 'posts') || ($_GET['action'] == 'page'))
+	{
+		
+		$postcont->allPosts($postman, $pagincont);
+
+	}
+
+	else if ($_GET['action'] == 'singlePost')
+	{
+		if ($_GET['id'] > 0)
+		{
+			$res = $postcont->onePost($postman, $_GET['id']);
+			
+		}
+
+		else
+		{
+			echo 'L\'article n\'a pas pu être trouvé.';
+		}
+	}
+
+
+	else if ($_GET['action'] == 'connexionStatus')
+	{
+		$usercont->userConnexion($userman, $_POST['pseudo'], $_POST['password']);
+		$postcont->allPosts($postman, $pagincont);
+	}
+
+	else if ($_GET['action'] == 'inscriptionForm')
+	{
+		$postcont->allPosts($postman, $pagincont);
+	}
+
+	else if ($_GET['action'] == 'inscriptionStatus')
+	{
+		$pseudo = $_POST['pseudo'];
+		$password1 = $_POST['password1'];
+		$password2 = $_POST['password2'];
+		$mail = $_POST['mail'];
+		$usercont->insertUser($userman, $pseudo, $password1, $password2, $mail);
+		$postcont->allPosts($postman, $pagincont);
+	}
+	else if ($_GET['action'] =='logout')
+	{
+		$usercont->destroySession();
+		$postcont->allPosts($postman, $pagincont);
+		
+	}
 
 
 
-$manager = new UsersManager;
+}
 
-// $data = $manager->getUser(113);
+else
+{
+	$usercont->destroySession();
+	$postcont->allPosts($postman, $pagincont);
+
+}
 
 
-// echo $data->mail;
 
-$sessionMan->setSession('pseudo', 'Autre exemple');
 
-echo $sessionMan->getSession('pseudo');
+
+
 ?>
-
-<form action='' method='POST'>
-	<input type="text" name='name'/>
-	<input type="text" name='password'/>
-	<input type="text" name='mail'/>
-	<button type="submit">Valider</button>
-
-</form>
-
 
 
 

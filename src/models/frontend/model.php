@@ -4,30 +4,34 @@ use p5\managers\UsersManager;
 use p5\managers\PostsManager;
 use p5\managers\SessionManager;
 
-$userMan : new UsersManager();
 
+
+
+// USERS SECTION----------------------------------
+
+$userMan = new UsersManager();
 
 
 function connexion($pseudo, $password)
 {
-	$userMan->getUser($pseudo, $password);
+	$connexion = $userMan->getUser($pseudo, $password);
 }
 
 
 function insertUser($pseudo, $password, $mail)
 {
-	$userMan->addUser($pseudo, $password, $mail);
+	$addedUser = $userMan->addUser($pseudo, $password, $mail);
 }
 
 function searchUser($pseudo)
 {
-	$userMan->compareUser($pseudo);
+	$foundUser = $userMan->compareUser($pseudo);
 }
 
 
 function activation($pseudo, $key)
 {
-	$userMan->accActivation($pseudo, $key);
+	$activation = $userMan->accActivation($pseudo, $key);
 
 }
 
@@ -41,64 +45,39 @@ function valid($login)
 
 // POSTS LIST (5)----------------------------
 
-function getPosts($firstEntry, $postsPerPage)
+
+
+
+function allPosts($firstEntry, $postsPerPage)
 {
-	$db = getDb();
+	$postMan = new PostsManager();
+	$allPosts = $postMan->getPosts($firstEntry, $postsPerPage);
+	return $allPosts;
+}
 
-	$posts = $db->query
-	('
-			SELECT *, p.id as postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate FROM Posts AS p
-			INNER JOIN Users AS u
-			ON u.id = p.id_user
-			ORDER BY p.post_date 
-			DESC LIMIT '.$firstEntry.', '.$postsPerPage.'
-	');
+function onePost($post_id)
+{
+	$postMan = new PostsManager();
+	$onePost = $postMan->getPost($post_id);
+}
 
-	return $posts;
+function insertPost($user_id, $title, $heading, $post_content, $img)
+{
+	$postMan = new PostsManager();
+	$onePost = $postMan->addPost($user_id, $title, $heading, $post_content, $img);
+}
+
+function howMuchPosts()
+{
+	$postMan = new PostsManager();
+	$count = $postMan->countPost();
 }
 
 
 
 
-// ONE POST ONLY------------------------------
-
-function getPost($post_id)
-{
-	$db = getDb();
-	$post = $db->prepare
-		('
-	
-			SELECT *, p.id AS postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate FROM Users AS u 
-			INNER JOIN Posts AS p ON u.id = p.id_user
-			AND p.id = :postId 
-		');
-
-		$post->bindParam(':postId', $post_id);
-		$post->execute();
-		return $post;
-}
 
 
-// ADD POST-------------------------------------
-
-function addPost($user_id, $title, $heading, $post_content, $img)
-{
-	$db = getDb();
-	$newPost = $db->prepare
-		("
-			INSERT INTO Posts (id_user, post_title, post_heading, post_content, post_date, post_update, post_img_url) 
-			VALUES (:id_user, :title, :heading, :content, NOW(), NOW(), :img_url)
-		");
-
-	$newPost->bindParam(':id_user', $user_id);
-	$newPost->bindParam(':title', $title);
-	$newPost->bindParam(':heading', $heading);
-	$newPost->bindParam(':content', $post_content);
-	$newPost->bindParam(':img_url', $img);
-	$newPost->execute();
-	return $newPost;
-
-}
 
 
 //LIST COMMENTS------------------------------

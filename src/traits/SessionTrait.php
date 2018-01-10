@@ -2,12 +2,13 @@
 
 namespace p5\traits;
 
-trait SessionManager
+trait SessionTrait
 {
 
 	public function setSession($key, $value)
 	{
 		$_SESSION[$key] = $value;
+		return $_SESSION[$key];
 	}
 
 	public function getSession($key)
@@ -18,6 +19,7 @@ trait SessionManager
 	public function closeSession()
 	{
 		session_destroy();
+		
 	}
 	
 

@@ -1,8 +1,9 @@
 <?php
 
-namespace blog\entities;
+namespace p5\entities;
+use p5\interfaces\hydrateInterface;
 
-class Users
+class Users implements hydrateInterface
 {
 
 	private $id;
@@ -15,9 +16,25 @@ class Users
 	private $inscr_date;
 
 
-// CONSTRUCTOR & HYDRATATION
 
-	use blog\traits\hydrate; 
+
+// INTERFACE METHOD
+
+public function hydrate(array $donnees)
+{
+   foreach ($donnees as $key => $value)
+   {
+       $method = 'set'.ucfirst($key);
+
+       if (method_exists($this, $method))
+       {
+         $this->$method($value);
+       }
+   }
+}
+
+
+// CONSTRUCTOR & HYDRATATION
 
 	public function __construct(array $data)
 	{
@@ -53,7 +70,7 @@ class Users
 		return $this->activation_key;
 	}
 
-	public function getVerfified()
+	public function getVerified()
 	{
 		return $this->verified;
 	}
@@ -70,6 +87,15 @@ class Users
 
 
 // SETTERS-----------------------------------
+
+	
+	public function setId($id)
+	{
+		if(intval($id))
+		{
+			$this->id = $id;
+		}
+	}
 
 	public function setPseudo($pseudo)
 	{
@@ -97,7 +123,7 @@ class Users
 
 	public function setActivation_key($activationKey)
 	{
-		if(is_int($activationKey))
+		if(intval($activationKey))
 		{
 			$this->activation_key = $activationKey;
 		}
@@ -106,7 +132,7 @@ class Users
 
 	public function setVerified($verified)
 	{
-		if(is_int($verified) && (($verified == 0) || ($verified == 1)))
+		if(($verified == 0) || ($verified == 1))
 		{
 			$this->verified = $verified;
 		}
@@ -114,12 +140,19 @@ class Users
 
 	public function setId_role($idRole)
 	{
-		if(is_int($idRole) && (($idRole == 1) || ($idRole == 2)))
+		if(intval($idRole) && (($idRole == 1) || ($idRole == 2)))
 		{
 			$this->id_role = $idRole;
 		}
 	}
 
+	public function setInscr_date($date)
+	{
+		if(is_string($date))
+		{
+			$this->inscr_date = $date;
+		}
+	}
 
 
 

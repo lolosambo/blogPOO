@@ -1,18 +1,39 @@
 <?php 
-session_cache_limiter('private_no_expire, must-revalidate');
-session_start(); 
 
-
+use p5\entities\Posts;
+use p5\entities\Users;
+use p5\controllers\frontend\PostsController;
+use p5\controllers\frontend\PaginationController;
 
 $title = 'ACCUEIL BLOG';
 
-ob_start();
-?>
-<div class="row">
+ob_start(); ?>
 
-	<?php	while ($data = $posts->fetch())
-	{
-	?>		
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title><?php echo $title; ?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Muli|Nunito|Nunito+Sans|Oswald" rel="stylesheet"> 	
+	</head>
+	
+<body>
+
+<?php
+
+foreach ($res as $posts)
+		{
+			$post = new Posts($posts);
+			$author = new Users($posts);
+		
+?>
+
+
+<div class="row">		
 		
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -22,7 +43,7 @@ ob_start();
 
 					<div class="row">
 
-						<div class="col-md-12 col-sm-12  thumbnail" style="background-image: url(<?php echo $data['post_img_url']; ?>);"></div>
+						<div class="col-md-12 col-sm-12  thumbnail" style="background-image: url(<?php echo $post->getPost_img_url(); ?>);"></div>
 
 					</div>
 
@@ -30,7 +51,7 @@ ob_start();
 
 		  				<div class="col-md-12 col-sm-12  post_info">
 		  	
-		  					<?php echo '<p>Ecrit par<b> '.$data['pseudo'].'</b><br>Modifé le '.$data['postUpdate'].'</p>'; ?>
+		  					<?php echo '<p>Ecrit par<b> '.$author->getPseudo().'</b><br>Modifé le '.$post->getPostUpdate().'</p>'; ?>
 		  			
 		  				</div>
 
@@ -42,13 +63,13 @@ ob_start();
 
 				<?php
 
-					echo '<p><b><h1>'.$data['post_title'].'</h1></b></p>';
+					echo '<p><b><h1>'.$post->getPost_title().'</h1></b></p>';
 		
-					echo '<p>'.substr($data['post_heading'], 0, 200).'</p>';
+					echo '<p>'.substr($post->getPost_heading(), 0, 200).'</p>';
 
 					?>
 						
-					<a href="index.php?action=singlePost&amp;id=<?php echo $data['postId'];?>">
+					<a href="index.php?action=singlePost&amp;id=<?php echo $post->getPostId();?>">
 
 						<button type="button" class="btn btn-warning">Lire la suite</button>
 
@@ -69,29 +90,17 @@ ob_start();
 </div>
 <?php
 
-$posts->closeCursor();
 
-// SHOWS PAGINATION
+
 echo '<p style="text-align : center;">Page : ';
 
-	for($i=1; $i<=$pagesNbr; $i++)
-	{
-    
-     	if($i==$currentPage)
-     	{
-        	echo ' [ '.$i.' ] '; 
-    	}	
-    	 else
-     	{
-          	echo ' <a href="http://www.b-log-lille.fr/p5/index.php?page='.$i.'">'.$i.'</a> ';
-     	}
-	}
-	echo '</p>';
+$pagincont->showPagination();
 
+echo '</p>';
 
 $content = ob_get_clean();
 
-require('views/frontend/template.php');
+require('../views/templates/default.php');
 
 ?>
 

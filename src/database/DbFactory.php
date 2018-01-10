@@ -23,14 +23,7 @@ class DbFactory
   	
   public function getPdo()
   {
-  	return new PDO 
-  		(
-        'mysql:host='.$this->config->getConfig()['host'].
-        ';dbname='.$this->config->getConfig()['dbname'], 
-        $this->config->getConfig()['user'], 
-        $this->config->getConfig()['pass']
-      );
-
+      return new PDO('mysql:host='.$this->config->getConfig()['host'].';dbname='.$this->config->getConfig()['dbname'], $this->config->getConfig()['user'], $this->config->getConfig()['pass']);
   }
 
 }

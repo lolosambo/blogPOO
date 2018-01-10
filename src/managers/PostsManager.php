@@ -4,14 +4,26 @@ namespace p5\managers;
 use p5\database\DbFactory;
 
 
+
 class PostsManager
 {
 
 	private $db;
 
+	
 	public function __construct()
 	{
   	 	$this->db = new DbFactory();
+	}
+
+	
+	public function countPosts()
+	{
+
+		$req = $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Posts');
+		$data = $req->fetch();
+		$total=$data['total'];
+		return $total;
 	}
 
 
@@ -20,21 +32,23 @@ class PostsManager
 
 		$posts = $this->db->getPdo()->query
 		('
-			SELECT *, p.id as postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate FROM Posts AS p
+			SELECT *, p.id as postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate 
+			FROM Posts AS p
 			INNER JOIN Users AS u
 			ON u.id = p.id_user
 			ORDER BY p.post_date 
 			DESC LIMIT '.$firstEntry.', '.$postsPerPage.'
 		');
-
-		return $posts;
+		$res = $posts->fetchAll();
+		return $res;
+		
 	}
 
 	
 	public function getPost($post_id)
 	{
 	
-		$posts = $this->db->getPdo()->prepare
+		$post = $this->db->getPdo()->prepare
 		('
 	
 			SELECT *, p.id AS postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate
@@ -45,7 +59,8 @@ class PostsManager
 
 		$post->bindParam(':postId', $post_id);
 		$post->execute();
-		return $post;
+		$data = $post->fetch();
+		return $data;
 	}
 
 

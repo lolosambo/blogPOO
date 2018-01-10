@@ -1,20 +1,21 @@
 
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
-	<head>
+		<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="public/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="public/css/style.css" type="text/css"/>	
+		<title><?php echo $title; ?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Muli|Nunito|Nunito+Sans|Oswald" rel="stylesheet"> 	
 	</head>
 	
 <body>
 
 <h3>INSCRIPTION</h3>
 
-<form method="POST" action="http://www.b-log-lille.fr/p5/index.php?action=inscriptionStatus" name="inscription">
+<form method="POST" action="index.php?action=inscriptionStatus" name="inscription">
 
 	<label for="pseudo">Pseudo</label><br>
 	<input type="text" name="pseudo" lenght=30><br><br>
