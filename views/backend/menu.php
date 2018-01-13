@@ -17,27 +17,27 @@
             <ul class="nav nav-pills flex-column">
 
               <li class="nav-item bg-primary border border-dark">
-                  <a href="http://www.b-log-lille.fr/p5/public/admin/index.php" class="active nav-link"><i class="fa fa-home fa-home"></i>&nbsp;Tableau de bord</a>
+                  <a href="index.php" class="active nav-link"><i class="fa fa-home fa-home"></i>&nbsp;Tableau de bord</a>
               </li>
 
               <li class="nav-item bg-secondary border border-dark" id="utilisateurs">
-                  <a class="nav-link" href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=searchUser"><i class="fa fa-user fa-fw"></i>&nbsp;Utilisateurs</a>
+                  <a class="nav-link" href="index.php?p=searchUser"><i class="fa fa-user fa-fw"></i>&nbsp;Utilisateurs</a>
               </li>
 
               <li class="nav-item bg-secondary border border-dark">
-                  <a class="nav-link" href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=posts"><i class="fa fa-pencil fa-fw"></i>&nbsp;Articles</a>
+                  <a class="nav-link" href="index.php?p=posts"><i class="fa fa-pencil fa-fw"></i>&nbsp;Articles</a>
               </li>
 
               <li class="nav-item bg-secondary border border-dark">
-                  <a class="nav-link" href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=comments"><i class="fa fa-comment fa-fw"></i>&nbsp;Commentaires</a>
+                  <a class="nav-link" href="index.php?p=comments"><i class="fa fa-comment fa-fw"></i>&nbsp;Commentaires</a>
               </li>
 
               <li class="nav-item bg-secondary border border-dark">
-                  <a class="nav-link" href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=networks"><i class="fa fa-group fa-fw"></i>&nbsp;Réseaux sociaux</a>
+                  <a class="nav-link" href="index.php?p=networks"><i class="fa fa-group fa-fw"></i>&nbsp;Réseaux sociaux</a>
               </li>
 
               <li class="nav-item bg-secondary border border-dark">
-                  <a class="nav-link" href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=cv"><i class="fa fa-id-card fa-fw"></i>&nbsp;CV</a>
+                  <a class="nav-link" href="index.php?p=cv"><i class="fa fa-id-card fa-fw"></i>&nbsp;CV</a>
               </li>
 
             </ul>

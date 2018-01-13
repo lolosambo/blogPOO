@@ -110,5 +110,79 @@ class CommentsManager
 	}
 
 
+	public function get3LastValidComments()
+	{
+
+		$req= $this->db->getPdo()->query
+		('
+	
+			SELECT *, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			INNER JOIN Comments AS c 
+			ON u.id = c.id_user
+			INNER JOIN Posts AS p
+			ON c.id_post = p.id
+			AND validated = 1
+			ORDER BY commentUpdate
+			DESC
+			lIMIT 0, 3
+		');
+
+		return $req;
+
+	}
+
+
+
+	public function get3LastUnvalidComments()
+	{
+
+		$req= $this->db->getPdo()->query
+		('
+			SELECT *, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			INNER JOIN Comments AS c 
+			ON u.id = c.id_user
+			INNER JOIN Posts AS p
+			ON c.id_post = p.id
+			AND validated = 0
+			ORDER BY commentUpdate
+			DESC
+			lIMIT 0, 3
+		');
+
+		return $req;
+	}
+
+
+	public function getUnvalidComments($firstEntry, $commentsPerPage)
+	{
+
+		$req= $this->db->getPdo()->query
+		('
+			SELECT *, c.id AS commentId, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			INNER JOIN Comments AS c 
+			ON u.id = c.id_user
+			INNER JOIN Posts AS p
+			ON c.id_post = p.id
+			AND validated = 0
+			ORDER BY commentUpdate
+			DESC LIMIT '.$firstEntry.', '.$commentsPerPage.'
+		');
+
+		return $req;
+
+	}
+
+
+
+	public function getTotalComments() //Only non-validated comments
+	{
+
+	$req= $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated = 0');
+	$data = $req->fetch();
+	$total=$data['total'];
+	return $data;
+	}
+
+
 
 }

@@ -1,13 +1,7 @@
-<?php 
-session_cache_limiter('private_no_expire, must-revalidate');
-session_start(); 
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
 
@@ -19,7 +13,7 @@ session_start();
 
 
 
-<form method="POST" action="http://www.b-log-lille.fr/p5/index.php?action=contact" name="contact" class="contactForm">
+<form method="POST" action="index.php?action=contact" name="contact" class="contactForm">
 
 	<h3>CONTACTEZ-MOI</h3><br><br>
 
@@ -38,8 +32,8 @@ session_start();
 	<label for="message" required>Message : </label><br>
 	<textarea name="message" cols=10 rows=50/></textarea><br><br>
 
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<div class="g-recaptcha" data-sitekey="6LeVwz0UAAAAAIj5SV_oArSrmS-jM4neQaP5nOvh"></div><br><br>
+	<!-- <script src='https://www.google.com/recaptcha/api.js'></script>
+	<div class="g-recaptcha" data-sitekey="6LeVwz0UAAAAAIj5SV_oArSrmS-jM4neQaP5nOvh"></div><br><br> -->
 
 
 	<button type="submit" class="btn btn-warning" name="valider">Envoyer</button><br>

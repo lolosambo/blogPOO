@@ -1,7 +1,7 @@
 <?php 
-use p5\controllers\frontend\UsersController;
-$session = new UsersController();
-
+require '../vendor/autoload.php';
+use p5\app\Session;
+$session = new Session();
 
 ?>
 
@@ -9,9 +9,7 @@ $session = new UsersController();
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" type="text/css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Muli|Nunito|Nunito+Sans|Oswald" rel="stylesheet"> 	
 	</head>
@@ -25,7 +23,12 @@ $session = new UsersController();
 
 
 //Show connexion form
-if ((!isset($_GET['action'])||($_GET['action'] == 'logout') || ($_GET['action'] == 'singlePost')) && ($session->getSession('pseudo') == null))
+if (!isset($_GET['action']) && ($session->getSessionVar('pseudo') == FALSE))
+{
+	require('../views/frontend/connexion_view.php');
+}
+
+else if ($_GET['action'] == 'logout')
 {
 	require('../views/frontend/connexion_view.php');
 }
@@ -40,30 +43,30 @@ else if ($_GET['action'] == 'inscriptionForm')
 
 // Error message If invalid pseudo or password
 
-else if (($_GET['action'] == 'connexionStatus') && ($session->getSession('pseudo') == null))
+else if (($_GET['action'] == 'connexionStatus') && ($session->getSessionVar('pseudo') == FALSE))
 {
 	require('../views/frontend/connexion_view.php');
 	echo '<p>Identifiant et/ou mot de passe invalide(s)</p>';
 	echo '<p>Pour vous connecter et laisser des commentaires, merci de <a href ="index.php?action=inscriptionForm">créer un compte</a></p>';
+
 }
 
-
 //Show connexion status after success login
-else if ($session->getSession('pseudo') != null)
+else if (isset($_GET['action']) && ($session->getSessionVar('pseudo') != null))
 {
 
-	if($session->getSession('id_role') == 2)
+	if($session->getSessionVar('id_role') == 2)
 	{
 		
-		echo '<p>Bonjour '.$session->getSession('pseudo').'</p>';
+		echo '<p>Bonjour '.$session->getSessionVar('pseudo').'</p>';
 		echo '<p><a href="/admin/">Accéder à l\'administration</a></p>';
 		echo '<p><a href="index.php?action=logout">Se déconnecter</a></p>';
 		
 	}
-	else if($session->getSession('id_role') == 1)
+	else if($session->getSessionVar('id_role') == 1)
 	{
 		
-		echo '<p>Bonjour '.$session->getSession('pseudo').'</p>';
+		echo '<p>Bonjour '.$session->getSessionVar('pseudo').'</p>';
 		echo '<p><a href="index.php?action=logout">Se déconnecter</a></p>';
 		
 	}
@@ -71,14 +74,15 @@ else if ($session->getSession('pseudo') != null)
 }
 
 
-if ($_GET['action'] == "inscriptionStatus")
+else if ($_GET['action'] == 'inscriptionStatus')
 {
 
-if ($_POST['pseudo'] == $session->getSession('db_pseudo'))
+	if ($_POST['pseudo'] == $session->getSessionVar('db_pseudo'))
 	{
 		
 		require('../views/frontend/inscription_view.php');
 		echo '<p>Ce pseudo existe déjà</p>';
+		echo '<p><a href="index.php">Revenir à la page de connexion<a></p>';
 		
 	}
 
@@ -87,6 +91,7 @@ if ($_POST['pseudo'] == $session->getSession('db_pseudo'))
 		
 		require('../views/frontend/inscription_view.php');
 		echo '<p>Veuillez remplir tous les champs</p>';
+		echo '<p><a href="index.php">Revenir à la page de connexion<a></p>';
 		
 
 	}
@@ -95,6 +100,7 @@ if ($_POST['pseudo'] == $session->getSession('db_pseudo'))
 	{
 		require('../views/frontend/inscription_view.php');
 		echo '<p>Les 2 mots de passe doivent être identiques</p>';
+		echo '<p><a href="index.php">Revenir à la page de connexion<a></p>';
 	}
 	
 	else
@@ -102,6 +108,7 @@ if ($_POST['pseudo'] == $session->getSession('db_pseudo'))
 		
 		echo '<p>Votre inscription a bien été prise en compte.</p>';
 		echo '<p>Vérifiez votre boîte mail, un courriel de confirmation vous a été envoyé.</p>';
+		echo '<p><a href="index.php">Revenir à la page de connexion<a></p>';
 	}
 
 }

@@ -1,22 +1,23 @@
 <?php
-
-
 require 'vendor/autoload.php';
-use p5\managers\SessionManager;
-use p5\managers\PostsManager;
-use p5\managers\UsersManager;
-use p5\controllers\frontend\PostsController;
-use p5\entities\Posts;
-use p5\entities\Users;
+use p5\app\Session;
+$test = new Session();
+
+
+$test->setSession('pseudo', 'trucmuche');
+$test->setSession('id_role', 2);
+$test->setSession('verified', 1);
+
+
+echo $test->getSessionVar('pseudo').'<br>';
+echo $test->getSessionVar('id_role').'<br>';
+echo $test->getSessionVar('verified').'<br>';
 
 
 
+var_dump($_SESSION).'<br>';
 
-$test = new UsersManager();
 
-$res = $test->getUser('laurentb', '010377');
-
-var_dump($res);
 
 
 

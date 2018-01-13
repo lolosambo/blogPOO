@@ -1,5 +1,10 @@
+<?php 
+use p5\entities\Posts;
+use p5\entities\Users;
+use p5\entities\Comments;
 
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -21,9 +26,13 @@
 
 <?php
 
-while($data = $users->fetch())
+foreach ($users as $data)
 {
-	echo '<p><b>'.$data['pseudo'].'</b> - Inscrit(e) le : '.$data['inscrDate'].'</p>';
+	$post = new Posts($data);
+	$author = new Users($data);
+		
+	
+	echo '<p><b>'.$author->getPseudo().'</b> - Inscrit(e) le : '.$author->getInscr_date().'</p>';
 }
 
 $users = ob_get_clean();
@@ -36,10 +45,12 @@ ob_start(); ?>
 
 <?php 
 
-while($data = $posts->fetch())
+foreach ($posts as $data)
 {
-	echo '<p><em>Dernière mise à jour le :'.$data['postUpdate'].'</em><br>';
-	echo '<b>'.$data['post_title'].'</b><br></p>';
+	$post = new Posts($data);
+
+	echo '<p><em>Dernière mise à jour le :'.$post->getPostUpdate().'</em><br>';
+	echo '<b>'.$post->getPost_title().'</b><br></p>';
 }
 
 $posts = ob_get_clean();
@@ -87,7 +98,7 @@ $comments = ob_get_clean();
 ?>
 
 
-<?php require('../../views/backend/daschboard_template.php'); ?>
+<?php require('../../views/templates/daschboard_template.php'); ?>
 
 
 </body>

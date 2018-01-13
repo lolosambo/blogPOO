@@ -1,27 +1,31 @@
 <?php
+require '../vendor/autoload.php';
+use p5\entities\Users;
+use p5\entities\Comments;
+use p5\controllers\frontend\CommentsController;
 
-
-while ($data2 = $comments->fetch())
+	
+foreach ($res2 as $comments)
 {
-	if ($data2['validated']==1)
-	{
-				
-?>
-		<div class="comment">
-			<div class="comment_info">
-					
-				<?php echo '<p>Publié par :<b> '.$data2['pseudo'].' </b><em>le '.$data2['commentUpdate'].'.</em></p>'; ?>
-						
-			</div>
-					
-			<?php echo '<p>'.$data2['comment_content'].'</p><br>'; ?>
+			
+	$commentContent = new Comments($comments);
+	$commentAuthor = new Users($comments);
 
-		</div><br>
+		
+?>
+	<div class="comment">
+		<div class="comment_info">
+					
+			<?php echo '<p>Publié par :<b> '.$commentAuthor->getPseudo().' </b><em>le '.$commentContent->getCommentUpdate().'.</em></p>'; ?>
+						
+		</div>
+					
+		<?php echo '<p>'.$commentContent->getComment_content().'</p><br>'; ?>
+
+	</div><br>
 
 <?php
-
-	}
+	
 
 }
 
-$comments->closeCursor();

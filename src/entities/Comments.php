@@ -1,21 +1,44 @@
 <?php
+namespace p5\entities;
+use p5\interfaces\hydrateInterface;
 
 
-namespace blog\entities;
+class Comments implements HydrateInterface
 
-
-class Comments
 {
 
 	private $id_user;
 	private $id_post;
 	private $comment_content;
 	private $comment_date;
-	private $comment_update;
-	private $validated == 0;
+	private $commentUpdate;
+	private $validated = 0;
 
 
+// INTERFACE METHOD
 
+public function hydrate(array $donnees)
+{
+   foreach ($donnees as $key => $value)
+   {
+       $method = 'set'.ucfirst($key);
+
+       if (method_exists($this, $method))
+       {
+         $this->$method($value);
+       }
+   }
+}
+
+
+// CONSTRUCTOR & HYDRATATION
+
+	public function __construct(array $data)
+	{
+
+		$this->hydrate($data);
+
+	}
 
 
 // GETTERS-----------------------------------
@@ -40,9 +63,9 @@ class Comments
 		return $this->comment_date;
 	}
 
-	public function getComment_update()
+	public function getCommentUpdate()
 	{	
-		return $this->comment_update;
+		return $this->commentUpdate;
 	}
 
 	public function getValidated()
@@ -69,6 +92,14 @@ class Comments
 		}
 	}
 
+	public function setCommentUpdate($date)
+	{
+		if(is_string($date))
+		{
+			$this->commentUpdate = $date;
+		}
+	}
+
 	public function setComment_content($content)
 	{
 		if(is_string($content))
@@ -76,6 +107,8 @@ class Comments
 			$this->comment_content = $content;
 		}
 	}
+
+	
 
 	public function setValidated($validated)
 	{

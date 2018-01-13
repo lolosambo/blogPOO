@@ -1,4 +1,9 @@
+<?php 
+require '../vendor/autoload.php';
+use p5\app\Session;
+$session = new Session();
 
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,7 +20,7 @@
 		<div class="col-lg-4 col-md-4 col-sm-12 col-12 footer_col_1">
 			
 			<div>
-				<a href ="http://www.b-log-lille.fr/p5/index.php">Blog professionnel de Laurent BERTON</a>
+				<a href ="http://www.b-log-lille.fr/public/index.php">Blog professionnel de Laurent BERTON</a>
 				<p>Développeur web PHP / Symfony / HTML5-CSS3</p>
 				<p>20 allée Baudelaire - 59139 Wattignies</p>
 				<p>Tél : 07 68 34 33 15</p>
@@ -28,9 +33,9 @@
 			
 			<?php
 
-			if ($_SESSION['id_role'] == 2)
+			if ($session->getSessionVar('id_role') == 2)
 			{
-				echo '<a href="http://www.b-log-lille.fr/p5/public/admin/">Accéder à l\'administration</a>';
+				echo '<a href="admin/">Accéder à l\'administration</a>';
 			}
 			?>
 

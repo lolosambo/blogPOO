@@ -15,7 +15,7 @@
 
 <div class='comment_form'>
 
-<form method="POST" action="http://www.b-log-lille.fr/p5/index.php?action=addComment&postId=<?php echo $_GET['id'];?>" name="add_comment">
+<form method="POST" action="index.php?action=addComment&amp;postId=<?php echo $_GET['postId'];?>" name="add_comment">
 
 	<label for="comment">Votre commentaire : </label><br>
 

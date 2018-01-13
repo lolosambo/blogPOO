@@ -81,5 +81,63 @@ class PostsManager
 		return $newPost;
 
 	}
+
+
+	public function get3LastPosts()
+	{
+
+		$req = $this->db->getPdo()->query 
+		('
+			SELECT *, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate, p.id AS postId
+			FROM Posts AS p
+			INNER JOIN Users AS u
+			ON p.id_user = u.id 
+			ORDER BY postUpdate
+			DESC
+			LIMIT 0, 3
+		');
+
+		return $req;
+	}
+
+	public function modifyPost($postId, $title, $heading, $content)
+	{
+
+		$req = $this->db->getPdo()->prepare
+		('
+			UPDATE Posts 
+			SET 
+			post_title = :post_title,
+			post_heading = :post_heading,
+			post_content = :post_content
+			WHERE id = :post_id
+		');
+
+		$req->bindParam(':post_id', $postId);
+		$req->bindParam(':post_title', $title);
+		$req->bindParam(':post_heading', $heading);
+		$req->bindParam(':post_content', $content);
+	
+		$req->execute();
+		return $req;
+	}
+
+
+	public function erasePost($postId)
+	{
+		$db = getDb();
+		$req= $db->prepare
+		('
+			DELETE FROM Posts 
+			WHERE id = :post_id
+		');
+
+		$req->bindParam(':post_id', $postId);
+		$req->execute();
+		return $req;
+
+	}
+
+
 	
 }

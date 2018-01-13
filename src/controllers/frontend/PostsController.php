@@ -2,9 +2,11 @@
 
 namespace p5\controllers\frontend;
 use p5\managers\PostsManager;
+use p5\managers\CommentsManager;
 use p5\entities\Posts;
 use p5\entities\Users;
 use p5\controllers\frontend\PaginationController;
+use p5\controllers\frontend\CommentsController;
 
 
 class PostsController
@@ -21,12 +23,13 @@ class PostsController
 
 	}
 
-	public function onePost(PostsManager $postman, $postId)
+	public function onePost(PostsManager $postman, CommentsController $commentcont, CommentsManager $commentman, $postId)
 	{
 		
 		$res = $postman->getPost($postId);
 		$post = new Posts($res);
 		$author = new Users($res);
+		$res2 = $commentcont->allComments($commentman, $_GET['postId']);
 		require('../views/frontend/post_view.php');
 
 	}

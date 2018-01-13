@@ -1,5 +1,7 @@
 <?php 
-
+require '../vendor/autoload.php';
+use p5\app\Session;
+$session = new Session();
 ob_start();
 
 $title = strtoupper($post->getPost_title());
@@ -7,19 +9,6 @@ $title = strtoupper($post->getPost_title());
 
 ?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title><?php echo $title; ?></title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" type="text/css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" type="text/css"/>
-		<link rel="stylesheet" href="css/style.css" type="text/css"/>
-		<link href="https://fonts.googleapis.com/css?family=Muli|Nunito|Nunito+Sans|Oswald" rel="stylesheet"> 	
-	</head>
-	
-<body>
 	<div class="row post_single">
 
 		<div class="row">
@@ -80,9 +69,11 @@ $title = strtoupper($post->getPost_title());
 
 <?php
 
-// require('../views/frontend/comments_view.php'); 
 
-// ?>
+
+require('../views/frontend/comments_view.php'); 
+
+?>
 
 <br>
 
@@ -90,26 +81,26 @@ $title = strtoupper($post->getPost_title());
 
 
 
-// if ($_SESSION['verified'] == 1)
-// {
+if ($session->getSessionVar('verified') == 1)
+{
 
-// 	require('views/frontend/add_comment_view.php');
+	require('../views/frontend/add_comment_view.php');
 
-// }
+}
 
-// if (isset($_POST['validComment']) && ($_SESSION['id_role'] == 1))
-// {
+if (isset($_POST['validComment']) && ($session->getSessionVar('id_role') == 1))
+{
 
-// 	echo 'Votre commentaire a bien été transmis, il sera validé dans les plus brefs délais.<br><br><br><br>';
+	echo 'Votre commentaire a bien été transmis, il sera validé dans les plus brefs délais.<br><br><br><br>';
 
-// }
+}
 
-// else if (isset($_POST['validComment']) && ($_SESSION['id_role'] == 2))
-// {
+else if (isset($_POST['validComment']) && ($session->getSessionVar('id_role') == 2))
+{
 	
-// 	echo 'Votre commentaire a bien été ajouté.<br><br><br><br>';
+	echo 'Votre commentaire a bien été ajouté.<br><br><br><br>';
 
-// }
+}
 
 
 
@@ -119,8 +110,7 @@ require('../views/templates/default.php');
 
 ?>
 
-</body>
-</html>
+
 
 
 

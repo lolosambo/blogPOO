@@ -51,8 +51,8 @@ class UsersManager
 
 		$req = $this->db->getPdo()->prepare
 		("
-			INSERT INTO Users (pseudo, password, mail, activation_key, verified, id_role) 
-			VALUES (:pseudo, :password, :mail, :activation_key, 0, 1)
+			INSERT INTO Users (pseudo, password, mail, activation_key, verified, id_role, inscr_date) 
+			VALUES (:pseudo, :password, :mail, :activation_key, 0, 1, NOW())
 		");
 
 		$req->bindParam(':pseudo', $pseudo);
@@ -61,9 +61,7 @@ class UsersManager
 		$req->bindParam(':activation_key', $activation_key);
 		$req->execute();
 		// $_SESSION['activation_key'] = $activation_key;
-
-		$res = $req->fetch();
-		return $res;
+		return $activation_key;
 	}
 
 
@@ -75,6 +73,89 @@ class UsersManager
 		$res=$req->fetch();
 		return $res;
 	
+	}
+
+	public function get5LastUsers()
+	{
+
+		$req = $this->db->getPdo()->query 
+		('
+			SELECT *, DATE_FORMAT(u.inscr_date, "%d/%m/%Y à %Hh%i") AS inscr_date  FROM Users AS u
+			ORDER BY id
+			DESC
+			LIMIT 0, 5
+		');
+
+		return $req;
+	}
+
+	public function searchUser($pseudo)
+	{
+
+		$req = $this->db->getPdo()->prepare 
+		('
+			SELECT *, DATE_FORMAT(u.inscr_date, "%d/%m/%Y à %Hh%i") AS inscrDate  
+			FROM Users AS u
+			WHERE u.pseudo = :pseudo
+	
+		');
+
+		$req->bindParam(':pseudo', $pseudo);
+		$req->execute();
+		$data=$req->fetch();
+
+		return $data;
+
+	}	
+
+
+	public function updateToAdmin($pseudo)
+	{
+		$req = $this->db->getPdo()->prepare
+		('
+			UPDATE Users SET id_role = 2
+			WHERE pseudo = :pseudo
+	
+		');
+
+		$req->bindParam(':pseudo', $pseudo);
+		$req->execute();
+
+		return $req;
+
+	}
+
+	public function updateToUser($pseudo)
+	{
+		$req = $this->db->getPdo()->prepare
+		('
+			UPDATE Users SET id_role = 1
+			WHERE pseudo = :pseudo
+	
+		');
+
+		$req->bindParam(':pseudo', $pseudo);
+		$req->execute();
+
+		return $req;
+
+	}
+
+
+	public function eraseUser($pseudo)
+	{
+
+		$req = $this->db->getPdo()->prepare
+		('
+			DELETE FROM Users
+			WHERE pseudo = :pseudo
+	
+		');
+
+		$req->bindParam(':pseudo', $pseudo);
+		$req->execute();
+
+		return $req;
 	}
 
 
