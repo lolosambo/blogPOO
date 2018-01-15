@@ -2,7 +2,8 @@
     "name": "lolosambo/blog",
     "require": {
         "symfony/http-foundation": "^4.0",
-        "sendgrid/sendgrid": "^6.0"
+        "sendgrid/sendgrid": "^6.0",
+        "vlucas/phpdotenv": "^2.4"
     },
 
     "authors": [

@@ -10,4 +10,5 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
+    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
 );

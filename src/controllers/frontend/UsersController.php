@@ -1,8 +1,8 @@
 <?php
 namespace p5\controllers\frontend;
-use Sendgrid\Email;
-use Sendgrid\Content;
-use Sendgrid\Mail;
+use SendGrid\Email;
+use SendGrid\Content;
+use SendGrid\Mail;
 use p5\managers\UsersManager;
 use p5\entities\Users;
 use p5\app\Session;
@@ -35,7 +35,7 @@ class UsersController implements MailerInterface
 	{
 
 		require "../vendor/autoload.php";
-
+		
 		$from = new Email('Laurent BERTON', "lolosambo2@gmail.com");
 		$subject = "Confirmation de votre inscription sur le blog de Laurent BERTON";
 		$to = new Email($pseudo, $mail_add);
@@ -49,12 +49,13 @@ class UsersController implements MailerInterface
 			---------------<br>
 			<p>Ceci est un mail automatique, Merci de ne pas y répondre.</p>");
 		$mail = new Mail($from, $subject, $to, $content);
-		$apiKey = getenv('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');
+		
+		$apiKey = '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';
 		$sg = new \SendGrid($apiKey);
 		$response = $sg->client->mail()->send()->post($mail);
-		echo $response->statusCode();
-		print_r($response->headers());
 		echo $response->body();
+
+
 
 
 		// $objet = 'Confirmation de votre inscription sur le blog de Laurent BERTON' ;

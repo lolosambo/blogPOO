@@ -23,6 +23,10 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'SendGrid\\' => 9,
         ),
+        'D' => 
+        array (
+            'Dotenv\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -41,6 +45,10 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         'SendGrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
     );
 
