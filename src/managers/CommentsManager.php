@@ -98,7 +98,7 @@ class CommentsManager
 
 	public function publishComment($comment_id)
 	{
-		$db = getDb();
+		
 		$publishedComment= $this->db->getPdo()->prepare
 			('
 				UPDATE Comments SET validated = 1 WHERE id = :commentId'
@@ -153,7 +153,7 @@ class CommentsManager
 	}
 
 
-	public function getUnvalidComments($firstEntry, $commentsPerPage)
+	public function getUnvalidComments($commentsFirstEntry, $commentsPerPage)
 	{
 
 		$req= $this->db->getPdo()->query
@@ -165,10 +165,11 @@ class CommentsManager
 			ON c.id_post = p.id
 			AND validated = 0
 			ORDER BY commentUpdate
-			DESC LIMIT '.$firstEntry.', '.$commentsPerPage.'
+			DESC LIMIT '.$commentsFirstEntry.', '.$commentsPerPage.'
 		');
-
-		return $req;
+		
+		$data = $req->fetchAll();
+		return $data;
 
 	}
 
@@ -180,7 +181,7 @@ class CommentsManager
 	$req= $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated = 0');
 	$data = $req->fetch();
 	$total=$data['total'];
-	return $data;
+	return $total;
 	}
 
 

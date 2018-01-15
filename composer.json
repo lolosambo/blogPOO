@@ -1,8 +1,10 @@
 {
     "name": "lolosambo/blog",
     "require": {
-        "symfony/http-foundation": "^4.0"
+        "symfony/http-foundation": "^4.0",
+        "sendgrid/sendgrid": "^6.0"
     },
+
     "authors": [
         {
             "name": "lolosambo",
@@ -13,6 +15,8 @@
     "autoload":{
         "psr-4" : {
             "p5\\" : "src"
+
+            
         }
     }
 }

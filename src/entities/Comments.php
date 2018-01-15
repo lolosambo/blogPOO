@@ -6,7 +6,7 @@ use p5\interfaces\hydrateInterface;
 class Comments implements HydrateInterface
 
 {
-
+	private $commentId;
 	private $id_user;
 	private $id_post;
 	private $comment_content;
@@ -43,6 +43,11 @@ public function hydrate(array $donnees)
 
 // GETTERS-----------------------------------
 
+	public function getCommentId()
+	{
+		return $this->commentId;
+	}
+
 	public function getId_user()
 	{
 		return $this->id_user;
@@ -76,9 +81,18 @@ public function hydrate(array $donnees)
 
 // SETTERS --------------------------------------
 
+
+	public function setCommentId($commentId)
+	{
+		if(intval($commentId))
+		{
+			$this->commentId = $commentId;
+		}
+	}
+
 	public function setId_user($idUser)
 	{
-		if(is_int($idUser))
+		if(intval($idUser))
 		{
 			$this->id_user = $idUser;
 		}
@@ -86,7 +100,7 @@ public function hydrate(array $donnees)
 
 	public function setId_post($idPost)
 	{
-		if(is_int($idPost))
+		if(intval($idPost))
 		{
 			$this->id_post = $idPost;
 		}
@@ -112,7 +126,7 @@ public function hydrate(array $donnees)
 
 	public function setValidated($validated)
 	{
-		if(is_int($validated) && (($validated == 0) || ($validated == 1)))
+		if(intval($validated) && (($validated == 0) || ($validated == 1)))
 		{
 			$this->validated = $validated;
 		}

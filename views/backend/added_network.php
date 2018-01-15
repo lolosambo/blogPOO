@@ -1,8 +1,4 @@
 <?php 
-session_cache_limiter('private_no_expire, must-revalidate');
-session_start();  
-
-
 ob_start();
 
 ?>
@@ -20,14 +16,14 @@ ob_start();
 
 echo '<p>Le compte a bien été ajouté.</p>';
 
-echo '<a href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=networks"><button type="button" class=" btn btn-warning">Retour à la liste des réseaux</button></a>';
+echo '<a href="index.php?p=networks"><button type="button" class=" btn btn-warning">Retour à la liste des réseaux</button></a>';
 
 
 
 $title = "GESTION DES RESEAUX SOCIAUX";
 $content = ob_get_clean();
 
-require('../../views/backend/admin_template.php');
+require('../../views/templates/admin_template.php');
 
 ?>
 </body>

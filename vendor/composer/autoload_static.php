@@ -8,6 +8,8 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
+        '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,6 +21,7 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'SendGrid\\' => 9,
         ),
     );
 
@@ -34,6 +37,10 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'SendGrid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
         ),
     );
 

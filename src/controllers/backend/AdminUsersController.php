@@ -28,32 +28,42 @@ class AdminUsersController
 
 	// USERS SECTION--------------------------------------------------
 
-	public function searchUserForm($pseudo)
+	public function searchUserForm(UsersManager $userman, $pseudo)
 	{
-		$data = searchUser($pseudo);
-		$_SESSION['foundUser'] = $data['pseudo'];
+		$data = $userman->searchUser($pseudo);
+		
+		if($data != FALSE)
+		{
+			$user = new Users($data);
+			$session = new Session();
+			$session->setSession('foundUser', $user->getPseudo());
+		}
+		else
+		{
+			$user = null;
+		}
 
 		require('../../views/backend/searchUserForm.php');
 	}
 
-	public function changeToAdmin($pseudo)
+	public function changeToAdmin(UsersManager $userman, $pseudo)
 	{
-		updateToAdmin($pseudo);
+		$userman->updateToAdmin($pseudo);
 		require('../../views/backend/updatedUsers.php');
 
 	}
 
-	public function changeToUser($pseudo)
+	public function changeToUser(UsersManager $userman, $pseudo)
 	{
-		updateToUser($pseudo);
+		$userman->updateToUser($pseudo);
 		require('../../views/backend/updatedUsers.php');
 
 	}
 
-	public function deleteUser($pseudo)
+	public function deleteUser(UsersManager $userman, $pseudo)
 	{
 
-		eraseUser($pseudo);
+		$userman->eraseUser($pseudo);
 		require('../../views/backend/updatedUsers.php');
 	}
 

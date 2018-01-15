@@ -4,8 +4,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>ADMINISTRATION DU BLOG</title>
-	<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/admin_style.css" type="text/css"/>
 	</head>
 	
 	<body>

@@ -64,7 +64,7 @@ class PostsManager
 	}
 
 
-	public function addPost($user_id, $title, $heading, $post_content, $img)
+	public function writePost($user_id, $title, $heading, $post_content, $img)
 	{
 		$newPost = $this->db->getPdo()->prepare
 		("
@@ -125,8 +125,7 @@ class PostsManager
 
 	public function erasePost($postId)
 	{
-		$db = getDb();
-		$req= $db->prepare
+		$req = $this->db->getPdo()->prepare
 		('
 			DELETE FROM Posts 
 			WHERE id = :post_id

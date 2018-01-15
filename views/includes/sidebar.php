@@ -23,7 +23,7 @@ $session = new Session();
 
 
 //Show connexion form
-if (!isset($_GET['action']) && ($session->getSessionVar('pseudo') == FALSE))
+if (!isset($_GET['action']) && (($session->getSessionVar('pseudo') == FALSE) || ($session->getSessionVar('pseudo') == TRUE)))
 {
 	require('../views/frontend/connexion_view.php');
 }

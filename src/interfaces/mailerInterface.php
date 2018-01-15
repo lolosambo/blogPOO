@@ -1,12 +1,9 @@
-
 <?php
+namespace p5\interfaces;
+
 
 interface MailerInterface
 {
-
-
-	protected function mailConfirmation($pseudo, $password1, $mail);
-	
-
+	public function sendMail($pseudo, $mail_add, $activKey);
 
 }

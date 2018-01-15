@@ -8,10 +8,14 @@ $session->startSession();
 use p5\managers\PostsManager;
 use p5\managers\CommentsManager;
 use p5\managers\UsersManager;
+use p5\managers\NetworksManager;
 use p5\controllers\backend\AdminUsersController;
 use p5\controllers\backend\AdminPostsController;
 use p5\controllers\backend\AdminCommentsController;
+use p5\controllers\backend\ImagesController;
+use p5\controllers\frontend\NetworksController;
 use p5\controllers\frontend\PaginationController;
+
 
 
 $postcont= new AdminPostsController();
@@ -21,12 +25,14 @@ $commentman = new CommentsManager();
 $commentcont = new AdminCommentsController();
 $usercont = new AdminUsersController();
 $pagincont = new PaginationController();
+$imgcont = new ImagesController();
+$networkman = new NetworksManager();
+$networkcont = new NetworksController();
 
 
 
 if (isset($_GET['p']))
 {
-
 
 // USERS SECTION
 
@@ -36,7 +42,7 @@ if (isset($_GET['p']))
 		if(isset($_POST['search']))
 		{
 			$search = htmlspecialchars($_POST['search']);
-			$usercont->searchUserForm($search);
+			$usercont->searchUserForm($userman, $search);
 
 		}
 
@@ -49,119 +55,117 @@ if (isset($_GET['p']))
 
 	else if ($_GET['p'] == 'changeToAdmin')
 	{
-		$usercont->changeToAdmin($_SESSION['foundUser']);
+		$usercont->changeToAdmin($userman, $session->getSessionVar('foundUser'));
 	}
 
 	else if ($_GET['p'] == 'changeToUser')
 	{
-		$usercont->changeToUser($_SESSION['foundUser']);
+		$usercont->changeToUser($userman, $session->getSessionVar('foundUser'));
 	}
 
 	else if ($_GET['p'] == 'deleteUser')
 	{
-		$usercont->deleteUser($_SESSION['foundUser']);
+		$usercont->deleteUser($userman, $session->getSessionVar('foundUser'));
 	}
 
 
 
-// //POSTS SECTION
+//POSTS SECTION
 
-// 	else if (($_GET['p'] == 'posts') || isset($_GET['page']))
-// 	{
-// 		postsPagination();
-// 	}
+	else if ($_GET['p'] == 'posts')
+	{
+		$postcont->showPosts($postman, $pagincont);
+	}
 
 	
-// 	else if ($_GET['p'] == 'addPostForm')
-// 	{
+	else if ($_GET['p'] == 'addPostForm')
+	{
 
-// 		addPostForm();
-// 	}
-
-
-
-// 	else if ($_GET['p'] == 'addPost')
-// 	{
-
-// 		$title = htmlspecialchars($_POST['title']);
-// 		$heading = htmlspecialchars($_POST['heading']);
-// 		$content = htmlspecialchars($_POST['content']);
+		$postcont->addPostForm();
+	}
 
 
-// 		if(isset($_POST['publier']))
-// 		{
+
+	else if ($_GET['p'] == 'addPost')
+	{
+
+		$title = htmlspecialchars($_POST['title']);
+		$heading = htmlspecialchars($_POST['heading']);
+		$content = htmlspecialchars($_POST['content']);
+
+
+		if(isset($_POST['publier']))
+		{
 	
-// 			$img_url = verifyImg();
+			$img_url = $imgcont->verifyImg();
 
-// 			if(isset($img_url))
-// 			{
-// 				addPost($_SESSION['id'], $title, $heading, $content, $img_url);
-// 			}
+			if(isset($img_url))
+			{
+				$postcont->addPost($postman, $_SESSION['id'], $title, $heading, $content, $img_url);
+			}
 
-// 			else
-// 			{
-// 				img_message();
-// 			}
-// 		}
+			else
+			{
+				$imgcont->img_message();
+			}
+		}
 
-// 		else
-// 		{
-//     		echo $error;
-// 		}
-
-
+		else
+		{
+    		echo $error;
+		}
 		
-// 	}
+	}
 
-// 	else if ($_GET['p'] == 'updatePost')
-// 	{
+	else if ($_GET['p'] == 'updatePost')
+	{
 		
-// 		$postId = intval($_GET['postId']);
-// 		selectPost($postId);
+		$postId = intval($_GET['postId']);
+		$postcont->selectPost($postman, $postId);
 
-// 	}
+	}
 
-// 	else if ($_GET['p'] =='postUpdated')
-// 	{
+	else if ($_GET['p'] =='postUpdated')
+	{
 		
-// 		$title = htmlspecialchars($_POST['title']);
-// 		$heading = htmlspecialchars($_POST['heading']);
-// 		$content = htmlspecialchars($_POST['content']);
-// 		$postId = intval($_GET['postId']);
+		$title = htmlspecialchars($_POST['title']);
+		$heading = htmlspecialchars($_POST['heading']);
+		$content = htmlspecialchars($_POST['content']);
+		$postId = intval($_GET['postId']);
 
-// 		updatePost($postId, $title, $heading, $content);
+		$postcont->updatePost($postman, $postId, $title, $heading, $content);
 	
-// 	}
+	}
 
-// 	else if ($_GET['p'] == 'deletePost')
-// 	{
-// 		$postId = intval($_GET['postId']);
-// 		deletePost($postId);
-// 	}
+	else if ($_GET['p'] == 'deletePost')
+	{
+		$postId = intval($_GET['postId']);
+		$postcont->deletePost($postman, $postId);
+	}
 	
 
-// // COMMENTS SECTION
+// COMMENTS SECTION
 
-// 	else if (($_GET['p'] == 'comments') || isset($_GET['cpage']))
-// 	{
-// 		commentsPagination();
-// 	}
+	else if ($_GET['p'] == 'comments')
+	{
+		$commentcont->allUnvalidComments($commentman, $pagincont);
+	}
 
-// 	else if ($_GET['p'] == 'validComment')
-// 	{
+	else if ($_GET['p'] == 'validComment')
+	{
 
-// 		$commentId = intval($_GET['commentId']);
-// 		validComment($commentId);
+		$commentId = intval($_GET['commentId']);
+		$commentcont->validComment($commentman, $commentId);
 		
-// 	}
+	}
 
-// 	else if ($_GET['p'] == 'refuseComment')
-// 	{
+	else if ($_GET['p'] == 'refuseComment')
+	{
 
-// 		$commentId = intval($_GET['commentId']);
-// 		refuseComment($commentId);
+		$commentId = intval($_GET['commentId']);
+		$commentcont->refuseComment($commentman, $commentId);
 		
-// 	}
+	}
 
 
 // // CV SECTION
@@ -171,41 +175,52 @@ if (isset($_GET['p']))
 // 	}
 
 
-// // SOCIAL NETWORKS SECTION
+// SOCIAL NETWORKS SECTION
 
-// 	else if ($_GET['p'] == 'networks')
-// 	{
-// 		showNetwork();
-// 	}
-// 	else if ($_GET['p'] == 'addNetwork')
-// 	{
-// 		addNetwork();
-// 	}
-// 	else if ($_GET['p'] == 'addedNetwork')
-// 	{
-// 		$name = htmlspecialchars($_POST['name']);
-// 		$address = htmlspecialchars($_POST['address']);
+	else if ($_GET['p'] == 'networks')
+	{
+		$networkcont->showNetworks($networkman);
+	}
+	else if ($_GET['p'] == 'addNetwork')
+	{
+		$networkcont->addNetwork($networkman);
+	}
+	else if ($_GET['p'] == 'addedNetwork')
+	{
+		$name = htmlspecialchars($_POST['name']);
+		$address = htmlspecialchars($_POST['address']);
 
-// 		addedNetwork($name, $_adress);
-// 	}
+		$networkcont->addedNetwork($networkman, $name, $address);
+	}
 
-// 	else if ($_GET['p'] == 'updateNetwork')
-// 	{
-// 		$address = htmlspecialchars($_POST['address']);
+	else if ($_GET['p'] == 'updateNetwork')
+	{
+		$address = htmlspecialchars($_POST['address']);
 
-// 		updateNetwork($_GET['networkId'], $address);
-// 	}
-// 	else if ($_GET['p'] == 'deleteNetwork')
-// 	{
-// 		$networkId = intval($_GET['networkId']);
-// 		deleteNetwork($networId);
-// 	}
-
+		$networkcont->updateNetwork($networkman, $_GET['networkId'], $address);
+	}
+	else if ($_GET['p'] == 'deleteNetwork')
+	{
+		$networkId = intval($_GET['networkId']);
+		$networkcont->deleteNetwork($networkman, $networkId);
+	}
 
 }
 
+else if (isset($_GET['page']))
+{
+	$postcont->showPosts($postman, $pagincont);
+
+}
+
+else if (isset($_GET['cpage']))
+	{
+		$commentcont->allUnvalidComments($commentman, $pagincont);
+	}
+
 else
 {
+
 	if($session->getSessionVar('id_role') != 2)
 	{
 		echo '<p>Section non autorisée</p>';
@@ -217,6 +232,7 @@ else
 	}
 
 }
+
 
 
 

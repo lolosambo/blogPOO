@@ -1,15 +1,12 @@
 
 <?php 
-session_cache_limiter('private_no_expire, must-revalidate');
-session_start();  
-
-
+ 
 ob_start();
 ?>
 
 
 
-<form method="POST" action="http://www.b-log-lille.fr/p5/public/admin/index.php?p=searchUser" name="connexion">
+<form method="POST" action="index.php?p=searchUser" name="connexion">
 
 <label for="search">Rechercher un utilisateur</label>
 <input type="text" name="search" lenght=30>
@@ -22,37 +19,44 @@ ob_start();
 
 <?php 
 
-if(isset($data['pseudo']))
+if (isset($_POST['valider']))
 {
 
-	echo '<p>'.$data['pseudo'].' - Inscrit(e) le : '.$data['inscrDate'].'</p>';
-	echo '<p>Adresse mail : '.$data['mail'].'</p>';
+	if($user != null)
+	{
 
-	if ($data['id_role'] == 1)
-	{
+		echo '<p>'.$user->getPseudo().' - Inscrit(e) le : '.$user->getInscr_date().'</p>';
+		echo '<p>Adresse mail : '.$user->getMail().'</p>';
+
+		if ($user->getId_role() == 1)
+		{
 			
-		echo'<a href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=changeToAdmin"><button type="button" class=" btn btn-dark">Passer en administrateur</button> </a>';
-		echo'<a href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=deleteUser"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>';
+			echo'<a href="index.php?p=changeToAdmin"><button type="button" class=" btn btn-dark">Passer en administrateur</button> </a>';
+			echo'<a href="index.php?p=deleteUser"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>';
 			
-	}
+		}
 	
-	else if ($data['id_role'] == 2)
+		else if ($user->getId_role() == 2)
+		{
+			
+			echo '<a href="index.php?p=changeToUser"><button type="button" class=" btn btn-dark">Passer en utilisateur</button> </a>';
+			echo'<a href="index.php?p=deleteUser"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>';
+			
+		}
+
+	}
+
+	else
 	{
-			
-		echo '<a href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=changeToUser"><button type="button" class=" btn btn-dark">Passer en utilisateur</button> </a>';
-		echo'<a href="http://www.b-log-lille.fr/p5/public/admin/index.php?p=deleteUser"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>';
-			
+		echo '<p>Cet utilisateur n\'existe pas.</p>';
 	}
 
 }
 
 
-
-
-
 $title = "GESTION DES UTILISATEURS";
 $content = ob_get_clean();
 
-require('../../views/backend/admin_template.php');
+require('../../views/templates/admin_template.php');
 
 ?>

@@ -6,19 +6,6 @@ use p5\entities\Comments;
 
 ?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>ADMINISTRATION DU BLOG</title>
-		<link rel="stylesheet" href="../../public/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="../../public/css/admin_style.css" type="text/css"/>	
-	</head>
-	
-<body>
-
-
-
 
 <?php ob_start(); ?>
 
@@ -100,6 +87,3 @@ $comments = ob_get_clean();
 
 <?php require('../../views/templates/daschboard_template.php'); ?>
 
-
-</body>
-</html>

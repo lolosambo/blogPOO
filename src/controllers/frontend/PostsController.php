@@ -9,6 +9,7 @@ use p5\controllers\frontend\PaginationController;
 use p5\controllers\frontend\CommentsController;
 
 
+
 class PostsController
 {
 

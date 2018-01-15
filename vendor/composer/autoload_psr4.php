@@ -9,4 +9,5 @@ return array(
     'p5\\' => array($baseDir . '/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
+    'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
 );
