@@ -1,36 +1,32 @@
 <?php
 
 namespace p5\controllers\frontend;
-use p5\managers\PostsManager;
-use p5\managers\CommentsManager;
-use p5\entities\Posts;
-use p5\entities\Users;
-use p5\controllers\frontend\PaginationController;
-use p5\controllers\frontend\CommentsController;
-
+use p5\builders\Builder;
 
 
 class PostsController
 {
 
 
-	public function allPosts(PostsManager $postman, PaginationController $pagincont)
+	public function allPosts(Builder $builder)
 	{
-		
-		$pagincont->postsPagination($postman);
+		$postman = $builder->createManager('posts')->build();
+		$pagincont = $builder->createFrontController('pagination')->build();
+		$pagincont->postsPagination($builder);
 		$res = $postman->getPosts($pagincont->getFirstEntry(), PaginationController::POST_PER_PAGE);
 
 		require('../views/frontend/list_posts_view.php');
 
 	}
 
-	public function onePost(PostsManager $postman, CommentsController $commentcont, CommentsManager $commentman, $postId)
+	public function onePost(Builder $builder, $postId)
 	{
 		
-		$res = $postman->getPost($postId);
-		$post = new Posts($res);
-		$author = new Users($res);
-		$res2 = $commentcont->allComments($commentman, $_GET['postId']);
+		$res = $builder->createManager('posts')->build()->getPost($postId);
+		$commentman = $builder->createManager('comments')->build();
+		$post = $builder->createEntities('posts', $res)->build();
+		$author = $builder->createEntities('users', $res)->build();
+		$res2 = $builder->createFrontController('comments')->build()->allComments($builder, $_GET['postId']);
 		require('../views/frontend/post_view.php');
 
 	}

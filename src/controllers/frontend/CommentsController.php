@@ -2,29 +2,27 @@
 
 namespace p5\controllers\frontend;
 
-use p5\app\Session;
-use p5\entities\Users;
-use p5\entities\Comments;
-use p5\managers\CommentsManager;
+use p5\builders\Builder;
 
 class CommentsController
 {
 
 
 	
-	public function allComments(CommentsManager $commentman, $postId)
+	public function allComments(Builder $builder, $postId)
 	{
-		$res2 = $commentman->getComments($postId);
+		$res2 = $builder->createManager('comments')->build()->getComments($postId);
 		return $res2;
 		
 	}
 
 
 
-	public function addComment(CommentsManager $commentman, $postId, $userId, $comment)
+	public function addComment(Builder $builder, $postId, $userId, $comment)
 	{
 		
-		$session = new Session();
+		$session = $builder->createApp('session')->build();
+		$commentman = $builder->createManager('comments')->build();
 		
 		if($session->getSessionVar('id_role') == 1)
 		{

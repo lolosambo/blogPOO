@@ -1,22 +1,22 @@
 <?php
 namespace p5\controllers\frontend;
-use p5\managers\UsersManager;
-use p5\entities\Users;
-use p5\app\Session;
+
 use p5\interfaces\MailerInterface;
+use p5\builders\Builder;
+
 
 class UsersController implements MailerInterface
 {
 	
 
-	public function userConnexion(UsersManager $userman, $pseudo, $password)
+	public function userConnexion(Builder $builder, $pseudo, $password)
 	{
 		
-		$res = $userman->getUser($pseudo, $password);
+		$res = $builder->createManager('users')->build()->getUser($pseudo, $password);
 		if (isset($res['pseudo']))
 		{
-			$user = new Users($res);
-			$session = new Session();
+			$user = $builder->createEntities('users', $res)->build();
+			$session = $builder->createApp('session')->build();
 			$session->setSession('id', $user->getId());
 			$session->setSession('pseudo', $user->getPseudo());
 			$session->setSession('id_role', $user->getId_role());
@@ -81,10 +81,11 @@ class UsersController implements MailerInterface
 }
 
 
-	public function insertUser(UsersManager $userman, $pseudo, $password1, $password2, $mail)
+	public function insertUser(Builder $builder, $pseudo, $password1, $password2, $mail)
 	{
 		
-		$session = new Session();
+		$session = $builder->createApp('session')->build();
+		$userman = $builder->createManager('users')->build();
 		$res = $userman->compareUsers($pseudo);
 		$session->setSession('db_pseudo', $res['pseudo']);
 		
@@ -112,9 +113,12 @@ class UsersController implements MailerInterface
 		}
 	}
 	
-	public function account_activation(UsersManager $userman, Session $session, $pseudo, $activKey)
+	public function account_activation(Builder $builder, $pseudo, $activKey)
 	{
 
+		$session = $builder->createApp('session')->build();
+		$userman = $builder->createManager('users')->build();
+		
 		$res = $userman->accActivation($pseudo, $activKey);
 		$activationKey = $res['activation_key'];	
 		$verified = $res['verified']; 
@@ -146,9 +150,10 @@ class UsersController implements MailerInterface
 
 	}
 
-	public function destroySession()
+	public function destroySession(Builder $builder)
 	{
-		$session = new Session();
+		
+		$session = $builder->createApp('session')->build();
 		$session->closeSession();
 		
 	}

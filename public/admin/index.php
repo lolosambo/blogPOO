@@ -1,33 +1,18 @@
 <?php 
 require '../../vendor/autoload.php';
-use p5\app\Session;
-$session = new Session();
+use p5\builders\Builder;
+
+$builder = new Builder();
+$session = $builder->createApp('session')->build();
 $session->startSession();
 
 
-use p5\managers\PostsManager;
-use p5\managers\CommentsManager;
-use p5\managers\UsersManager;
-use p5\managers\NetworksManager;
-use p5\controllers\backend\AdminUsersController;
-use p5\controllers\backend\AdminPostsController;
-use p5\controllers\backend\AdminCommentsController;
-use p5\controllers\backend\ImagesController;
-use p5\controllers\frontend\NetworksController;
-use p5\controllers\frontend\PaginationController;
-
-
-
-$postcont= new AdminPostsController();
-$userman = new UsersManager();
-$postman = new PostsManager();
-$commentman = new CommentsManager();
-$commentcont = new AdminCommentsController();
-$usercont = new AdminUsersController();
-$pagincont = new PaginationController();
-$imgcont = new ImagesController();
-$networkman = new NetworksManager();
-$networkcont = new NetworksController();
+$postcont= $builder->createBackController('posts')->build();
+$commentcont = $builder->createBackController('comments')->build();
+$usercont = $builder->createBackController('users')->build();
+$pagincont = $builder->createFrontController('pagination')->build();
+$imgcont = $builder->createBackController('images')->build();
+$networkcont = $builder->createFrontController('networks')->build();
 
 
 
@@ -42,7 +27,7 @@ if (isset($_GET['p']))
 		if(isset($_POST['search']))
 		{
 			$search = htmlspecialchars($_POST['search']);
-			$usercont->searchUserForm($userman, $search);
+			$usercont->searchUserForm($builder, $search);
 
 		}
 
@@ -55,17 +40,17 @@ if (isset($_GET['p']))
 
 	else if ($_GET['p'] == 'changeToAdmin')
 	{
-		$usercont->changeToAdmin($userman, $session->getSessionVar('foundUser'));
+		$usercont->changeToAdmin($builder, $session->getSessionVar('foundUser'));
 	}
 
 	else if ($_GET['p'] == 'changeToUser')
 	{
-		$usercont->changeToUser($userman, $session->getSessionVar('foundUser'));
+		$usercont->changeToUser($builder, $session->getSessionVar('foundUser'));
 	}
 
 	else if ($_GET['p'] == 'deleteUser')
 	{
-		$usercont->deleteUser($userman, $session->getSessionVar('foundUser'));
+		$usercont->deleteUser($builder, $session->getSessionVar('foundUser'));
 	}
 
 
@@ -74,7 +59,7 @@ if (isset($_GET['p']))
 
 	else if ($_GET['p'] == 'posts')
 	{
-		$postcont->showPosts($postman, $pagincont);
+		$postcont->showPosts($builder);
 	}
 
 	
@@ -101,7 +86,7 @@ if (isset($_GET['p']))
 
 			if(isset($img_url))
 			{
-				$postcont->addPost($postman, $_SESSION['id'], $title, $heading, $content, $img_url);
+				$postcont->addPost($builder, $_SESSION['id'], $title, $heading, $content, $img_url);
 			}
 
 			else
@@ -121,7 +106,7 @@ if (isset($_GET['p']))
 	{
 		
 		$postId = intval($_GET['postId']);
-		$postcont->selectPost($postman, $postId);
+		$postcont->selectPost($builder, $postId);
 
 	}
 
@@ -133,14 +118,14 @@ if (isset($_GET['p']))
 		$content = htmlspecialchars($_POST['content']);
 		$postId = intval($_GET['postId']);
 
-		$postcont->updatePost($postman, $postId, $title, $heading, $content);
+		$postcont->updatePost($builder, $postId, $title, $heading, $content);
 	
 	}
 
 	else if ($_GET['p'] == 'deletePost')
 	{
 		$postId = intval($_GET['postId']);
-		$postcont->deletePost($postman, $postId);
+		$postcont->deletePost($builder, $postId);
 	}
 	
 
@@ -148,14 +133,14 @@ if (isset($_GET['p']))
 
 	else if ($_GET['p'] == 'comments')
 	{
-		$commentcont->allUnvalidComments($commentman, $pagincont);
+		$commentcont->allUnvalidComments($builder, $pagincont);
 	}
 
 	else if ($_GET['p'] == 'validComment')
 	{
 
 		$commentId = intval($_GET['commentId']);
-		$commentcont->validComment($commentman, $commentId);
+		$commentcont->validComment($builder, $commentId);
 		
 	}
 
@@ -163,7 +148,7 @@ if (isset($_GET['p']))
 	{
 
 		$commentId = intval($_GET['commentId']);
-		$commentcont->refuseComment($commentman, $commentId);
+		$commentcont->refuseComment($builder, $commentId);
 		
 	}
 
@@ -179,43 +164,43 @@ if (isset($_GET['p']))
 
 	else if ($_GET['p'] == 'networks')
 	{
-		$networkcont->showNetworks($networkman);
+		$networkcont->showNetworks($builder);
 	}
 	else if ($_GET['p'] == 'addNetwork')
 	{
-		$networkcont->addNetwork($networkman);
+		$networkcont->addNetwork($builder);
 	}
 	else if ($_GET['p'] == 'addedNetwork')
 	{
 		$name = htmlspecialchars($_POST['name']);
 		$address = htmlspecialchars($_POST['address']);
 
-		$networkcont->addedNetwork($networkman, $name, $address);
+		$networkcont->addedNetwork($builder, $name, $address);
 	}
 
 	else if ($_GET['p'] == 'updateNetwork')
 	{
 		$address = htmlspecialchars($_POST['address']);
 
-		$networkcont->updateNetwork($networkman, $_GET['networkId'], $address);
+		$networkcont->updateNetwork($builder, $_GET['networkId'], $address);
 	}
 	else if ($_GET['p'] == 'deleteNetwork')
 	{
 		$networkId = intval($_GET['networkId']);
-		$networkcont->deleteNetwork($networkman, $networkId);
+		$networkcont->deleteNetwork($builder, $networkId);
 	}
 
 }
 
 else if (isset($_GET['page']))
 {
-	$postcont->showPosts($postman, $pagincont);
+	$postcont->showPosts($builder);
 
 }
 
 else if (isset($_GET['cpage']))
 	{
-		$commentcont->allUnvalidComments($commentman, $pagincont);
+		$commentcont->allUnvalidComments($builder);
 	}
 
 else
@@ -228,7 +213,7 @@ else
 	}
 	else
 	{
-	$usercont->showDaschboard($userman, $postman, $commentman);
+	$usercont->showDaschboard($builder);
 	}
 
 }

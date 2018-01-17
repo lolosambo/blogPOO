@@ -1,7 +1,7 @@
 <?php
 namespace p5\controllers\backend;
 
-class ImagesController
+class AdminImagesController
 {
 	
 	public function verifyImg()

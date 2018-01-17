@@ -1,24 +1,31 @@
 <?php
 require 'vendor/autoload.php';
-use p5\app\Session;
-$test = new Session();
+
+use p5\builders\Builder;
 
 
-$test->setSession('pseudo', 'trucmuche');
-$test->setSession('id_role', 2);
-$test->setSession('verified', 1);
-
-
-echo $test->getSessionVar('pseudo').'<br>';
-echo $test->getSessionVar('id_role').'<br>';
-echo $test->getSessionVar('verified').'<br>';
+$builder = new Builder();
 
 
 
-var_dump($_SESSION).'<br>';
+$data = $builder->createManager('users')->build()->getUser('laurentb', '010377');
+$data2 = $builder->createManager('posts')->build()->getPost(27);
 
 
 
+$object = $builder->createEntities('users', $data)->build();
+$object2 = $builder->createEntities('posts', $data2)->build();
+
+
+
+
+
+var_dump($object).'<br>';
+
+var_dump($object2).'<br>';
+
+
+echo $object2->getPost_title();
 
 
 

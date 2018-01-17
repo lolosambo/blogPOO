@@ -1,10 +1,6 @@
 <?php
 namespace p5\controllers\backend;
-use p5\managers\UsersManager;
-use p5\managers\PostsManager;
-use p5\managers\CommentsManager;
-use p5\entities\Users;
-use p5\app\Session;
+use p5\builders\Builder;
 
 
 class AdminUsersController
@@ -12,15 +8,15 @@ class AdminUsersController
 	
 	// DASCHBOARD SECTION -------------------------------------------
 
-	public function showDaschboard(UsersManager $userman, PostsManager $postman, CommentsManager $commentman)
+	public function showDaschboard(Builder $builder)
 	{
-		$users = $userman->get5LastUsers();
+		$users = $builder->createManager('users')->build()->get5LastUsers();
 
-		$posts = $postman->get3LastPosts();
+		$posts = $builder->createManager('posts')->build()->get3LastPosts();
 
-		$comments1 = $commentman->get3LastValidComments();
+		$comments1 = $builder->createManager('comments')->build()->get3LastValidComments();
 
-		$comments0 = $commentman->get3LastUnvalidComments();
+		$comments0 = $builder->createManager('comments')->build()->get3LastUnvalidComments();
 
 		require('../../views/backend/daschboard.php');
 
@@ -28,15 +24,14 @@ class AdminUsersController
 
 	// USERS SECTION--------------------------------------------------
 
-	public function searchUserForm(UsersManager $userman, $pseudo)
+	public function searchUserForm(Builder $builder, $pseudo)
 	{
-		$data = $userman->searchUser($pseudo);
+		$data = $builder->createManager('users')->build()->searchUser($pseudo);
 		
 		if($data != FALSE)
 		{
-			$user = new Users($data);
-			$session = new Session();
-			$session->setSession('foundUser', $user->getPseudo());
+			$user = $builder->createEntities('users', $data)->build();
+			$session = $builder->createApp('session')->build()->setSession('foundUser', $user->getPseudo());
 		}
 		else
 		{
@@ -46,24 +41,24 @@ class AdminUsersController
 		require('../../views/backend/searchUserForm.php');
 	}
 
-	public function changeToAdmin(UsersManager $userman, $pseudo)
+	public function changeToAdmin(Builder $builder, $pseudo)
 	{
-		$userman->updateToAdmin($pseudo);
+		$builder->createManager('users')->build()->updateToAdmin($pseudo);
 		require('../../views/backend/updatedUsers.php');
 
 	}
 
-	public function changeToUser(UsersManager $userman, $pseudo)
+	public function changeToUser(Builder $builder, $pseudo)
 	{
-		$userman->updateToUser($pseudo);
+		$builder->createManager('users')->build()->updateToUser($pseudo);
 		require('../../views/backend/updatedUsers.php');
 
 	}
 
-	public function deleteUser(UsersManager $userman, $pseudo)
+	public function deleteUser(Builder $builder, $pseudo)
 	{
 
-		$userman->eraseUser($pseudo);
+		$builder->createManager('users')->build()->eraseUser($pseudo);
 		require('../../views/backend/updatedUsers.php');
 	}
 

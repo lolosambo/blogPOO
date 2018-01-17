@@ -52,11 +52,14 @@ ob_start(); ?>
 
 <?php 
 
-while($data = $comments1->fetch())
+foreach ($comments1 as $data)
 {
-	echo '<p><em>Posté le : '.$data['commentUpdate'].'</em><br>';
-	echo '<b>'.$data['post_title'].'</b><br>';
-	echo $data['comment_content'].'<br>';
+	$comment = new Comments($data);
+	$post = new Posts($data);
+	
+	echo '<p><em>Posté le : '.$comment->getCommentUpdate().'</em><br>';
+	echo '<b>'.$post->getPost_title().'</b><br>';
+	echo $comment->getComment_content().'<br>';
 	echo '---------------------------------------</p>';
 }
 
@@ -72,11 +75,14 @@ ob_start(); ?>
 
 <?php 
 
-while($data = $comments0->fetch())
+foreach ($comments0 as $data)
 {
-	echo '<p><em>Posté le : '.$data['commentUpdate'].'</em><br>';
-	echo '<b>'.$data['post_title'].'</b><br>';
-	echo $data['comment_content'].'<br>';
+	$comment = new Comments($data);
+	$post = new Posts($data);
+	
+	echo '<p><em>Posté le : '.$comment->getCommentUpdate().'</em><br>';
+	echo '<b>'.$post->getPost_title().'</b><br>';
+	echo $comment->getComment_content().'<br>';
 	echo '---------------------------------------</p>';
 }
 

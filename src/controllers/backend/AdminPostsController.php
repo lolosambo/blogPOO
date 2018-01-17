@@ -1,18 +1,18 @@
 <?php
 namespace p5\controllers\backend;
+
+use p5\builders\Builder;
 use p5\controllers\frontend\PaginationController;
-use p5\controllers\backend\ImagesController;
-use p5\managers\PostsManager;
-use p5\entities\Posts;
-use p5\app\Session;
 
 
 class AdminPostsController
 {
 
-	public function showPosts(PostsManager $postman, PaginationController $pagincont)
+	public function showPosts(Builder $builder)
 	{
-		$pagincont->postsPagination($postman);
+		$postman = $builder->createManager('posts')->build();
+		$pagincont = $builder->createFrontController('pagination')->build();
+		$pagincont->postsPagination($builder);
 		$res = $postman->getPosts($pagincont->getFirstEntry(), PaginationController::POST_PER_PAGE);
 		
 		
@@ -20,10 +20,10 @@ class AdminPostsController
 	}
 
 
-	public function selectPost(PostsManager $postman, $postId)
+	public function selectPost(Builder $builder, $postId)
 	{
-		$res = $postman->getPost($postId);
-		$post = new Posts($res);
+		$res = $builder->createManager('posts')->build()->getPost($postId);
+		$post = $builder->createEntities('posts', $res)->build();
 
 		require('../../views/backend/update_post.php');
 
@@ -35,24 +35,24 @@ class AdminPostsController
 	}
 
 
-	public function addPost(PostsManager $postman, $user_id, $title, $heading, $post_content, $img)
+	public function addPost(Builder $builder, $user_id, $title, $heading, $post_content, $img)
 	{
 
-		$postman->writePost($user_id, $title, $heading, $post_content, $img);
+		$builder->createManager('posts')->build()->writePost($user_id, $title, $heading, $post_content, $img);
 		require('../../views/backend/add_post.php');
 	}
 
-	public function updatePost(PostsManager $postman, $postId, $title, $heading, $content)
+	public function updatePost(Builder $builder, $postId, $title, $heading, $content)
 	{
 
-		$postman->modifyPost($postId, $title, $heading, $content);
+		$builder->createManager('posts')->build()->modifyPost($postId, $title, $heading, $content);
 		require('../../views/backend/updated_post.php');
 
 	}
 
-	public function deletePost(PostsManager $postman, $postId)
+	public function deletePost(Builder $builder, $postId)
 	{
-		$postman->erasePost($postId);
+		$builder->createManager('posts')->build()->erasePost($postId);
 		require('../../views/backend/delete_post.php');
 	}
 

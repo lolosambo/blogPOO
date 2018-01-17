@@ -1,7 +1,7 @@
 <?php
 namespace p5\controllers\frontend;
-use p5\managers\PostsManager;
-use p5\managers\CommentsManager;
+
+use p5\builders\Builder;
 
 class PaginationController
 {
@@ -132,10 +132,10 @@ class PaginationController
 	}
 
 
-	public function postsPagination(PostsManager $postman)
+	public function postsPagination(Builder $builder)
 	{
 
-		$this->postsNbr = $postman->countPosts();
+		$this->postsNbr = $builder->createManager('posts')->build()->countPosts();
 
 		$this->pagesNbr = ceil($this->postsNbr/self::POST_PER_PAGE);
 
@@ -158,10 +158,10 @@ class PaginationController
 	}
 
 
-	public function commentsPagination(CommentsManager $commentman)
+	public function commentsPagination(Builder $builder)
 	{
 
-		$this->commentsNbr = $commentman->getTotalComments();
+		$this->commentsNbr = $builder->createManager('comments')->build()->getTotalComments();
 		
 		$this->commentsPagesNbr = ceil($this->commentsNbr/self::COMMENTS_PER_PAGE);
 

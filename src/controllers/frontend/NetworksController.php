@@ -1,13 +1,13 @@
 <?php
 namespace p5\controllers\frontend;
-use p5\managers\NetworksManager;
+use p5\builders\Builder;
 
 class NetworksController
 {
 	
-	public function showNetworks(NetworksManager $networkman)
+	public function showNetworks(Builder $builder)
 	{
-		$res = $networkman->networkList();
+		$res = $builder->createManager('networks')->build()->networkList();
 
 		require('../../views/backend/networks.php');
 	}
@@ -17,22 +17,22 @@ class NetworksController
 		require('../../views/backend/add_network_form.php');
 	}
 
-	public function addedNetwork(NetworksManager $networkman, $name, $address)
+	public function addedNetwork(Builder $builder, $name, $address)
 	{
-		$networkman->createNetwork($name, $address);
+		$builder->createManager('networks')->build()->createNetwork($name, $address);
 		require('../../views/backend/added_network.php');
 	}
 
-	public function updateNetwork(NetworksManager $networkman, $networkId, $networkAdress)
+	public function updateNetwork(Builder $builder, $networkId, $networkAdress)
 	{
-		$networkman->changeNetwork($networkId, $networkAdress);
+		$builder->createManager('networks')->build()->changeNetwork($networkId, $networkAdress);
 
 		require('../../views/backend/update_network.php');
 	}
 
-	public function deleteNetwork(NetworksManager $networkman, $networkId)
+	public function deleteNetwork(Builder $builder, $networkId)
 	{
-		$networkman->eraseNetwork($networkId);
+		$builder->createManager('networks')->build()->eraseNetwork($networkId);
 
 		require('../../views/backend/delete_network.php');
 	}

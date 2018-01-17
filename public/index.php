@@ -1,27 +1,16 @@
 <?php
 require '../vendor/autoload.php';
-use p5\app\Session;
-$session = new Session();
+use p5\builders\Builder;
+
+$builder = new Builder();
+$session = $builder->createApp('session')->build();
 $session->startSession();
 
+$postcont = $builder->createFrontController('posts')->build();
+$usercont = $builder->createFrontController('users')->build();
+$commentcont = $builder->createFrontController('comments')->build();
+$pagincont = $builder->createFrontController('pagination')->build();
 
-use p5\managers\PostsManager;
-use p5\managers\CommentsManager;
-use p5\managers\UsersManager;
-use p5\controllers\frontend\UsersController;
-use p5\controllers\frontend\PostsController;
-use p5\controllers\frontend\CommentsController;
-use p5\controllers\frontend\PaginationController;
-
-
-
-$postcont= new PostsController();
-$postman = new PostsManager();
-$commentman = new CommentsManager();
-$commentcont = new CommentsController();
-$userman = new UsersManager();
-$usercont = new UsersController();
-$pagincont = new PaginationController();
 
 
 
@@ -31,7 +20,7 @@ if (isset($_GET['action']))
 	if (($_GET['action'] == 'posts') || ($_GET['action'] == 'page'))
 	{
 		
-		$postcont->allPosts($postman, $pagincont);
+		$postcont->allPosts($builder);
 
 	}
 
@@ -39,7 +28,7 @@ if (isset($_GET['action']))
 	{
 		if ($_GET['postId'] > 0)
 		{
-			$res = $postcont->onePost($postman, $commentcont, $commentman, $_GET['postId']);
+			$res = $postcont->onePost($builder, $_GET['postId']);
 			
 			
 		}
@@ -55,22 +44,22 @@ if (isset($_GET['action']))
 		
 		$postId = intval($_GET['postId']);
 		$comContent = htmlspecialchars($_POST['comment']);
-		$commentcont->addComment($commentman, $postId, $session->getSessionVar('id'), $comContent);
-		$onePost = $postcont->onePost($postman, $commentcont, $commentman, $postId);
+		$commentcont->addComment($builder, $postId, $session->getSessionVar('id'), $comContent);
+		$onePost = $postcont->onePost($builder, $postId);
 
 	}
 
 
 	else if ($_GET['action'] == 'connexionStatus')
 	{
-		$user = $usercont->userConnexion($userman, $_POST['pseudo'], $_POST['password']);
+		$user = $usercont->userConnexion($builder, $_POST['pseudo'], $_POST['password']);
 		
-		$postcont->allPosts($postman, $pagincont);
+		$postcont->allPosts($builder);
 	}
 
 	else if ($_GET['action'] == 'inscriptionForm')
 	{
-		$postcont->allPosts($postman, $pagincont);
+		$postcont->allPosts($builder);
 	}
 
 	else if ($_GET['action'] == 'inscriptionStatus')
@@ -79,21 +68,21 @@ if (isset($_GET['action']))
 		$password1 = $_POST['password1'];
 		$password2 = $_POST['password2'];
 		$mail = $_POST['mail'];
-		$usercont->insertUser($userman, $pseudo, $password1, $password2, $mail);
-		$postcont->allPosts($postman, $pagincont);
+		$usercont->insertUser($builder, $pseudo, $password1, $password2, $mail);
+		$postcont->allPosts($builder);
 	}
 	
 	else if ($_GET['action'] == 'activation')
 	{
 		$log = $_GET['log'];
 		$key = $_GET['key'];
-		$usercont->account_activation($userman, $session, $log, $key);
-		$postcont->allPosts($postman, $pagincont);
+		$usercont->account_activation($builder, $log, $key);
+		$postcont->allPosts($builder);
 	}
 	else if ($_GET['action'] == 'logout')
 	{
-		$usercont->destroySession();
-		$postcont->allPosts($postman, $pagincont);
+		$usercont->destroySession($builder);
+		$postcont->allPosts($builder);
 		
 	}
 	
@@ -106,7 +95,7 @@ if (isset($_GET['action']))
 		$object = htmlspecialchars($_POST['object']);
 		$message = htmlspecialchars($_POST['message']);
 		$usercont->sendMailContact($name, $mail, $phone, $object, $message);
-		$postcont->allPosts($postman, $pagincont);
+		$postcont->allPosts($builder);
 		
 	}
 
@@ -117,7 +106,7 @@ if (isset($_GET['action']))
 else
 {
 	
-	$postcont->allPosts($postman, $pagincont);
+	$postcont->allPosts($builder);
 
 }
 
