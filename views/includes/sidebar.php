@@ -59,7 +59,7 @@ else if (isset($_GET['action']) && ($session->getSessionVar('pseudo') != null))
 	{
 		
 		echo '<p>Bonjour '.$session->getSessionVar('pseudo').'</p>';
-		echo '<p><a href="/admin/">Accéder à l\'administration</a></p>';
+		echo '<p><a href="admin/index.php">Accéder à l\'administration</a></p>';
 		echo '<p><a href="index.php?action=logout">Se déconnecter</a></p>';
 		
 	}
@@ -96,7 +96,7 @@ else if ($_GET['action'] == 'inscriptionStatus')
 
 	}
 
-	else if ($_POST['password1'] !== $_POST['password2'])
+	else if ($_POST['password1'] != $_POST['password2'])
 	{
 		require('../views/frontend/inscription_view.php');
 		echo '<p>Les 2 mots de passe doivent être identiques</p>';
@@ -114,55 +114,31 @@ else if ($_GET['action'] == 'inscriptionStatus')
 }
 
 
-// if ($_GET['action'] == "activation")
-// {
+ else if ($_GET['action'] == 'activation')
+ {
    
 
-//    if($session->getSession('update_verified') == '1') 
-//  	{
-//     	echo "Votre compte est déjà actif !";
-//   	}
-// 	else 
-//   	{
-//     	if( $session->getSession('activKey') ==  $session->getSession('activationKey')) 
-//       		{
-          		
-//           		echo "<p>Votre compte a bien été activé !</p>
-//           		<p>Vous pouvez maintenant <a href='index.php'>vous connecter</a>";
+    if($session->getSessionVar('update_verified') == '1') 
+  	{
+     	echo "Votre compte est déjà actif !";
+   	}
+ 	else 
+   	{
+     	if( $session->getSessionVar('activKey') ==  $session->getSessionVar('activationKey')) 
+       		{
+        		
+           		echo "<p>Votre compte a bien été activé !</p>
+           		<p>Vous pouvez maintenant <a href='index.php'>vous connecter</a>";
 
           		
-//       		}
-//      	else // if the two keys are different
-//        		{
-//          		echo "Erreur ! Votre compte ne peut être activé...";
-//       		}
-//   	}
+       		}
+      	else // if the two keys are different
+        		{
+          		echo "Erreur ! Votre compte ne peut être activé...";
+       		}
+   	}
 
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

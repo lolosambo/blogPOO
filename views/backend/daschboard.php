@@ -11,8 +11,8 @@ use p5\entities\Comments;
 
 <h6>Les 5 utilisateurs enregistrés</h6>
 
-<?php
-
+<?php 
+	
 foreach ($users as $data)
 {
 	$post = new Posts($data);

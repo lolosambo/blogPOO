@@ -14,6 +14,7 @@ use p5\controllers\frontend\CommentsController;
 use p5\controllers\frontend\PaginationController;
 
 
+
 $postcont= new PostsController();
 $postman = new PostsManager();
 $commentman = new CommentsManager();
@@ -81,9 +82,30 @@ if (isset($_GET['action']))
 		$usercont->insertUser($userman, $pseudo, $password1, $password2, $mail);
 		$postcont->allPosts($postman, $pagincont);
 	}
+	
+	else if ($_GET['action'] == 'activation')
+	{
+		$log = $_GET['log'];
+		$key = $_GET['key'];
+		$usercont->account_activation($userman, $session, $log, $key);
+		$postcont->allPosts($postman, $pagincont);
+	}
 	else if ($_GET['action'] == 'logout')
 	{
 		$usercont->destroySession();
+		$postcont->allPosts($postman, $pagincont);
+		
+	}
+	
+	else if ($_GET['action'] == 'contact')
+	{
+		
+		$name = htmlspecialchars($_POST['name']);
+		$mail = htmlspecialchars($_POST['mail']);
+		$phone = htmlspecialchars($_POST['phone']);
+		$object = htmlspecialchars($_POST['object']);
+		$message = htmlspecialchars($_POST['message']);
+		$usercont->sendMailContact($name, $mail, $phone, $object, $message);
 		$postcont->allPosts($postman, $pagincont);
 		
 	}

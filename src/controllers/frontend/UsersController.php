@@ -1,8 +1,5 @@
 <?php
 namespace p5\controllers\frontend;
-use SendGrid\Email;
-use SendGrid\Content;
-use SendGrid\Mail;
 use p5\managers\UsersManager;
 use p5\entities\Users;
 use p5\app\Session;
@@ -31,57 +28,57 @@ class UsersController implements MailerInterface
 			
 	}
 
-	public function sendMail($pseudo, $mail_add, $activKey)
+	public function sendMailInscr($pseudo, $mail_add, $activKey)
 	{
 
-		require "../vendor/autoload.php";
+		$objet = 'Confirmation de votre inscription sur le blog de Laurent BERTON' ;
+		$to = $mail_add;
+		$header =
+		'Content-type: text/html; charset=utf-8' . "\r\n" .
+		'From: contact@b-log-lille.fr' . "\r\n" .
+		'Reply-To: contact@b-log-lille.fr' . "\r\n" .
+		'X-Mailer: PHP/' . phpversion();
 		
-		$from = new Email('Laurent BERTON', "lolosambo2@gmail.com");
-		$subject = "Confirmation de votre inscription sur le blog de Laurent BERTON";
-		$to = new Email($pseudo, $mail_add);
-		$content = new Content("text/plain", "<p>Bonjour '.ucfirst($pseudo).' et bienvenue sur le blog professionnel de Laurent BERTON,</p>
- 
-			<p>Pour activer votre compte, veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur.</p>
- 
-			<p><a href='index.php?action=activation&amp;log='.$pseudo.'&amp;key='.$activKey.''</a></p><br><br>
- 
- 
-			---------------<br>
-			<p>Ceci est un mail automatique, Merci de ne pas y répondre.</p>");
-		$mail = new Mail($from, $subject, $to, $content);
-		
-		$apiKey = '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';
-		$sg = new \SendGrid($apiKey);
-		$response = $sg->client->mail()->send()->post($mail);
-		echo $response->body();
 
-
-
-
-		// $objet = 'Confirmation de votre inscription sur le blog de Laurent BERTON' ;
-		// 	$to = $mail_add;
-		// 	$header =
-		// 	'Content-type: text/html; charset=utf-8' . "\r\n" .
-		// 	'From: lolosambo2@gmail.com' . "\r\n" .
-		// 	'Reply-To: lolosambo2@gmail.com' . "\r\n" .
-		// 	'X-Mailer: PHP/' . phpversion();
-
-		// 	$message = 
-		// 	'<p>Bonjour '.ucfirst($pseudo).' et bienvenue sur le blog professionnel de Laurent BERTON,</p>
+		$message = 
+		'<p>Bonjour '.ucfirst($pseudo).' et bienvenue sur le blog professionnel de Laurent BERTON,</p>
  
-		// 	<p>Pour activer votre compte, veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur.</p>
+		<p>Pour activer votre compte, veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur.</p>
  
-		// 	<p><a href="index.php?action=activation&amp;log='.$pseudo.'&amp;key='.$activKey.'"</a></p><br><br>
+		<p><a href="http://www.b-log-lille.fr/public/index.php?action=activation&amp;log='.$pseudo.'&amp;key='.$activKey.'">Activez votre compte</a></p><br><br>
  
  
-		// 	---------------<br>
-		// 	<p>Ceci est un mail automatique, Merci de ne pas y répondre.</p>';
+		---------------<br>
+		<p>Ceci est un mail automatique, Merci de ne pas y répondre.</p>';
           
-		// 	//Send mail
-		// 	mail($to, $objet, $message, $header);
-
+		//Send mail
+		mail($to, $objet, $message, $header);
 
 	}
+	
+	public function sendMailContact($name, $mail, $phone, $object, $message)
+	{
+
+		$objet = 'Nouveau message de B-LOG' ;
+		$to = 'contact@b-log-lille.fr';
+		$header =
+		'Content-type: text/html; charset=utf-8' . "\r\n" .
+		'From: contact@b-log-lille.fr' . "\r\n" .
+		'Reply-To: '.$mail."\r\n" .
+		'X-Mailer: PHP/' . phpversion();
+
+		$message = 
+		'<p>Message en provenance de '.$name.'.</p>
+		<p>Numéro de téléphone : '.$phone.'</p>
+		<p>Adresse mail : '.$mail.'</p>
+		<p>Sujet du message : '.$object.'</p>
+		<p>Message : '.$message.'</p>';
+		
+          
+		//Send mail
+		mail($to, $objet, $message, $header);		
+
+}
 
 
 	public function insertUser(UsersManager $userman, $pseudo, $password1, $password2, $mail)
@@ -110,9 +107,43 @@ class UsersController implements MailerInterface
 		{
 			$activKey = $userman->addUser($pseudo, $password1, $mail);
 			$session->setSession('activation_key', $activKey);
-			$this->sendMail($pseudo, $mail, $activKey);
+			$this->sendMailInscr($pseudo, $mail, $activKey);
 
 		}
+	}
+	
+	public function account_activation(UsersManager $userman, Session $session, $pseudo, $activKey)
+	{
+
+		$res = $userman->accActivation($pseudo, $activKey);
+		$activationKey = $res['activation_key'];	
+		$verified = $res['verified']; 
+
+    
+		if($verified == '1') 
+		{
+   		 	// echo "Votre compte est déjà actif !";
+  		}
+  		else 
+  		{
+    		if($activKey == $activationKey) 
+      			{
+          		
+        	  		// echo "<p>Votre compte a bien été activé !</p>
+			  		// <p>Vous pouvez maintenant <a href='http://www.b-log-lille.fr/public/index.php'>vous connecter</a>";
+
+			  		$userman->setValidated($pseudo);
+			  		}
+			  		else // if the two keys are different
+			  		{
+			  		// echo "Erreur ! Votre compte ne peut être activé...";
+			  		}
+	  	}
+
+	  	$session->setSession('activKey', $activKey);
+	  	$session->setSession('activationKey', $activationKey);
+	  	$session->setSession('update_verfied',  $verified);
+
 	}
 
 	public function destroySession()

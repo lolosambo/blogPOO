@@ -32,8 +32,8 @@
 	<label for="message" required>Message : </label><br>
 	<textarea name="message" cols=10 rows=50/></textarea><br><br>
 
-	<!-- <script src='https://www.google.com/recaptcha/api.js'></script>
-	<div class="g-recaptcha" data-sitekey="6LeVwz0UAAAAAIj5SV_oArSrmS-jM4neQaP5nOvh"></div><br><br> -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<div class="g-recaptcha" data-sitekey="6LeVwz0UAAAAAIj5SV_oArSrmS-jM4neQaP5nOvh"></div><br><br>
 
 
 	<button type="submit" class="btn btn-warning" name="valider">Envoyer</button><br>

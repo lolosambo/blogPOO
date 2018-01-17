@@ -35,7 +35,7 @@ $session = new Session();
 
 			if ($session->getSessionVar('id_role') == 2)
 			{
-				echo '<a href="admin/">Accéder à l\'administration</a>';
+				echo '<a href="admin/index.php">Accéder à l\'administration</a>';
 			}
 			?>
 
