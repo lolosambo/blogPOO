@@ -13,6 +13,7 @@ $usercont = $builder->createBackController('users')->build();
 $pagincont = $builder->createFrontController('pagination')->build();
 $imgcont = $builder->createBackController('images')->build();
 $networkcont = $builder->createFrontController('networks')->build();
+$daschboardcont = $builder->createBackController('daschboard')->build();
 
 
 
@@ -213,7 +214,7 @@ else
 	}
 	else
 	{
-	$usercont->showDaschboard($builder);
+	$daschboardcont->showDaschboard($builder);
 	}
 
 }
