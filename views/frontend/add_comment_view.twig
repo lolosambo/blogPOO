@@ -1,0 +1,21 @@
+
+<div class='comment_form'>
+
+<form method="POST" action="/addComment/{{title}}" name="add_comment">
+
+	<label for="comment">Votre commentaire : </label><br>
+
+		<textarea name="comment" cols=100 rows=10></textarea><br><br>
+
+	<button type="submit" class="btn btn-default btn-sm" name="validComment" value="1">Soumettre votre commentaire</button><br><br>
+
+	{% if validation == 1  %}
+
+		{% if role == 1 %} <p>Votre commentaire a bien été transmis pour publication</p> {% endif%}
+		{% if role == 2 %} <p>Votre commentaire a bien été publié</p> {% endif%}
+
+	{% endif%}
+
+</form>
+
+</div>

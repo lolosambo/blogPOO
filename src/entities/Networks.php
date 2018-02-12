@@ -1,6 +1,6 @@
 <?php
 
-namespace blog\entities;
+namespace P5\entities;
 
 class Networks
 

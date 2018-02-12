@@ -1,29 +1,49 @@
 <?php
 
-namespace p5\managers;
-use p5\database\DbFactory;
+namespace P5\managers;
+use P5\core\factories\DbFactory;
+use P5\managers\MainManager;
 use \PDO;
 
 
-class UsersManager
+class UsersManager extends MainManager
 {
 
-	private $db;
-
-
-
+	protected $db;
 
 	public function __construct()
 	{
-  	 	$this->db = new DbFactory();
+		$this->getDb(); 
+  	 	return $this->db;
 	}
 
 
-	public function getUser($pseudo, $password)
+	public function usersList()
 	{
+		return $this->getAllBy('Users', 'pseudo', 0, 100);	 
+	}
+
+
+	public function compareUsers($column, $pseudo)
+	{
+		return $this->getOne('Users', $column, $pseudo);
+	}
+
+
+	public function deleteUser($pseudo)
+	{
+		return $this->erase('Users', 'pseudo', $pseudo);
+	}
+
+
+	public function login($pseudo, $password)
+	{
+
   		$password = sha1($password);
   		$pseudo = htmlspecialchars($pseudo);
+
   		$user = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :pseudo AND password = :password');
+
   		$user->bindParam(':pseudo', $pseudo);
 		$user->bindParam(':password', $password);
 		$user->execute();
@@ -32,15 +52,7 @@ class UsersManager
 	}
 
 
-	public function getUsersList()
-	{
-		$req = $this->db->getPdo()->query('SELECT * FROM Users ORDER BY inscr_date DESC');
-		$res = $req->fetchAll();
-		return $res;
-
-	}
-
-	public function addUser($pseudo, $password, $mail)
+	public function insertUser($pseudo, $password, $mail)
 	{
   		 
   		 // Creation of a Random Activation Key
@@ -65,27 +77,11 @@ class UsersManager
 	}
 
 
-	public function compareUsers($pseudo)
-	{
-		$req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :pseudo');
-		$req->bindParam(':pseudo', $pseudo);
-		$req->execute();
-		$res=$req->fetch();
-		return $res;
 	
-	}
 
 	public function get5LastUsers()
 	{
-
-		$req = $this->db->getPdo()->query 
-		('
-			SELECT *, DATE_FORMAT(u.inscr_date, "%d/%m/%Y à %Hh%i") AS inscr_date  FROM Users AS u
-			ORDER BY id
-			DESC
-			LIMIT 0, 5
-		');
-
+		$req = $this->getAllByDate('inscr_date', 'Users', 'inscr_date', 0, 5);
 		return $req;
 	}
 
@@ -111,70 +107,30 @@ class UsersManager
 
 	public function updateToAdmin($pseudo)
 	{
-		$req = $this->db->getPdo()->prepare
-		('
-			UPDATE Users SET id_role = 2
-			WHERE pseudo = :pseudo
-	
-		');
-
-		$req->bindParam(':pseudo', $pseudo);
-		$req->execute();
-
-		return $req;
-
+		return $this->update('Users', 'id_role', 2, 'pseudo', $pseudo);	
 	}
 
 	public function updateToUser($pseudo)
 	{
-		$req = $this->db->getPdo()->prepare
-		('
-			UPDATE Users SET id_role = 1
-			WHERE pseudo = :pseudo
+		return $this->update('Users', 'id_role', 1, 'pseudo', $pseudo);
+	}
+
+
 	
-		');
-
-		$req->bindParam(':pseudo', $pseudo);
-		$req->execute();
-
-		return $req;
-
-	}
 
 
-	public function eraseUser($pseudo)
+	public function accActivation($pseudo)
 	{
+		return $this->getOne('Users', 'pseudo', $pseudo);
 
-		$req = $this->db->getPdo()->prepare
-		('
-			DELETE FROM Users
-			WHERE pseudo = :pseudo
-	
-		');
-
-		$req->bindParam(':pseudo', $pseudo);
-		$req->execute();
-
-		return $req;
 	}
 
 
-	public function accActivation($pseudo, $key)
-	{
-		$req = $this->db->getPdo()->prepare("SELECT activation_key, verified FROM Users WHERE pseudo like :pseudo");
-		$req->bindParam(':pseudo', $pseudo);
-		$req->execute();
-		$data = $req->fetch();
-		return $data;
-	}
-
-
-	public function setValidated($login)
+	public function setVerified($login)
 	{
 		
-		$req = $this->db->getPdo()->prepare("UPDATE Users SET verified = 1 WHERE pseudo like :login ");
-   	 	$req->bindParam(':login', $login);
-    	$req->execute();
+    	return $this->update('Users', 'verified', 1, 'pseudo', $login);
+    	
 	}
 
 	

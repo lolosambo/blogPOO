@@ -1,6 +1,6 @@
 <?php
-namespace p5\entities;
-use p5\interfaces\hydrateInterface;
+namespace P5\entities;
+use P5\core\interfaces\hydrateInterface;
 
 
 class Comments implements HydrateInterface

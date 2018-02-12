@@ -1,0 +1,96 @@
+{% extends 'views/templates/default.twig' %}
+
+{% block content %}
+
+
+	<div class="row post_single">
+
+		<div class="row">
+
+			<div class="col-lg-5 col-md-12 col-sm-12 col-12">
+
+				<div class="post_single_thumbnail" style="background-image: url({{ post.post_img_url }})"></div>
+
+			</div>
+
+
+			<div class="col-lg-7 col-md-12 col-sm-12 col-12">
+
+				<div class="row">
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12 post_single_intro">
+							
+						<p><b><h1>{{ post.post_title }}</h1></b></p>
+
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12 post_single_info">
+							
+						<p>Ecrit par <b>{{ author.pseudo }}</b> - Modifié le {{ post.postUpdate }}</p>
+									
+					</div>
+							
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+						  <h3><em><b>{{ post.post_heading }}</b></em></h3>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12 post_single_content">
+					
+				<p>{{ post.post_content }}</p>
+
+				<p><a href="/"><button type="button" class=" btn btn-warning">Retour à la liste des articles</button></a></p>
+
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+		</div>		
+	</div>
+</div>
+
+{% endblock %}
+
+
+{% block comments %}
+{% for comments in comments %}
+
+	<div class="comment">
+		<div class="comment_info">
+					
+			<p>Publié par : <b>{{comments.pseudo}} </b><em>le {{comments.commentUpdate}}</em></p>
+						
+		</div>
+					
+		<p> {{comments.comment_content}}</p><br>
+
+	</div><br>
+
+{% endfor %}
+
+{% if role == 2 or role == 1 %}
+	{% include "views/frontend/add_comment_view.twig" %}
+{% endif %}
+
+{% endblock %}
+
+{% block network %}{{ network.__invoke }}{% endblock %}
+
+{% block sidebar %} {{sidebar.__invoke}} {% endblock %}
+
+
+
+
+
+
+

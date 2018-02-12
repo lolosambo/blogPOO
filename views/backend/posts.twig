@@ -1,0 +1,47 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+{% block title %} GESTION DES ARTICLES {% endblock %}
+
+{% block content %}
+
+	<br><a href="/admin/addPostForm/">
+		<button type="button" class=" btn btn-dark">Ecrire un article</button> 
+	</a></p>
+
+{% for post in post %}
+
+   
+	<p><b>{{post.post_title}}</b></p>
+	<p><em>Dernière mise à jour le {{post.postUpdate}}</em> - Edité par : <b>{{post.pseudo}}</b></p>
+	<a href="/admin/updatePost/{{post.post_title | replace({' ' : '_'})}}">
+		<button type="button" class=" btn btn-dark">Modifier l'article</button>  
+	</a>
+	<a href="/admin/deletePost/{{post.postId }}">
+		<button type="button" class=" btn btn-dark">Supprimer l'article</button> 
+	</a></p>
+
+	--------------------------------------------------
+					
+
+{% endfor %}
+
+{% for i in range(1, pagesNbr) %}
+
+    {% if i == currentPage %}
+            
+        [ {{i}} ]
+
+    {% endif%} 
+            
+    {% if i != currentPage %}
+
+        <a href="/admin/posts/{{i}}">{{i}}</a>
+
+    {% endif%}
+
+{% endfor %}
+
+{% endblock %}
+
+
+

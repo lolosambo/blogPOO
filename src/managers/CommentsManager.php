@@ -1,25 +1,33 @@
 <?php
 
-namespace p5\managers;
-use p5\database\DbFactory;
+namespace P5\managers;
+use P5\core\factories\DbFactory;
+use P5\managers\MainManager;
 use \PDO;
 
 
-class CommentsManager
+class CommentsManager extends MainManager
 {
 
-	private $db;
+	protected $db;
 
 	public function __construct()
 	{
-  	 	$this->db = new DbFactory();
+		$this->getDb(); 
+  	 	return $this->db;
 	}
 
 
-	//LIST COMMENTS------------------------------
+	public function getTotalComments() //Only non-validated comments
+	{
+		return $this->count('Comments', 'validated', 0);
+	}
+	
 
 	public function getComments($post_id)
 	{
+		
+		
 		$comments = $this->db->getPdo()->prepare
 			('
 	
@@ -82,13 +90,7 @@ class CommentsManager
 	public function deleteComment($comment_id)
 	{
 		
-		$deletedComment = $this->db->getPdo()->prepare
-			('
-				DELETE FROM Comments WHERE id = :commentId
-			');
-
-		$deletedComment->bindParam(':commentId', $comment_id);
-		$deletedComment->execute();
+		$deletedComment = $this->erase('Comments', 'id', $comment_id);
 		return $deletedComment;
 
 	}
@@ -99,13 +101,9 @@ class CommentsManager
 	public function publishComment($comment_id)
 	{
 		
-		$publishedComment= $this->db->getPdo()->prepare
-			('
-				UPDATE Comments SET validated = 1 WHERE id = :commentId'
-			);
-			$publishedComment->bindParam(':commentId', $comment_id);
-			$publishedComment->execute();
-			return $publishedComment;
+		$publishedComment= $this->update('Comments', 'validated', 1, 'id', $comment_id);
+			
+		return $publishedComment;
 
 	}
 
@@ -130,7 +128,6 @@ class CommentsManager
 		return $req;
 
 	}
-
 
 
 	public function get3LastUnvalidComments()
@@ -171,17 +168,6 @@ class CommentsManager
 		$data = $req->fetchAll();
 		return $data;
 
-	}
-
-
-
-	public function getTotalComments() //Only non-validated comments
-	{
-
-	$req= $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated = 0');
-	$data = $req->fetch();
-	$total=$data['total'];
-	return $total;
 	}
 
 
