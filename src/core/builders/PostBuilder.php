@@ -28,3 +28,4 @@ class PostBuilder
       return $this->post;
     }
 }
+

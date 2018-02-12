@@ -78,7 +78,5 @@ class ShowPostsController
 		
 	}
 
-
-	
-
 }
+

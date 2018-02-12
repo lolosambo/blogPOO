@@ -4647,7 +4647,7 @@ var Modal = function () {
       }
     }; // ----------------------------------------------------------------------
     // the following methods are used to handle overflowing modals
-    // todo (fat): these should probably be refactored out of modal.js
+   
     // ----------------------------------------------------------------------
 
 
@@ -5788,7 +5788,7 @@ var ScrollSpy = function () {
           var targetBCR = target.getBoundingClientRect();
 
           if (targetBCR.width || targetBCR.height) {
-            // todo (fat): remove sketch reliance on jQuery position/offset
+            
             return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
           }
         }

@@ -82,11 +82,5 @@ class UserInscriptionController implements InscrMailerInterface
 		mail($to, $objet, $message, $header);
 	}
 
-	
-	
-	
-	
-	
-
-
 }
+

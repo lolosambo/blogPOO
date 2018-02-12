@@ -8,3 +8,4 @@ interface ContactMailerInterface
 	public function sendMailContact($name, $mail, $phone, $object, $message);
 
 }
+

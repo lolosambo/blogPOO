@@ -32,3 +32,6 @@ class Route
   public function setMethod($method) { $this->method = $method; }
   
 }
+
+
+

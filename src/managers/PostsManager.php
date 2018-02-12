@@ -126,7 +126,7 @@ class PostsManager extends MainManager
 		return $req;
 
 	}
-
-
 	
 }
+
+
