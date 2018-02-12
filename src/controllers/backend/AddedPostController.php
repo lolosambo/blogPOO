@@ -55,14 +55,14 @@ class AddedPostController implements CheckImageInterface
 		{
    		 	$error = 'Vous devez uploader un fichier de type png, gif, jpg ou jpeg.';
    		 	echo $this->factory->getTwig()->render('views/backend/err_img.twig', ['erreur' => $error]);
-   		 	die;
+   		 	
 		}
 
 		if($size>$size_max)
 		{
    		  	$error = 'Le fichier est trop gros...';
    		  	echo $this->factory->getTwig()->render('views/backend/err_img.twig', ['erreur' => $error]);
-   		  	die;
+   		  	
 		}
 
 		//If there's no error, begin upload

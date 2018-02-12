@@ -1,25 +1,21 @@
-{
-    "name": "lolosambo/blog",
-    "require": {
-        "symfony/http-foundation": "^4.0",
-        "sendgrid/sendgrid": "^6.0",
-        "vlucas/phpdotenv": "^2.4",
-        "twig/twig": "^2.4"
-    },
-
-    "authors": [
-        {
-            "name": "lolosambo",
-            "email": "lolosambo2@gmail.com"
-        }
-    ],
-
-    "autoload":{
-        "psr-4" : {
-            "Config\\" : "config",
-            "P5\\" : "src"
-
-            
-        }
-    }
+{  
+   "name":"lolosambo/blog",
+   "require":{  
+      "symfony/http-foundation":"^4.0",
+      "sendgrid/sendgrid":"^6.0",
+      "vlucas/phpdotenv":"^2.4",
+      "twig/twig":"^2.4"
+   },
+   "authors":[  
+      {  
+         "name":"lolosambo",
+         "email":"lolosambo2@gmail.com"
+      }
+   ],
+   "autoload":{  
+      "psr-4":{  
+         "Config\\":"config",
+         "P5\\":"src"
+      }
+   }
 }
