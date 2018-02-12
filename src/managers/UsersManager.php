@@ -72,7 +72,6 @@ class UsersManager extends MainManager
 		$req->bindParam(':mail', $mail);
 		$req->bindParam(':activation_key', $activation_key);
 		$req->execute();
-		// $_SESSION['activation_key'] = $activation_key;
 		return $activation_key;
 	}
 

@@ -27,7 +27,7 @@ class UpdateNetworkController
 		
 		$networkId = $match[1];
 		$address = $this->request->request->get('address');
-		$res = $this->networkman->changeNetwork($networkId, $address);
+		$this->networkman->changeNetwork($networkId, $address);
 
 		echo $this->factory->getTwig()->render('views/backend/update_network.twig');	
 	}

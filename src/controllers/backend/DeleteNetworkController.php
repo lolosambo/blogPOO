@@ -29,7 +29,7 @@ class DeleteNetworkController
 		
 		$networkId = $match[1];
 
-		$res = $this->networkman->eraseNetwork($networkId);
+		$this->networkman->eraseNetwork($networkId);
 
 		echo $this->factory->getTwig()->render('views/backend/delete_network.twig');	
 	}

@@ -30,11 +30,3 @@ class Validator
 }
 
 
-
-
-      // foreach ($data as $entry) 
-      // {
-      //    $this->validator->validateSQL($entry);
-      //    $this->validator->validateJavascript($entry);
-      // }
-
