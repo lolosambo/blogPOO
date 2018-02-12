@@ -1,33 +1,31 @@
 <?php
 
-namespace p5\managers;
-use p5\database\DbFactory;
+namespace P5\managers;
+use P5\core\factories\DbFactory;
+use P5\managers\MainManager;
+use \PDO;
 
 
-
-class PostsManager
+class PostsManager extends MainManager
 {
 
-	private $db;
+	protected $db;
 
-	
 	public function __construct()
 	{
-  	 	$this->db = new DbFactory();
+		$this->getDb(); 
+  	 	return $this->db;
 	}
 
 	
-	public function countPosts()
+	
+	public function countAllPosts()
 	{
-
-		$req = $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Posts');
-		$data = $req->fetch();
-		$total=$data['total'];
-		return $total;
+		return $this->count('Posts');
 	}
 
 
-	public function getPosts($firstEntry, $postsPerPage)
+	public function allPosts($firstEntry, $postsPerPage)
 	{
 
 		$posts = $this->db->getPdo()->query
@@ -45,26 +43,25 @@ class PostsManager
 	}
 
 	
-	public function getPost($post_id)
+	public function onePost($title)
 	{
-	
 		$post = $this->db->getPdo()->prepare
 		('
 	
 			SELECT *, p.id AS postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate
 			FROM Users AS u 
 			INNER JOIN Posts AS p ON u.id = p.id_user
-			AND p.id = :postId 
+			AND p.post_title = :title
 		');
 
-		$post->bindParam(':postId', $post_id);
+		$post->bindParam(':title', $title);
 		$post->execute();
 		$data = $post->fetch();
 		return $data;
 	}
 
 
-	public function writePost($user_id, $title, $heading, $post_content, $img)
+	public function insertPost($user_id, $title, $heading, $post_content, $img)
 	{
 		$newPost = $this->db->getPdo()->prepare
 		("
@@ -100,7 +97,7 @@ class PostsManager
 		return $req;
 	}
 
-	public function modifyPost($postId, $title, $heading, $content)
+	public function updatePost($postId, $title, $heading, $content)
 	{
 
 		$req = $this->db->getPdo()->prepare
@@ -123,16 +120,9 @@ class PostsManager
 	}
 
 
-	public function erasePost($postId)
+	public function deletePost($postId)
 	{
-		$req = $this->db->getPdo()->prepare
-		('
-			DELETE FROM Posts 
-			WHERE id = :post_id
-		');
-
-		$req->bindParam(':post_id', $postId);
-		$req->execute();
+		$req = $this->erase('Posts', 'id', $postId);
 		return $req;
 
 	}

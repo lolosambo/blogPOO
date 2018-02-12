@@ -1,0 +1,26 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+{% block title %} GESTION DES RESEAUX SOCIAUX {% endblock %}
+
+{% block content %}
+
+<form action="/admin/addedNetwork/" method="POST" enctype="multipart/form-data" name="add_network>
+
+	<label for="name">Nom du réseau : </label>
+	<input type="text" name="name" lenght=230/><br><br>
+
+	<label for="address">Adresse : </label>
+	<input type="text" name="address" lenght=530/><br><br>
+
+	<!-- Image insertion field -->
+	<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+ 	<label for="img">Insérer une image : </label>
+ 	<input name="img" type="file"/><br><br>
+
+	<button type="submit" name="create" class=" btn btn-warning">Ajouter ce réseau</button>
+
+</form>
+
+<a href="/admin/networks/"><button type="button" class=" btn btn-warning">Retour à la liste des réseaux</button></a>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% block network %}
+
+<center><h4>Retrouvez-moi sur</h4></center>
+
+
+<div class="col-lg-12  col-md-12 col-sm-12">
+{% for network in network %}
+
+<table style="display: inline; margin-left:auto; margin-right: auto;">
+
+	<tr>
+
+		<td><a href="{{network.address}}" target="blank"><img src="{{network.img_url}}"/></a></td>
+
+	</tr>
+
+	<tr>
+
+		<td><h6>{{network.network_name}}</h6></td>
+
+	</tr>
+
+</table>
+
+{% endfor %}
+
+</div>
+
+{%endblock%}
+

@@ -3,7 +3,8 @@
     "require": {
         "symfony/http-foundation": "^4.0",
         "sendgrid/sendgrid": "^6.0",
-        "vlucas/phpdotenv": "^2.4"
+        "vlucas/phpdotenv": "^2.4",
+        "twig/twig": "^2.4"
     },
 
     "authors": [
@@ -15,7 +16,8 @@
 
     "autoload":{
         "psr-4" : {
-            "p5\\" : "src"
+            "Config\\" : "config",
+            "P5\\" : "src"
 
             
         }

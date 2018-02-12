@@ -1,0 +1,28 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+{% block title %} GESTION DES RESEAUX SOCIAUX {% endblock %}
+
+{% block content %}
+
+{% for network in network%}
+
+	<br>
+
+	<form action="/admin/updateNetwork/{{network.id}}" method="POST">
+
+		<label for="network1"><img src="{{network.img_url}}"/> {{network.network_name}}</label>
+
+		<input type="text" name="address" value="{{network.address}}" lenght=530/><br><br>
+
+		<button type="submit" name="update" class=" btn btn-warning">Enregistrer les modifications</button>
+
+		<a href="/admin/deleteNetwork/{{network.id}}"><button type="button" class=" btn btn-warning">Supprimer ce réseau</button></a>
+
+	</form>
+	<br>
+
+{% endfor %}
+
+<a href="/admin/addNetwork/"><button type="button" class=" btn btn-warning">Ajouter un réseau social</button>  </a>
+
+{% endblock %}

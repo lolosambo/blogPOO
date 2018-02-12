@@ -13,9 +13,9 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
     );
 
     public static $prefixLengthsPsr4 = array (
-        'p' => 
+        'T' => 
         array (
-            'p5\\' => 3,
+            'Twig\\' => 5,
         ),
         'S' => 
         array (
@@ -23,16 +23,24 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'SendGrid\\' => 9,
         ),
+        'P' => 
+        array (
+            'P5\\' => 3,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
         ),
+        'C' => 
+        array (
+            'Config\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'p5\\' => 
+        'Twig\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -46,9 +54,27 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
         ),
+        'P5\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
         ),
     );
 
@@ -57,6 +83,7 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

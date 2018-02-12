@@ -1,0 +1,38 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+{% block title %} GESTION DES COMMENTAIRES {% endblock %}
+
+{% block content %}
+
+{% for comments in comments %}     
+     <div class="comment">
+
+        <div class="comment_info">
+            
+            <p>Commentaire publié par <b>: {{comments.pseudo}}</b><em> le {{comments.commentUpdate}}</em></p>
+                            
+        </div>
+
+                         
+           <p>Article : <b>{{comments.post_title}}</b></p>
+                            
+           <p>Contenu : {{comments.comment_content}}</p>
+
+            <!-- "Publier" and "Refuser" buttons for each comment -->
+
+                               
+            <a href="/admin/comments/published/{{comments.commentId}}">
+            
+            <button  class="btn btn-warning btn-sm btn-sm-active" name="publier{{comments.commentId}}">Publier</button> </a>
+                                  
+            <a href="/admin/comments/refused/{{comments.commentId}}">
+            
+            <button  class="btn btn-warning btn-sm btn-sm-active" name="refuser{{comments.commentId}}">Refuser</button></a><br>
+                        
+        </div><br>
+
+{% endfor %}
+
+{{pagination.showPagination}}
+
+{% endblock %}

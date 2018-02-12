@@ -1,0 +1,48 @@
+{% extends 'views/templates/default.twig' %}
+
+{% block content%}
+
+<div class="row page">
+
+	<div class="col-lg-2 col-md-2 col-sm-2 loloDebout">
+
+
+	</div>
+
+	<div class="col-lg-9 col-md-9 col-sm-10">
+
+		<div class="row">
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+
+				<h1>QUI SUIS-JE ?</h1>
+
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+			
+				<p>Agé de 41 ans et armé d’un solide sens de la créativité mais aussi et surtout de la curiosité, j’ai commencé ma vie professionnelle en 2001 en tant qu’adjoint administratif au sein d’un service communication d’une collectivité territoriale de la métropole Lilloise. Durant cette période, j’ai pu m’auto-former à l’infographie et ainsi pu développer des compétences sur les logiciels de la suite Adobe Creative Suite (Photoshop, Illustrator, In Design entre autre).</p>
+
+				<p>Après en avoir eu l’opportunité, j’ai pris la tête de ce service et acquis d’autres compétences notamment  rédactionnelles, organisationnelles et comptables. Au contact permanent avec les autres services de ma collectivité mais aussi avec tout le tissu associatif de la ville pour laquelle j’ai travaillé durant 16 ans, j’ai affûté ma connaissance de l’administration française et par conséquent ma compréhension des attentes de celle-ci en matière de service public.</p>
+
+				<p>Ma passion pour la programmation a débuté en 2003, lorsque confronté à la nécessité de créer un site internet pour une association dont je faisais parti, j’ai réalisé mes premiers pas dans le développement web en apprenant le HTML basique. Ce même site a connu plusieurs versions au cours des années (les besoins de la structure exigeant toujours plus d’interactivité) et j’ai donc évolué en même temps que lui (apprentissage du CSS, puis du PHP, puis du CMS Wordpress). Très vite, un autre projet m’a été confié, puis un autre. Ce qui m’a amené naturellement à penser que ce métier était fait pour moi.</p>
+
+				<p>C’est la raison pour laquelle en septembre 2017, j’ai pris une mesure ô combien audacieuse : démissionner de la Fonction Publique Territoriale. J’ai ensuite suivi une formation à distance et obtenu un diplôme de Developpeur d'Application PHP / Symfony au sein du site Openclassrooms. Diplôme me permettant aujourd’hui de vous proposer mes services. Et ainsi naquit B-LOG…</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block network %}{{ network.__invoke }}{% endblock %}
+
+{% block sidebar %} {{sidebarContent.__invoke}} {% endblock %}
+
+

@@ -1,0 +1,21 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+
+{% block title %} GESTION DES UTILISATEURS {% endblock %}
+
+{% block content %}
+
+<form method="POST" action="/admin/searchUser/" name="connexion">
+
+<label for="search">Rechercher un utilisateur</label>
+<input type="text" name="search" lenght=30>
+
+<button type="submit" class="btn btn-warning" name="valider" value=1 >Rechercher</button>
+
+<br><br>
+
+</form>
+
+<p>L'utilisateur a été mis à jour avec succès</p>
+
+{% endblock %}

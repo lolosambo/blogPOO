@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ADMINISTRATION DU BLOG</title>
+		<link rel="stylesheet" href="../public/css/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="../public/css/admin_style.css" type="text/css"/>
+	</head>
+	
+	<body>
+
+
+<div class="container">
+
+	<div class="row content no-padding">
+		
+		<div class="col-lg-3 col-md-3 col-sm-12 col-12 left_col no-padding">
+
+			{% include "views/menu/backend/menu.twig" %}
+		
+		</div>	
+
+		
+		<div class="col-lg-9 col-md-9 col-sm-12 col-12 right_col">
+
+			<div class="row no-padding">
+				
+				<div class="col-lg-6 col-md-6 col-sm-12 col-12 users">	
+
+					<h6>Les 5 utilisateurs enregistrés</h6>	
+
+					{% for users in users %}
+					
+					<p><b>{{users.pseudo}}</b> - Inscrit(e) le : {{users.inscr_date}}</p>
+
+					{% endfor%}	
+					
+				</div>
+				
+				<div class="col-lg-6 col-md-6 col-sm-12 col-12 posts">
+
+					<h6>Les 3 derniers articles</h6>
+			
+					{% for posts in posts %}
+					
+					<p><em>Dernière mise à jour le : {{posts.postUpdate}}</em><br>
+					<b>{{posts.post_title}}</b><br></p>
+
+					{% endfor%}	
+
+				</div>
+
+			</div>
+
+			<div class="row no-padding">
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-12 valComments">
+
+					<h6>Les 3 derniers commentaires validés</h6>
+				
+					{% for comment1 in comment1 %}
+					
+					<p><em>Posté le : {{comment1.commentUpdate}}</em><br>
+					<b>{{comment1.post_title}}</b><br>
+					{{comment1.comment_content}}<br>
+				---------------------------------------------------</p>
+
+					{% endfor%}	
+
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-12 unvalComments">
+
+					<h6>Les 3 derniers commentaires à valider</h6>
+			
+					{% for comment0 in comment0 %}
+					
+					<p><em>Posté le : {{comment0.commentUpdate}}</em><br>
+					<b>{{comment0.post_title}}</b><br>
+					{{comment0.comment_content}}<br>
+				---------------------------------------------------</p>
+
+					{% endfor%}	
+
+				</div>
+
+			</div>
+		
+		</div>	
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-12 footer"></div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

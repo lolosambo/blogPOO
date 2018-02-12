@@ -1,0 +1,13 @@
+{% extends 'views/templates/admin_template.twig' %}
+
+{% block title %} ERREUR FICHIER IMAGE {% endblock %}
+
+{% block content %}
+
+<p>Une erreur a été rencontrée lors de l'upload de votre fichier !</p>
+
+<p>{{erreur}}</p>
+
+<a href="/admin/posts/"><button type="button" class=" btn btn-warning">Retour à la liste des articles</button></a>
+
+{% endblock %}
