@@ -153,7 +153,7 @@ class CommentsManager extends MainManager
 	public function getUnvalidComments($commentsFirstEntry, $commentsPerPage)
 	{
 
-		$req= $this->db->getPdo()->query
+		$req= $this->db->getPdo()->prepare
 		('
 			SELECT *, c.id AS commentId, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
 			INNER JOIN Comments AS c 
@@ -162,8 +162,11 @@ class CommentsManager extends MainManager
 			ON c.id_post = p.id
 			AND validated = 0
 			ORDER BY commentUpdate
-			DESC LIMIT '.$commentsFirstEntry.', '.$commentsPerPage.'
+			DESC LIMIT :commentsFirstEntry, :commentsPerPage
 		');
+		$req->bindparam(':commentsFirstEntry', $commentsFirstEntry, PDO::PARAM_INT);
+		$req->bindparam(':commentsPerPage',$commentsPerPage, PDO::PARAM_INT);
+		$req->execute();
 		
 		$data = $req->fetchAll();
 		return $data;
