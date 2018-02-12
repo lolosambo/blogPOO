@@ -9,7 +9,6 @@ class AccountController
 {
 
 	private $userman;
-	private $factory;
 	private $twig;
 	private $builder;
 	private $session;

@@ -5,13 +5,12 @@ use P5\core\factories\ControllerFactory;
 class ContactController 
 {
 	
-	private $factory;
+
 	private $request;
 	
 	public function __construct()
 	{
 		$factory = new ControllerFactory();
-		$this->factory = $factory;
 		$this->request = $factory->getRequest();
 		
 	}

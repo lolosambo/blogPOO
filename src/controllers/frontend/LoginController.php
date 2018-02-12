@@ -7,7 +7,6 @@ class LoginController
 {
 	
 	private $controller;
-	private $builder;
 	private $session;
 	private $twig;
 

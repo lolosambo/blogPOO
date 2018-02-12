@@ -7,17 +7,14 @@ use P5\core\factories\ControllerFactory;
 class AddCommentController
 {
 
-	private $factory;
 	private $commentman;
-	private $twig;
-	private $session;
 
 	public function __construct()
 	{
 		$factory = new ControllerFactory();
-		$this->factory = $factory;
+
 		$this->commentman = $factory->getTable()->Table('comments');
-		$this->twig = $factory->getTwig();
+
 		
 	}
 

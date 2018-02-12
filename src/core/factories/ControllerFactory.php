@@ -47,7 +47,6 @@ class ControllerFactory
 	{	
 		$action = ucfirst($action);
 		$namespace = 'P5\\controllers\\frontend\\'.$action;
-		$controller = new $namespace();
 		$this->controller = new $namespace();
 		return $this->controller;
 		
@@ -57,7 +56,6 @@ class ControllerFactory
 	{	
 		$action = ucfirst($action);
 		$namespace = 'P5\\controllers\\backend\\'.$action;
-		$controller = new $namespace();
 		$this->controller = new $namespace();
 		return $this->controller;
 		

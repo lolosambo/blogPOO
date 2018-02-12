@@ -9,13 +9,6 @@ class DbFactory
 {
 	private $config;
 
-	private $host;
-  private $driver;
-  private $db_name;
-  private $user;
-  private $pass;
-
-
   public function __construct()
   {
   	$this->config = new DbConfig;
