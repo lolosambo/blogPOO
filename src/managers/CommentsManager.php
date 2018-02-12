@@ -173,6 +173,5 @@ class CommentsManager extends MainManager
 
 	}
 
-
-
 }
+

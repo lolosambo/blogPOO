@@ -60,7 +60,7 @@ class Router
                   $regex = $route->getParams()[':id'];
 
 
-                  if (preg_match($regex, $params[0]) != false)
+                  if (preg_match($regex, $params[0]) !== false)
                   {
                     $route->setParams($params[1])[':id']; // affect parameter's value in the Route Object $params attribute
                   }
@@ -104,7 +104,7 @@ class Router
     $route = $this->match($url, $method);
  
 
-    if ($route == false)
+    if ($route === false)
     {
       echo 'Pas de route pour cette URL';
     }
@@ -124,11 +124,5 @@ class Router
 
 
   }
-
-
-
-
-
-
 
 }
