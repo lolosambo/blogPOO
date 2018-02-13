@@ -36,7 +36,7 @@ class UserConnectionController
 			
 			$this->session->set('id', $user->getId());
 			$this->session->set('pseudo', $user->getPseudo());
-			$this->session->set('id_role', $user->getId_role());
+			$this->session->set('id_role', $user->getIdRole());
 			$this->session->set('verified', $user->getVerified());
 			return $user;
 			

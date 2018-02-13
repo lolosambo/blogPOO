@@ -10,10 +10,10 @@ class Users implements hydrateInterface
 	private $pseudo;
 	private $mail;
 	private $password;
-	private $activation_key;
+	private $activationKey;
 	private $verified = 0;
-	private $id_role = 1;
-	private $inscr_date;
+	private $idRole = 1;
+	private $inscrDate;
 
 
 
@@ -65,9 +65,9 @@ public function hydrate(array $donnees)
 		return $this->password;
 	}
 
-	public function getActivation_key()
+	public function getActivationKey()
 	{
-		return $this->activation_key;
+		return $this->activationKey;
 	}
 
 	public function getVerified()
@@ -75,14 +75,14 @@ public function hydrate(array $donnees)
 		return $this->verified;
 	}
 
-	public function getId_role()
+	public function getIdRole()
 	{
-		return $this->id_role;
+		return $this->idRole;
 	}
 
-	public function getInscr_date()
+	public function getInscrDate()
 	{
-		return $this->inscr_date;
+		return $this->inscrDate;
 	}
 
 
@@ -121,11 +121,11 @@ public function hydrate(array $donnees)
 		}
 	}
 
-	public function setActivation_key($activationKey)
+	public function setActivationKey($activationKey)
 	{
 		if(intval($activationKey))
 		{
-			$this->activation_key = $activationKey;
+			$this->activationKey = $activationKey;
 		}
 	}
 
@@ -138,19 +138,19 @@ public function hydrate(array $donnees)
 		}
 	}
 
-	public function setId_role($idRole)
+	public function setIdRole($idRole)
 	{
 		if(intval($idRole) && (($idRole == 1) || ($idRole == 2)))
 		{
-			$this->id_role = $idRole;
+			$this->idRole = $idRole;
 		}
 	}
 
-	public function setInscr_date($date)
+	public function setInscrDate($date)
 	{
 		if(is_string($date))
 		{
-			$this->inscr_date = $date;
+			$this->inscrDate = $date;
 		}
 	}
 

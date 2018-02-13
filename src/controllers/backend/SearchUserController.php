@@ -33,7 +33,7 @@ class SearchUserController
 		$valider = $this->request->request->get('valider');
 
 		$this->session->set('foundUser', $user->getPseudo());
-		$this->session->set('foundUserRole', $user->getId_role());
+		$this->session->set('foundUserRole', $user->getIdrole());
 
 		echo $this->factory->getTwig()->render('views/backend/updateUsers.twig', [
 			'user' => $user, 

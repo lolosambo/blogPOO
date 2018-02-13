@@ -30,11 +30,11 @@ class PostsManager extends MainManager
 
 		$posts = $this->db->getPdo()->prepare
 		('
-			SELECT *, p.id as postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate 
+			SELECT *, p.id as postId, DATE_FORMAT(p.postUpdate, "%d/%m/%Y à %Hh%i") AS postUpdate 
 			FROM Posts AS p
 			INNER JOIN Users AS u
-			ON u.id = p.id_user
-			ORDER BY p.post_date 
+			ON u.id = p.idUser
+			ORDER BY p.postDate 
 			DESC LIMIT :firstEntry, :postsPerPage
 		');
 		$posts->bindparam(':firstEntry', $firstEntry, PDO::PARAM_INT);
@@ -51,10 +51,10 @@ class PostsManager extends MainManager
 		$post = $this->db->getPdo()->prepare
 		('
 	
-			SELECT *, p.id AS postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate
+			SELECT *, p.id AS postId, DATE_FORMAT(p.postUpdate, "%d/%m/%Y à %Hh%i") AS postUpdate
 			FROM Users AS u 
-			INNER JOIN Posts AS p ON u.id = p.id_user
-			AND p.post_title = :title
+			INNER JOIN Posts AS p ON u.id = p.idUser
+			AND p.postTitle = :title
 		');
 
 		$post->bindParam(':title', $title);
@@ -68,7 +68,7 @@ class PostsManager extends MainManager
 	{
 		$newPost = $this->db->getPdo()->prepare
 		("
-			INSERT INTO Posts (id_user, post_title, post_heading, post_content, post_date, post_update, post_img_url) 
+			INSERT INTO Posts (idUser, postTitle, postHeading, postContent, postDate, postUpdate, postImgUrl) 
 			VALUES (:id_user, :title, :heading, :content, NOW(), NOW(), :img_url)
 		");
 
@@ -88,10 +88,10 @@ class PostsManager extends MainManager
 
 		$req = $this->db->getPdo()->query 
 		('
-			SELECT *, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate, p.id AS postId
+			SELECT *, DATE_FORMAT(p.postUpdate, "%d/%m/%Y à %Hh%i") AS postUpdate, p.id AS postId
 			FROM Posts AS p
 			INNER JOIN Users AS u
-			ON p.id_user = u.id 
+			ON p.idUser = u.id 
 			ORDER BY postUpdate
 			DESC
 			LIMIT 0, 3
@@ -107,9 +107,9 @@ class PostsManager extends MainManager
 		('
 			UPDATE Posts 
 			SET 
-			post_title = :post_title,
-			post_heading = :post_heading,
-			post_content = :post_content
+			postTitle = :post_title,
+			postHeading = :post_heading,
+			postContent = :post_content
 			WHERE id = :post_id
 		');
 

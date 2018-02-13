@@ -31,9 +31,9 @@ class CommentsManager extends MainManager
 		$comments = $this->db->getPdo()->prepare
 			('
 	
-				SELECT *, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
-				INNER JOIN Comments AS c ON u.id = c.id_user
-				AND c.id_post = :postId
+				SELECT *, DATE_FORMAT(c.commentUpdate, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+				INNER JOIN Comments AS c ON u.id = c.idUser
+				AND c.idPost = :postId
 				ORDER BY commentUpdate
 				DESC
 			');
@@ -52,7 +52,7 @@ class CommentsManager extends MainManager
 	{
 		$req = $this->db->getPdo()->prepare
 			("
-				INSERT INTO Comments (id_post, id_user, comment_content, comment_date, comment_update, validated) 
+				INSERT INTO Comments (idPost, idUser, commentContent, commentDate, commentUpdate, validated) 
 				VALUES (:id_post, :id_user, :content, NOW(), NOW(), 0)
 			");
 
@@ -72,7 +72,7 @@ class CommentsManager extends MainManager
 		
 		$req = $this->db->getPdo()->prepare
 			("
-				INSERT INTO Comments (id_post, id_user, comment_content, comment_date, comment_update, validated) 
+				INSERT INTO Comments (idPost, idUser, commentContent, commentDate, commentUpdate, validated) 
 				VALUES (:id_post, :id_user, :content, NOW(), NOW(), 1)
 			");
 
@@ -114,11 +114,11 @@ class CommentsManager extends MainManager
 		$req= $this->db->getPdo()->query
 		('
 	
-			SELECT *, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			SELECT *, DATE_FORMAT(c.commentUpdate, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
 			INNER JOIN Comments AS c 
-			ON u.id = c.id_user
+			ON u.id = c.idUser
 			INNER JOIN Posts AS p
-			ON c.id_post = p.id
+			ON c.idPost = p.id
 			AND validated = 1
 			ORDER BY commentUpdate
 			DESC
@@ -135,11 +135,11 @@ class CommentsManager extends MainManager
 
 		$req= $this->db->getPdo()->query
 		('
-			SELECT *, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			SELECT *, DATE_FORMAT(c.commentUpdate, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
 			INNER JOIN Comments AS c 
-			ON u.id = c.id_user
+			ON u.id = c.idUser
 			INNER JOIN Posts AS p
-			ON c.id_post = p.id
+			ON c.idPost = p.id
 			AND validated = 0
 			ORDER BY commentUpdate
 			DESC
@@ -155,11 +155,11 @@ class CommentsManager extends MainManager
 
 		$req= $this->db->getPdo()->prepare
 		('
-			SELECT *, c.id AS commentId, DATE_FORMAT(c.comment_update, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
+			SELECT *, c.id AS commentId, DATE_FORMAT(c.commentUpdate, "%d/%m/%Y à %Hh%i") AS commentUpdate FROM Users AS u
 			INNER JOIN Comments AS c 
-			ON u.id = c.id_user
+			ON u.id = c.idUser
 			INNER JOIN Posts AS p
-			ON c.id_post = p.id
+			ON c.idPost = p.id
 			AND validated = 0
 			ORDER BY commentUpdate
 			DESC LIMIT :commentsFirstEntry, :commentsPerPage

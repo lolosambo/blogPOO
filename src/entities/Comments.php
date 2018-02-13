@@ -7,10 +7,10 @@ class Comments implements HydrateInterface
 
 {
 	private $commentId;
-	private $id_user;
-	private $id_post;
-	private $comment_content;
-	private $comment_date;
+	private $idUser;
+	private $idPost;
+	private $commentContent;
+	private $commentDate;
 	private $commentUpdate;
 	private $validated = 0;
 
@@ -48,24 +48,24 @@ public function hydrate(array $donnees)
 		return $this->commentId;
 	}
 
-	public function getId_user()
+	public function getIdUser()
 	{
-		return $this->id_user;
+		return $this->idUser;
 	}
 
-	public function getId_post()
+	public function getIdPost()
 	{
-		return $this->id_post;
+		return $this->idPost;
 	}
 
-	public function getComment_content()
+	public function getCommentContent()
 	{
-		return $this->comment_content;
+		return $this->commentContent;
 	}
 
-	public function getComment_date()
+	public function getCommentDate()
 	{
-		return $this->comment_date;
+		return $this->commentDate;
 	}
 
 	public function getCommentUpdate()
@@ -90,19 +90,19 @@ public function hydrate(array $donnees)
 		}
 	}
 
-	public function setId_user($idUser)
+	public function setIdUser($idUser)
 	{
 		if(intval($idUser))
 		{
-			$this->id_user = $idUser;
+			$this->idUser = $idUser;
 		}
 	}
 
-	public function setId_post($idPost)
+	public function setIdPost($idPost)
 	{
 		if(intval($idPost))
 		{
-			$this->id_post = $idPost;
+			$this->idPost = $idPost;
 		}
 	}
 
@@ -114,11 +114,11 @@ public function hydrate(array $donnees)
 		}
 	}
 
-	public function setComment_content($content)
+	public function setCommentContent($content)
 	{
 		if(is_string($content))
 		{
-			$this->comment_content = $content;
+			$this->commentContent = $content;
 		}
 	}
 

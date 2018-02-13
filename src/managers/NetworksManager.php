@@ -30,7 +30,7 @@ class NetworksManager extends MainManager
 		$req = $this->db->getPdo()->prepare
 		('
 		
-			INSERT INTO Networks (network_name, address, img_url) VALUES (:name, :address, :img)
+			INSERT INTO Networks (networkName, address, imgUrl) VALUES (:name, :address, :img)
 		
 		');
 		$req->bindParam(':address', $address);

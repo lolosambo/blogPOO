@@ -7,7 +7,7 @@ class Networks
 {
 
 	private $id;
-	private $network_name;
+	private $networkName;
 	private $address; 
 
 
@@ -18,9 +18,9 @@ class Networks
 		return $this->id;
 	}
 
-	public function getNetwork_name()
+	public function getNetworkName()
 	{
-		return $this->network_name;
+		return $this->networkName;
 	}
 
 	public function getAddress()
@@ -31,11 +31,11 @@ class Networks
 
 // SETTERS -------------------------------
 
-	public function setNetwork_name($name)
+	public function setNetworkName($name)
 	{
 		if(is_string($name))
 		{
-			$this->network_name = $name;
+			$this->networkName = $name;
 		}
 	}
 

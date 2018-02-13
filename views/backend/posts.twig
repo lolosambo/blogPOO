@@ -11,9 +11,9 @@
 {% for post in post %}
 
    
-	<p><b>{{post.post_title}}</b></p>
+	<p><b>{{post.postTitle}}</b></p>
 	<p><em>Dernière mise à jour le {{post.postUpdate}}</em> - Edité par : <b>{{post.pseudo}}</b></p>
-	<a href="/admin/updatePost/{{post.post_title | replace({' ' : '_'})}}">
+	<a href="/admin/updatePost/{{post.postTitle | replace({' ' : '_'})}}">
 		<button type="button" class=" btn btn-dark">Modifier l'article</button>  
 	</a>
 	<a href="/admin/deletePost/{{post.postId }}">

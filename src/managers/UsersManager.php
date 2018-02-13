@@ -63,7 +63,7 @@ class UsersManager extends MainManager
 
 		$req = $this->db->getPdo()->prepare
 		("
-			INSERT INTO Users (pseudo, password, mail, activation_key, verified, id_role, inscr_date) 
+			INSERT INTO Users (pseudo, password, mail, activationKey, verified, idRole, inscrDate) 
 			VALUES (:pseudo, :password, :mail, :activation_key, 0, 1, NOW())
 		");
 
@@ -80,7 +80,7 @@ class UsersManager extends MainManager
 
 	public function get5LastUsers()
 	{
-		$req = $this->getAllByDate('inscr_date', 'Users', 'inscr_date', 0, 5);
+		$req = $this->getAllByDate('inscrDate', 'Users', 'inscrDate', 0, 5);
 		return $req;
 	}
 
@@ -89,7 +89,7 @@ class UsersManager extends MainManager
 
 		$req = $this->db->getPdo()->prepare 
 		('
-			SELECT *, DATE_FORMAT(u.inscr_date, "%d/%m/%Y à %Hh%i") AS inscrDate  
+			SELECT *, DATE_FORMAT(u.inscrDate, "%d/%m/%Y à %Hh%i") AS inscrDate  
 			FROM Users AS u
 			WHERE u.pseudo = :pseudo
 	
@@ -106,12 +106,12 @@ class UsersManager extends MainManager
 
 	public function updateToAdmin($pseudo)
 	{
-		return $this->update('Users', 'id_role', 2, 'pseudo', $pseudo);	
+		return $this->update('Users', 'idRole', 2, 'pseudo', $pseudo);	
 	}
 
 	public function updateToUser($pseudo)
 	{
-		return $this->update('Users', 'id_role', 1, 'pseudo', $pseudo);
+		return $this->update('Users', 'idRole', 1, 'pseudo', $pseudo);
 	}
 
 

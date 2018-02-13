@@ -13,10 +13,10 @@
 	{% if user is not empty %}
 	
 
-		<p>{{user.getPseudo}} - Inscrit(e) le : {{user.getInscr_date | date("d/m/Y à H:i:s")}}</p>
+		<p>{{user.getPseudo}} - Inscrit(e) le : {{user.getInscrDate}}</p>
 		<p>Adresse mail : {{user.getMail}}</p>
 
-		{% if user.getId_role() == 1 %}
+		{% if user.getIdRole() == 1 %}
 		
 			
 			<a href="/admin/changeToAdmin/"><button type="button" class=" btn btn-dark">Passer en administrateur</button> </a>
@@ -25,7 +25,7 @@
 		{% endif %}
 		
 	
-		{% if user.getId_role() == 2 %}
+		{% if user.getIdRole() == 2 %}
 		
 			
 			<a href="/admin/changeToUser/"><button type="button" class=" btn btn-dark">Passer en utilisateur</button> </a>
