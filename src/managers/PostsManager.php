@@ -22,6 +22,11 @@ class PostsManager extends MainManager
 	public function countAllPosts()
 	{
 		return $this->count('Posts');
+
+		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Posts');
+		$data = $req->fetch();
+		$total=$data['total'];
+		return $total;
 	}
 
 
@@ -126,7 +131,9 @@ class PostsManager extends MainManager
 	public function deletePost($postId)
 	{
 		$req = $this->erase('Posts', 'id', $postId);
-		return $req;
+		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Posts WHERE id = :param');
+		$req->bindParam(':param', $param);
+		$req->execute();
 
 	}
 	

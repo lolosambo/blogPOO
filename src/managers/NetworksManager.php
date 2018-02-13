@@ -21,7 +21,9 @@ class NetworksManager extends MainManager
 
 	public function networkList()
 	{
-		return $this->getAllBy('Networks', 'id');
+		$req = $this->getDb()->getPdo()->query('SELECT * FROM Networks ORDER BY id');
+		$res = $req->fetchAll();
+		return $res;
 	}
 
 
@@ -43,12 +45,20 @@ class NetworksManager extends MainManager
 
 	public function changeNetwork($networkId, $networkAddress)
 	{
-		return $this->update('Networks', 'address', $networkAddress, 'id', $networkId);
+		
+		$req = $this->getDb()->getPdo()->prepare('UPDATE Networks SET address = :value WHERE id = :param');
+		$req->bindParam(':value', $networkAddress);
+		$req->bindParam(':param', $networkId);
+		$req->execute();
+		return $req;
 	}
 
 	public function eraseNetwork($networkId)
 	{
 		return $this->erase('Networks', 'id', $networkId);
+		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Networks WHERE id = :param');
+		$req->bindParam(':param', $param);
+		$req->execute();
 	}
 
 }
