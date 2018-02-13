@@ -6,10 +6,3 @@ interface CheckImageInterface
 	public function verifyImg();
 }
 
-
-
-	
-
-
-
-	

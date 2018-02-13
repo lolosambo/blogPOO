@@ -12,9 +12,9 @@ class Route
 
   private $params = []; 
 
-  private $method;
+ 
 
-  public function __construct($path, $action, $params = null, $method)
+  public function __construct($path, $action, $params = null)
   {
     $this->path = $path;
     $this->action = $action;
@@ -24,12 +24,11 @@ class Route
   public function getPath() { return $this->path; }
   public function getAction() { return $this->action; }
   public function getParams() { return $this->params; }
-  public function getMethod() { return $this->method; }
 
   public function setPath($path) { $this->path = $path; }
   public function setAction($action) { $this->action = $action; }
   public function setParams($params) { $this->params = $params; }
-  public function setMethod($method) { $this->method = $method; }
+
   
 }
 

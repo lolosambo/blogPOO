@@ -20,7 +20,7 @@ class Router
     $routes = require __DIR__ . '../../../../config/Routes.php'; 
 
     foreach ($routes as $route) {
-      $this->routes[] = new Route($route['path'], $route['action'], $route['params'], $route['method']);
+      $this->routes[] = new Route($route['path'], $route['action'], $route['params']);
     }
   }
 
