@@ -1,8 +1,12 @@
 { 
-   "description:": {
-      "type": "string",
-      "description" : "Blog de Laurent BERTON"
-   },
+   "properties" : {
+
+         "description": {
+            "type": "string",
+            "description" : "Blog de Laurent BERTON"
+   }
+},
+
 
    "name":"lolosambo/blog",
    "require":{  

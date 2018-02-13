@@ -55,7 +55,6 @@ class NetworksManager extends MainManager
 
 	public function eraseNetwork($networkId)
 	{
-		return $this->erase('Networks', 'id', $networkId);
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Networks WHERE id = :param');
 		$req->bindParam(':param', $param);
 		$req->execute();

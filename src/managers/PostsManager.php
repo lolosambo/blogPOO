@@ -21,7 +21,6 @@ class PostsManager extends MainManager
 	
 	public function countAllPosts()
 	{
-		return $this->count('Posts');
 
 		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Posts');
 		$data = $req->fetch();
