@@ -20,8 +20,6 @@ class CommentsManager extends MainManager
 
 	public function getTotalComments() //Only non-validated comments
 	{
-		return $this->count('Comments', 'validated', 0);
-
 		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated  = 0');
 		$data = $req->fetch();
 		$total=$data['total'];

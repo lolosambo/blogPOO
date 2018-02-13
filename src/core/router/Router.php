@@ -25,7 +25,7 @@ class Router
   }
 
 
-  public function match($url, $method)
+  public function match($url)
   {
     preg_match('#^/(([a-z-A-Z0-9_-]*)/)*#', $url, $path);  // URL with slash 
 
