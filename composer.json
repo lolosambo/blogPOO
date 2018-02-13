@@ -1,4 +1,9 @@
 { 
+   "description:": {
+      "type": "string",
+      "description" : "Blog de Laurent BERTON"
+   },
+
    "name":"lolosambo/blog",
    "require":{  
       "symfony/http-foundation":"^4.0",
