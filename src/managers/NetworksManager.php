@@ -52,5 +52,3 @@ class NetworksManager extends MainManager
 	}
 
 }
-
- 

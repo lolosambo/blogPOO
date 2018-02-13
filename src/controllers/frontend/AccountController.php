@@ -24,7 +24,7 @@ class AccountController
 		$this->session = $factory->getSession();
 	}
 
-	public function account_activation($pseudo, $activKey)
+	public function accountActivation($pseudo, $activKey)
 	{
 
 		$res = $this->userman->accActivation($pseudo);

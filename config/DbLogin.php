@@ -8,6 +8,3 @@ return
   'pass' => 'root',
   
 ];
-
-?>
-

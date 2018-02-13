@@ -8,7 +8,7 @@ class TableFactory
 	private $table;
 	
 
-	public function Table($table)
+	public function table($table)
 	{	
 		$majTable = ucfirst($table);
 		$class = 'P5\\managers\\'.$majTable.'Manager';
