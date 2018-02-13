@@ -1,7 +1,7 @@
 { 
    "name":"lolosambo/blog",
    "description": "Blog de Laurent BERTON",
-
+   "license": "proprietary",
    
    "require":{  
       "symfony/http-foundation":"^4.0",
