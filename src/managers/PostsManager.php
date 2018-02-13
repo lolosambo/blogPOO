@@ -129,9 +129,8 @@ class PostsManager extends MainManager
 
 	public function deletePost($postId)
 	{
-		$req = $this->erase('Posts', 'id', $postId);
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Posts WHERE id = :param');
-		$req->bindParam(':param', $param);
+		$req->bindParam(':param', $postId);
 		$req->execute();
 
 	}
