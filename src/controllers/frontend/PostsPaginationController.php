@@ -35,7 +35,7 @@ class PostsPaginationController
 		$url = $this->request->server->get('REQUEST_URI');
 
 		// URL' Id recuperation
-		preg_match('#([0-9]+)$#', $url, $page);
+		preg_match('#([0-9]+)$#', $url, $match);
 
 		//Pagination
 		$this->postsNbr = $this->postman->countAllPosts();
@@ -44,9 +44,9 @@ class PostsPaginationController
 		$this->pagesNbr = ceil($this->postsNbr/self::POST_PER_PAGE);
 
 
-		if(isset($page[1]))
+		if(isset($match[1]))
     	{ 
-    		$this->currentPage=intval($page[1]);
+    		$this->currentPage=intval($match[1]);
 
  
      			if($this->currentPage > $this->pagesNbr)
@@ -69,21 +69,21 @@ class PostsPaginationController
 		$post = $this->postman->allPosts($this->firstEntry, self::POST_PER_PAGE);
 
 		// show sidebar
-		$sidebar = $this->factory->getFrontController('loginController');
+		$connection = $this->factory->getFrontController('loginController');
 
-		$networks = $this->factory->getFrontController('SocialNetworksController');
+		$social = $this->factory->getFrontController('SocialNetworksController');
 
-		$id_role = $this->session->get('id_role');
+		$role = $this->session->get('id_role');
 
 		// Render Twig
 		echo $this->twig->render('views/frontend/list_posts_view.twig', 
 			[
 				'post' => $post,
-				'sidebarContent' => $sidebar,
-				'network' => $networks,
+				'sidebarContent' => $connection,
+				'network' => $social,
 				'pagesNbr' => $this->pagesNbr,	
 				'currentPage' => $this->currentPage,
-				'role' => $id_role,
+				'role' => $role,
 			]
 			);
 		
