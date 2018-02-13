@@ -55,7 +55,7 @@ class Router
 
 
                   $route->setPath($value); // affect the result to the Route Object path attribute
-                  $route->setMethod($method); // send méthod to the Route Object
+                  
                   
                   $regex = $route->getParams()[':id'];
 
@@ -80,7 +80,7 @@ class Router
           
              if (($path[0] === $savedPath) && ($path[0] === $url)) // if the rebuilt URL has a route listed in the Routes array
              {
-                   $route->setMethod($method); // send méthod to the Route Object
+                   
                    return $route; //  return Route Object to use his methods in the HandleRequest Method'
 
              }
@@ -109,10 +109,6 @@ class Router
       echo 'Pas de route pour cette URL';
     }
 
-    else if ($route->getMethod() != $method)
-    {
-      echo 'La méthode ne correspond pas.';
-    }
 
     else
     {
