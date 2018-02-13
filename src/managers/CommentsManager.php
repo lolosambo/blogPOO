@@ -21,6 +21,11 @@ class CommentsManager extends MainManager
 	public function getTotalComments() //Only non-validated comments
 	{
 		return $this->count('Comments', 'validated', 0);
+
+		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated  = 0');
+		$data = $req->fetch();
+		$total=$data['total'];
+		return $total;
 	}
 	
 
@@ -90,8 +95,9 @@ class CommentsManager extends MainManager
 	public function deleteComment($comment_id)
 	{
 		
-		$deletedComment = $this->erase('Comments', 'id', $comment_id);
-		return $deletedComment;
+		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Comments WHERE id = :param');
+		$req->bindParam(':param', $comment_id);
+		$req->execute();
 
 	}
 
@@ -101,9 +107,12 @@ class CommentsManager extends MainManager
 	public function publishComment($comment_id)
 	{
 		
-		$publishedComment= $this->update('Comments', 'validated', 1, 'id', $comment_id);
+		$req= $this->update('Comments', 'validated', 1, 'id', $comment_id);
 			
-		return $publishedComment;
+		$req = $this->getDb()->getPdo()->prepare('UPDATE Comments SET validated = 1 WHERE id = :param');
+		$req->bindParam(':param', $comment_id);
+		$req->execute();
+		return $req;
 
 	}
 

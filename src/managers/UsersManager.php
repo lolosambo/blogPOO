@@ -20,19 +20,27 @@ class UsersManager extends MainManager
 
 	public function usersList()
 	{
-		return $this->getAllBy('Users', 'pseudo', 0, 100);	 
+		$req = $this->getDb()->getPdo()->query('SELECT * FROM Users ORDER BY pseudo DESC LIMIT 0, 100');
+		$res = $req->fetchAll();
+		return $res;	 
 	}
 
 
-	public function compareUsers($column, $pseudo)
+	public function compareUsers($pseudo)
 	{
-		return $this->getOne('Users', $column, $pseudo);
+		$req = $this->getDb()->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :param');
+		$req->bindParam(':param', $pseudo);
+		$req->execute();
+		$res = $req->fetch();
+		return $res;
 	}
 
 
 	public function deleteUser($pseudo)
 	{
-		return $this->erase('Users', 'pseudo', $pseudo);
+		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Users WHERE pseudo = :param');
+		$req->bindParam(':param', $pseudo);
+		$req->execute();
 	}
 
 
@@ -80,8 +88,16 @@ class UsersManager extends MainManager
 
 	public function get5LastUsers()
 	{
-		$req = $this->getAllByDate('inscrDate', 'Users', 'inscrDate', 0, 5);
-		return $req;
+		$req = $this->getDb()->getPdo()->query
+			('
+				SELECT *, DATE_FORMAT(inscrDate, "%d/%m/%Y à %Hh%i") AS inscrDate 
+				FROM Users 
+				ORDER BY inscrDate
+				DESC LIMIT 0, 5
+			');
+
+			$res = $req->fetchAll();
+			return $res;	
 	}
 
 	public function searchUser($pseudo)
@@ -105,13 +121,19 @@ class UsersManager extends MainManager
 
 
 	public function updateToAdmin($pseudo)
-	{
-		return $this->update('Users', 'idRole', 2, 'pseudo', $pseudo);	
+	{	
+		$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET idRole = 2 WHERE pseudo = :param');
+		$req->bindParam(':param', $pseudo);
+		$req->execute();
+		return $req;
 	}
 
 	public function updateToUser($pseudo)
 	{
-		return $this->update('Users', 'idRole', 1, 'pseudo', $pseudo);
+		$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET idRole = 1 WHERE pseudo = :param');
+		$req->bindParam(':param', $pseudo);
+		$req->execute();
+		return $req;
 	}
 
 
@@ -120,15 +142,23 @@ class UsersManager extends MainManager
 
 	public function accActivation($pseudo)
 	{
-		return $this->getOne('Users', 'pseudo', $pseudo);
+
+		$req = $this->getDb()->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :param');
+		$req->bindParam(':param', $pseudo);
+		$req->execute();
+		$res = $req->fetch();
+		return $res;
 
 	}
 
 
 	public function setVerified($login)
-	{
-		
-    	return $this->update('Users', 'verified', 1, 'pseudo', $login);
+	{	
+
+    	$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET verified = 1 WHERE pseudo = :param');
+		$req->bindParam(':param', $login);
+		$req->execute();
+		return $req;
     	
 	}
 
