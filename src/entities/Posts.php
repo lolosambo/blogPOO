@@ -7,13 +7,13 @@ class Posts implements HydrateInterface
 {
 
 	private $postId;
-	private $id_user;
-	private $post_title;
-	private $post_heading;
-	private $post_content;
-	private $post_date;
+	private $idUser;
+	private $postTitle;
+	private $postHeading;
+	private $postContent;
+	private $postDate;
 	private $postUpdate;
-	private $post_img_url;
+	private $postImgUrl;
 
 
 // INTERFACE METHOD
@@ -48,29 +48,29 @@ public function hydrate(array $donnees)
 		return $this->postId;
 	}
 
-	public function getId_user()
+	public function getIdUser()
 	{
-		return $this->id_user;
+		return $this->idUser;
 	}
 
-	public function getPost_title()
+	public function getPostTitle()
 	{
-		return $this->post_title;
+		return $this->postTitle;
 	}
 
-	public function getPost_heading()
+	public function getPostHeading()
 	{
-		return $this->post_heading;
+		return $this->postHeading;
 	}
 
-	public function getPost_content()
+	public function getPostContent()
 	{
-		return $this->post_content;
+		return $this->postContent;
 	}
 
-	public function getPost_date()
+	public function getPostDate()
 	{
-		return $this->post_date;
+		return $this->postDate;
 	}
 
 	public function getPostUpdate()
@@ -78,9 +78,9 @@ public function hydrate(array $donnees)
 		return $this->postUpdate;
 	}
 
-	public function getPost_img_url()
+	public function getPostImgUrl()
 	{
-		return $this->post_img_url;
+		return $this->postImgUrl;
 	}
 
 
@@ -95,43 +95,43 @@ public function hydrate(array $donnees)
 	}
 
 
-	public function setId_user($id)
+	public function setIdUser($id)
 	{
 		if(intval($id))
 		{
-			$this->id_user = $id;
+			$this->idUser = $id;
 		}
 	}
 
-	public function setPost_title($title)
+	public function setPostTitle($title)
 	{
 		if(is_string($title))
 		{
-			$this->post_title = $title;
+			$this->postTitle = $title;
 		}
 	}
 
-	public function setPost_heading($heading)
+	public function setPostHeading($heading)
 	{
 		if(is_string($heading))
 		{
-			$this->post_heading = $heading;
+			$this->postHeading = $heading;
 		}
 	}
 
-	public function setPost_content($content)
+	public function setPostContent($content)
 	{
 		if(is_string($content))
 		{
-		$this->post_content = $content;
+		$this->postContent = $content;
 		}
 	}
 
-	public function setPost_date($date)
+	public function setPostDate($date)
 	{
 		if(is_string($date))
 		{
-		$this->post_date = $date;
+		$this->postDate = $date;
 		}
 	}
 
@@ -144,11 +144,11 @@ public function hydrate(array $donnees)
 	}
 
 
-	public function setPost_img_url($imgUrl)
+	public function setPostImgUrl($imgUrl)
 	{
 		if(is_string($imgUrl))
 		{
-			$this->post_img_url = $imgUrl;
+			$this->postImgUrl = $imgUrl;
 		}
 	}
 

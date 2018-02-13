@@ -1,12 +1,4 @@
-{  
-   " description " :[ 
-   {
-      " type " : " chaîne " ,
-      " description " : " Description courte du paquet "
-   
-   }
-],
-
+{ 
    "name":"lolosambo/blog",
    "require":{  
       "symfony/http-foundation":"^4.0",

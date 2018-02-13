@@ -8,15 +8,15 @@
 
 	<div class="col-lg-3 col-md-4 col-sm-12">
   		<div class="card">
-   			<img class="card-img-top" src="{{post.post_img_url}}" alt="Card image cap">
+   			<img class="card-img-top" src="{{post.postImgUrl}}" alt="Card image cap">
     		<div class="card-body">
-      			<h5 class="card-title">{{post.post_title}}</h5>
-     			<p class="card-text">{{post.post_content | slice(0, 250) ~ '...'}}</p>
-       			<a href="/article/{{post.post_title | replace({' ' : '_'})}}" class="btn btn-warning">Lire la suite</a>
+      			<h5 class="card-title">{{post.postTitle}}</h5>
+     			<p class="card-text">{{post.postContent | slice(0, 250) ~ '...'}}</p>
+       			<a href="/article/{{post.postTitle | replace({' ' : '_'})}}" class="btn btn-warning">Lire la suite</a>
     		</div>
     		<div class="card-footer">
       			<p><small class="text-muted">Posté par : {{post.pseudo}}</small></p>
-      			<p><small class="text-muted">Le : {{post.post_update |date("d/m/Y à H:i:s")}}</small></p>
+      			<p><small class="text-muted">Le : {{post.postUpdate}}</small></p>
     		</div>
   		</div>
  	</div>

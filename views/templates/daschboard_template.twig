@@ -31,7 +31,7 @@
 
 					{% for users in users %}
 					
-					<p><b>{{users.pseudo}}</b> - Inscrit(e) le : {{users.inscr_date}}</p>
+					<p><b>{{users.pseudo}}</b> - Inscrit(e) le : {{users.inscrDate}}</p>
 
 					{% endfor%}	
 					
@@ -44,7 +44,7 @@
 					{% for posts in posts %}
 					
 					<p><em>Dernière mise à jour le : {{posts.postUpdate}}</em><br>
-					<b>{{posts.post_title}}</b><br></p>
+					<b>{{posts.postTitle}}</b><br></p>
 
 					{% endfor%}	
 
@@ -61,8 +61,8 @@
 					{% for comment1 in comment1 %}
 					
 					<p><em>Posté le : {{comment1.commentUpdate}}</em><br>
-					<b>{{comment1.post_title}}</b><br>
-					{{comment1.comment_content}}<br>
+					<b>{{comment1.postTitle}}</b><br>
+					{{comment1.commentContent}}<br>
 				---------------------------------------------------</p>
 
 					{% endfor%}	
@@ -76,8 +76,8 @@
 					{% for comment0 in comment0 %}
 					
 					<p><em>Posté le : {{comment0.commentUpdate}}</em><br>
-					<b>{{comment0.post_title}}</b><br>
-					{{comment0.comment_content}}<br>
+					<b>{{comment0.postTitle}}</b><br>
+					{{comment0.commentContent}}<br>
 				---------------------------------------------------</p>
 
 					{% endfor%}	
