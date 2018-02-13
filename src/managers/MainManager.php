@@ -2,6 +2,7 @@
 
 namespace P5\managers;
 use P5\core\factories\DbFactory;
+use \PDO;
 
 
 
@@ -19,7 +20,9 @@ abstract class MainManager
 
 	public function getAllBy($table, $orderBy, $limit1 = 0, $limit2 = 20 )
 	{
-		$req = $this->getDb()->getPdo()->query('SELECT * FROM ' .$table. ' ORDER BY ' .$orderBy.' DESC LIMIT '.$limit1.', '.$limit2.'');
+		$req = $this->getDb()->getPdo()->prepare('SELECT * FROM :table ORDER BY ' .$orderBy.' DESC LIMIT '.$limit1.', '.$limit2.'');
+		$req->bindvalue(':table', $table);
+		$req->execute();
 		$res = $req->fetchAll();
 		return $res;
 

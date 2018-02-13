@@ -28,15 +28,18 @@ class PostsManager extends MainManager
 	public function allPosts($firstEntry, $postsPerPage)
 	{
 
-		$posts = $this->db->getPdo()->query
+		$posts = $this->db->getPdo()->prepare
 		('
 			SELECT *, p.id as postId, DATE_FORMAT(p.post_update, "%d/%m/%Y à %Hh%i") AS postUpdate 
 			FROM Posts AS p
 			INNER JOIN Users AS u
 			ON u.id = p.id_user
 			ORDER BY p.post_date 
-			DESC LIMIT '.$firstEntry.', '.$postsPerPage.'
+			DESC LIMIT :firstEntry, :postsPerPage
 		');
+		$posts->bindparam(':firstEntry', $firstEntry, PDO::PARAM_INT);
+		$posts->bindparam(':postsPerPage', $postsPerPage, PDO::PARAM_INT);
+		$posts->execute();
 		$res = $posts->fetchAll();
 		return $res;
 		
