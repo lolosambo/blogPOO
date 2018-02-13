@@ -2,7 +2,7 @@
    " description " :[ 
    {
       " type " : " chaîne " ,
-      " description " : " Description courte du paquet ",
+      " description " : " Description courte du paquet "
    
    }
 ],
