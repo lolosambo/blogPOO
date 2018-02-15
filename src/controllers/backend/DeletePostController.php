@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 class DeletePostController
@@ -23,7 +24,6 @@ class DeletePostController
 		$url = $this->request->server->get('REQUEST_URI');
 		preg_match('#/([0-9]+)$#', $url, $match);
 		$postId = $match[1];
-
 		$this->postman->deletePost($postId);
 		echo $this->factory->getTwig()->render('views/backend/deleted_post.twig');
 	}

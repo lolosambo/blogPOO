@@ -1,5 +1,6 @@
 <?php
 namespace P5\entities;
+
 use P5\core\interfaces\hydrateInterface;
 
 
@@ -14,24 +15,15 @@ class Comments implements HydrateInterface
 	private $commentUpdate;
 	private $validated = 0;
 
-
-// INTERFACE METHOD
-
-public function hydrate(array $donnees)
-{
-   foreach ($donnees as $key => $value)
-   {
-       $method = 'set'.ucfirst($key);
-
-       if (method_exists($this, $method))
-       {
-         $this->$method($value);
-       }
-   }
-}
-
-
-// CONSTRUCTOR & HYDRATATION
+	public function hydrate(array $donnees)
+	{
+   		foreach ($donnees as $key => $value) {
+      		$method = 'set'.ucfirst($key);
+       		if (method_exists($this, $method)) {
+       		  $this->$method($value);
+      		 }
+   		}
+	}
 
 	public function __construct(array $data)
 	{
@@ -39,9 +31,6 @@ public function hydrate(array $donnees)
 		$this->hydrate($data);
 
 	}
-
-
-// GETTERS-----------------------------------
 
 	public function getCommentId()
 	{
@@ -131,8 +120,6 @@ public function hydrate(array $donnees)
 			$this->validated = $validated;
 		}
 	}
-
-
 
 }
 

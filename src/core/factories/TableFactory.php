@@ -1,13 +1,10 @@
 <?php
-
 namespace P5\core\factories;
 
 class TableFactory
-{
-	
+{	
 	private $table;
 	
-
 	public function table($table)
 	{	
 		$majTable = ucfirst($table);
@@ -15,6 +12,5 @@ class TableFactory
 		$this->table = new $class();
 		return $this->table;
 	}
-
 }
 

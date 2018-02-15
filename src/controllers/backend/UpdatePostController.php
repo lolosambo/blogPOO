@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 class UpdatePostController
@@ -27,7 +28,9 @@ class UpdatePostController
 		$title = str_replace('_', ' ', $match[1]);
 		$res = $this->postman->onePost($title);
 
-		echo $this->factory->getTwig()->render('views/backend/update_post_form.twig', ['post' => $res]);
+		echo $this->factory->getTwig()->render('views/backend/update_post_form.twig', 
+		['post' => $res]);
+		
 		return $res['postId'];
 
 	}

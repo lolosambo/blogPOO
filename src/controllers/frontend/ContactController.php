@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\frontend;
+
 use P5\core\factories\ControllerFactory;
 
 class ContactController 
@@ -38,7 +39,6 @@ class ContactController
 		<p>Adresse mail : '.$mail.'</p>
 		<p>Sujet du message : '.$object.'</p>
 		<p>Message : '.$message.'</p>';
-		
           
 		//Send mail
 		mail($to, $objet, $message, $header);	

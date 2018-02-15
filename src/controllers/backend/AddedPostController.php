@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 
@@ -7,6 +8,7 @@ class AddedPostController
 {
 
 	use \P5\core\traits\ImgTrait;
+	
 	private $factory;
 	private $postman;
 	private $session;
@@ -24,14 +26,12 @@ class AddedPostController
 	}
 
 	public function __invoke()
-	{
-		
+	{		
 		$title = $this->request->request->get('title');
 		$heading = $this->request->request->get('heading');
 		$post_content = $this->request->request->get('content');
 		$img = $this->verifyImg();
 		$user_id = $this->session->get('id');
-
 		$this->postman->insertPost($user_id, $title, $heading, $post_content, $img);
 		echo $this->factory->getTwig()->render('views/backend/added_post.twig');
 	}

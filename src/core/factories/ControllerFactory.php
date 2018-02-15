@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\core\factories;
+
 use P5\core\controllers\SessionController;
 use P5\core\factories\TableFactory;
 use P5\core\factories\BuilderFactory;
@@ -48,8 +48,7 @@ class ControllerFactory
 		$action = ucfirst($action);
 		$namespace = 'P5\\controllers\\frontend\\'.$action;
 		$this->controller = new $namespace();
-		return $this->controller;
-		
+		return $this->controller;	
 	}
 
 	public function getBackController($action)
@@ -57,11 +56,8 @@ class ControllerFactory
 		$action = ucfirst($action);
 		$namespace = 'P5\\controllers\\backend\\'.$action;
 		$this->controller = new $namespace();
-		return $this->controller;
-		
+		return $this->controller;	
 	}
-
-
 }
 
 

@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 
@@ -20,8 +21,8 @@ class NetworksController
 	public function __invoke()
 	{
 		$res = $this->networkman->networkList();
-
-		echo $this->factory->getTwig()->render('views/backend/networks.twig', ['network' => $res]);		
+		echo $this->factory->getTwig()->render('views/backend/networks.twig', 
+		['network' => $res]);		
 	}
 
 

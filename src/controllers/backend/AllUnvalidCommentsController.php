@@ -1,5 +1,6 @@
 <?php
 namespace p5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 class AllUnvalidCommentsController
@@ -44,11 +45,8 @@ class AllUnvalidCommentsController
 			);		
 	}
 
-
 	private function pagination()
-	{
-	
-		
+	{	
 		$url = $this->request->server->get('REQUEST_URI');
 
 		// URL' Id recuperation
@@ -58,29 +56,18 @@ class AllUnvalidCommentsController
 		$this->commentsNbr = $this->commentman->getTotalComments();
 		$this->pagesNbr = ceil($this->commentsNbr/self::COMMENTS_PER_PAGE);
 
-
-		if(isset($page[1]))
-    	{ 
+		if(isset($page[1])) { 
     		$this->currentPage=intval($page[1]);
- 
-     			if($this->currentPage > $this->pagesNbr)
-     			{
+ 				if($this->currentPage > $this->pagesNbr) {
         		  	$this->currentPage = $this->pagesNbr;
-    			}
-    			else if($this->currentPage < 1)
-     			{
+    			} elseif($this->currentPage < 1) {
         		  	$this->currentPage = 1;
-    			}
-    			
-		}
-
-		else
-		{
+    			}		
+		} else {
      		$this->currentPage = 1;   
 		}
 
 		$this->firstEntry = ($this->currentPage-1) * self::COMMENTS_PER_PAGE;
 	}
-
 }
 

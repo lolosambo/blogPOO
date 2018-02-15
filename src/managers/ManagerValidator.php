@@ -4,12 +4,9 @@ namespace P5\managers;
 class ManagerValidator
 {
   private $sql = ['INSERT', 'UPDATE', 'DELETE', 'WHERE', 'JOIN', 'LIKE', 'OR', 'AND'];
-
   private $javascript = ['<script>', '</script>'];
-
   private $safe;
 
-  
   public function validateSQL($entry) // "Coucou ;les copains INSERT table INTO tot"
   {
     foreach ($this->sql as $sqlEntry) {

@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\managers;
+
 use P5\core\factories\DbFactory;
 use P5\managers\MainManager;
 use \PDO;
@@ -26,7 +26,6 @@ class CommentsManager extends MainManager
 		return $total;
 	}
 	
-
 	public function getComments($post_id)
 	{
 		
@@ -48,9 +47,6 @@ class CommentsManager extends MainManager
 
 	}
 
-
-	//ADD COMMENT FOR MEMBERS--------------------------
-
 	public function addCommentMembers($post_id, $user_id, $comment)
 	{
 		$req = $this->db->getPdo()->prepare
@@ -66,9 +62,6 @@ class CommentsManager extends MainManager
 			return $req;
 		
 	}
-
-
-	//ADD COMMENT FOR ADMINISTRATORS --------------------------
 
 	public function addCommentAdmin($post_id, $user_id, $comment)
 	{
@@ -87,9 +80,6 @@ class CommentsManager extends MainManager
 
 	}
 
-
-	//DELETE COMMENT-----------------------------------------
-
 	public function deleteComment($comment_id)
 	{
 		
@@ -98,9 +88,6 @@ class CommentsManager extends MainManager
 		$req->execute();
 
 	}
-
-
-	//MEMBER COMMENT VALIDATION--------------------------------------
 
 	public function publishComment($comment_id)
 	{
@@ -113,7 +100,6 @@ class CommentsManager extends MainManager
 		return $req;
 
 	}
-
 
 	public function get3LastValidComments()
 	{
@@ -135,7 +121,6 @@ class CommentsManager extends MainManager
 		return $req;
 
 	}
-
 
 	public function get3LastUnvalidComments()
 	{
@@ -179,6 +164,5 @@ class CommentsManager extends MainManager
 		return $data;
 
 	}
-
 }
 

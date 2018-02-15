@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\frontend;
+
 use P5\core\factories\ControllerFactory;
 
 class CvController

@@ -29,28 +29,14 @@ class UserInscriptionController implements InscrMailerInterface
 		$res = $this->userman->compareUsers('pseudo', $pseudo);
 		$this->session->set('db_pseudo', $res['pseudo']);
 		
-		if ($pseudo == $res['pseudo'])
-		{
-		
-		}
-
-		else if (empty($pseudo) || empty($password1) || empty($password2) || empty($mail))
-		{
-		
-		}
-
-		else if ($password1 !== $password2)
-		{
-			
-		}
-	
-		else
-		{
+		if ($pseudo == $res['pseudo']) {
+		} elseif (empty($pseudo) || empty($password1) || empty($password2) || empty($mail)) {
+		} else if ($password1 !== $password2) {
+		} else {
 			$activKey = $this->userman->insertUser($pseudo, $password1, $mail);
 			$this->session->set('activation_key', $activKey);
 			$this->sendMailInscr($pseudo, $mail, $activKey);
 			return $activKey;
-
 		}
 	}
 
@@ -65,7 +51,6 @@ class UserInscriptionController implements InscrMailerInterface
 		'From: contact@b-log-lille.fr' . "\r\n" .
 		'Reply-To: contact@b-log-lille.fr' . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
-		
 
 		$message = 
 		'<p>Bonjour '.ucfirst($pseudo).' et bienvenue sur le blog professionnel de Laurent BERTON,</p>

@@ -1,13 +1,10 @@
 <?php
-	
 namespace P5\controllers\frontend;
+
 use p5\core\factories\ControllerFactory;
-
-
 
 class AccountController
 {
-
 	private $userman;
 	private $twig;
 	private $builder;
@@ -26,28 +23,19 @@ class AccountController
 
 	public function accountActivation($pseudo, $activKey)
 	{
-
 		$res = $this->userman->accActivation($pseudo);
 		$user = $this->builder->getBuilder('User')->create($res);
 		$activationKey = $user->getActivation_key();	
 		$verified = $user->getVerified(); 
-
     
-		if($verified == '1') 
-		{
+		if($verified == '1') {
    		 	echo $this->twig->render('views/frontend/accountAllreadyActived.twig');
-  		}
-  		else 
-  		{
-    		if($activKey == $activationKey) 
-      		{
-          		
-        	  	echo $this->twig->render('views/frontend/activationOk.twig');
+  		} else {
+    		if($activKey == $activationKey) {
+        		echo $this->twig->render('views/frontend/activationOk.twig');
 
 			  	$this->userman->setVerified($pseudo);
-			}
-			 else // if the two keys are different
-			{
+			} else {
 			  	echo $this->twig->render('views/frontend/errorActivation.twig');
 			}
 	  	}
@@ -55,8 +43,6 @@ class AccountController
 	  	$this->session->set('activKey', $activKey);
 	  	$this->session->set('activationKey', $activationKey);
 	  	$this->session->set('update_verfied',  $verified);
-
-	}
-	
+	}	
 }
 

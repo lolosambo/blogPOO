@@ -1,18 +1,14 @@
 <?php
-
 namespace P5\managers;
+
 use P5\core\factories\DbFactory;
 use \PDO;
-
-
 
 abstract class MainManager
 {
 
 	protected $db;
 	protected $validator;
-
-	
 
 	public function __construct()
 	{
@@ -24,10 +20,6 @@ abstract class MainManager
   	 	$this->db = new DbFactory();
   	 	return $this->db;
 	}
-	
-
-	
-
 }
 
 

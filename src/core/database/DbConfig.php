@@ -1,5 +1,4 @@
 <?php
-
 namespace p5\core\database;
 
 class DbConfig

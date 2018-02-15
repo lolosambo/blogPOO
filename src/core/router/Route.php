@@ -1,5 +1,4 @@
 <?php
-
 namespace P5\core\router;
 
 
@@ -7,12 +6,8 @@ namespace P5\core\router;
 class Route
 {
   private $path; 
-
   private $action; 
-
   private $params = []; 
-
- 
 
   public function __construct($path, $action, $params = null)
   {
@@ -27,9 +22,7 @@ class Route
 
   public function setPath($path) { $this->path = $path; }
   public function setAction($action) { $this->action = $action; }
-  public function setParams($params) { $this->params = $params; }
-
-  
+  public function setParams($params) { $this->params = $params; }  
 }
 
 

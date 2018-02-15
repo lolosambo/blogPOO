@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\entities;
+
 use P5\core\interfaces\hydrateInterface;
 
 class Posts implements HydrateInterface
@@ -16,23 +16,19 @@ class Posts implements HydrateInterface
 	private $postImgUrl;
 
 
-// INTERFACE METHOD
+	public function hydrate(array $donnees)
+	{
+   		foreach ($donnees as $key => $value)
+   		{
+      		 $method = 'set'.ucfirst($key);
 
-public function hydrate(array $donnees)
-{
-   foreach ($donnees as $key => $value)
-   {
-       $method = 'set'.ucfirst($key);
+       		if (method_exists($this, $method))
+       		{
+         		$this->$method($value);
+       		}
+   		}
+	}
 
-       if (method_exists($this, $method))
-       {
-         $this->$method($value);
-       }
-   }
-}
-
-
-// CONSTRUCTOR & HYDRATATION
 
 	public function __construct(array $data)
 	{
@@ -40,8 +36,6 @@ public function hydrate(array $donnees)
 		$this->hydrate($data);
 
 	}
-
-// GETTERS-----------------------------------
 
 	public function getPostId()
 	{
@@ -83,8 +77,6 @@ public function hydrate(array $donnees)
 		return $this->postImgUrl;
 	}
 
-
-// SETTERS --------------------------------------
 
 	public function setPostId($postId)
 	{
@@ -151,8 +143,5 @@ public function hydrate(array $donnees)
 			$this->postImgUrl = $imgUrl;
 		}
 	}
-
-
-
 }
 

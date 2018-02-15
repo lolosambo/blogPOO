@@ -1,5 +1,6 @@
 <?php
 namespace p5\controllers\backend;
+
 use P5\core\factories\ControllerFactory;
 
 class PublishedCommentController

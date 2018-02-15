@@ -1,11 +1,10 @@
 <?php
-
 namespace P5\controllers\frontend;
+
 use P5\core\factories\ControllerFactory;
 
 class LoginController
-{
-	
+{	
 	private $controller;
 	private $session;
 	private $twig;
@@ -22,10 +21,6 @@ class LoginController
 
 	public function __invoke()
 	{
-
-
-		
-
 		$url = $this->request->server->get('REQUEST_URI');
 		$connecter = $this->request->request->get('connecter');
 		$inscrire = $this->request->request->get('inscrire');
@@ -35,108 +30,53 @@ class LoginController
 		$password2 = $this->request->request->get(htmlspecialchars('password2'));
 		$mail = $this->request->request->get(htmlspecialchars('mail'));
 
-
-
-		if ($url == '/inscriptionForm/')
-		{
-			echo $this->twig->render('views/frontend/inscription_view.twig');
-			
-		}
-
-		else if ($url == '/logout/')
- 		{
-   
+		if ($url == '/inscriptionForm/') {
+			echo $this->twig->render('views/frontend/inscription_view.twig');	
+		} else if ($url == '/logout/') {
    			$this->session->clear();
    			echo $this->twig->render('views/frontend/connection_view.twig');
-
-		}
-
-		else if (isset($connecter))
-		{
+		} else if (isset($connecter)) {
 			$user = $this->controller->getFrontController('UserConnectionController');
-			$user->login($pseudo, $password);
-
-			
-			if ($this->session->get('id_role') == 2)
-			{
+			$user->login($pseudo, $password);	
+			if ($this->session->get('id_role') == 2) {
 				$pseudo = $this->session->get('pseudo');
 				echo $this->twig->render('views/frontend/loginAdmin.twig', ['pseudo' => $pseudo]);
-			}
-
-			else if ($this->session->get('id_role') == 1)
-			{
+			} else if ($this->session->get('id_role') == 1) {
 				$pseudo = $this->session->get('pseudo');
 				echo $this->twig->render('views/frontend/loginMember.twig', ['pseudo' => $pseudo]);
 			
-			}
-
-			else if ($this->session->get('pseudo') == FALSE)
-			{
+			} else if ($this->session->get('pseudo') == FALSE) {
 				echo $this->twig->render('views/frontend/errorConnection.twig');
 			}
 	
-		}
-
-		else if ($this->session->get('id_role') == 2)
-			{
-				$pseudo = $this->session->get('pseudo');
-				echo $this->twig->render('views/frontend/loginAdmin.twig', ['pseudo' => $pseudo]);
-			}
-
-			else if ($this->session->get('id_role') == 1)
-			{
-				$pseudo = $this->session->get('pseudo');
-				echo $this->twig->render('views/frontend/loginMember.twig', ['pseudo' => $pseudo]);
-			
-			}
-
-		else if (isset($inscrire))
-		{
+		} else if ($this->session->get('id_role') == 2) {
+			$pseudo = $this->session->get('pseudo');
+			echo $this->twig->render('views/frontend/loginAdmin.twig', ['pseudo' => $pseudo]);
+		} else if ($this->session->get('id_role') == 1) {
+			$pseudo = $this->session->get('pseudo');
+			echo $this->twig->render('views/frontend/loginMember.twig', ['pseudo' => $pseudo]);	
+		} else if (isset($inscrire)) {
 			$user = $this->controller->getFrontController('UserInscriptionController');
 			$user->addUser($pseudo, $password1, $password2, $mail);
 
-			if ($pseudo == $this->session->get('db_pseudo'))
-			{
+			if ($pseudo == $this->session->get('db_pseudo')) {
 				echo $this->twig->render('views/frontend/pseudoAllreadyExist.twig');	
-			}
-
-			else if (empty($pseudo) || empty($password1) || empty($password2) || empty($mail))
-			{
+			} else if (empty($pseudo) || empty($password1) || empty($password2) || empty($mail)) {
 				echo $this->twig->render('views/frontend/uncompletedForm.twig');
-			}
-
-			else if ($password1 != $password2)
-			{
-				echo $this->twig->render('views/frontend/differentPasswords.twig');
-				
-			}
-	
-			else
-			{
+			} else if ($password1 != $password2) {
+				echo $this->twig->render('views/frontend/differentPasswords.twig');	
+			} else {
 				$user = $this->controller->getFrontController('UserInscriptionController');
 				$user->addUser($pseudo, $password, $password, $mail);
-		
 				echo $this->twig->render('views/frontend/inscriptionOk.twig');
-
 			}
 
-		}
-
-		else if ($url == '/activation/')
- 		{
-   
-   			$account = $this->controller->getFrontController('AccountController');
+		} else if ($url == '/activation/') {
+  			$account = $this->controller->getFrontController('AccountController');
    			$account->account_activation($pseudo, $activKey);
-
-		}
-
-
-		else
-		{
+		} else {
 			echo $this->twig->render('views/frontend/connection_view.twig');
 		}
-
 	}
-
 }
 

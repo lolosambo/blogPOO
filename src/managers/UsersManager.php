@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\managers;
+
 use P5\core\factories\DbFactory;
 use P5\managers\MainManager;
 use \PDO;
@@ -8,7 +8,6 @@ use \PDO;
 
 class UsersManager extends MainManager
 {
-
 	protected $db;
 
 	public function __construct()
@@ -16,7 +15,6 @@ class UsersManager extends MainManager
 		$this->getDb(); 
   	 	return $this->db;
 	}
-
 
 	public function usersList()
 	{
@@ -35,14 +33,12 @@ class UsersManager extends MainManager
 		return $res;
 	}
 
-
 	public function deleteUser($pseudo)
 	{
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Users WHERE pseudo = :param');
 		$req->bindParam(':param', $pseudo);
 		$req->execute();
 	}
-
 
 	public function login($pseudo, $password)
 	{
@@ -58,7 +54,6 @@ class UsersManager extends MainManager
 		$user_data=$user->fetch();
 		return $user_data;
 	}
-
 
 	public function insertUser($pseudo, $password, $mail)
 	{
@@ -82,9 +77,6 @@ class UsersManager extends MainManager
 		$req->execute();
 		return $activation_key;
 	}
-
-
-	
 
 	public function get5LastUsers()
 	{
@@ -119,7 +111,6 @@ class UsersManager extends MainManager
 
 	}	
 
-
 	public function updateToAdmin($pseudo)
 	{	
 		$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET idRole = 2 WHERE pseudo = :param');
@@ -136,10 +127,6 @@ class UsersManager extends MainManager
 		return $req;
 	}
 
-
-	
-
-
 	public function accActivation($pseudo)
 	{
 
@@ -151,7 +138,6 @@ class UsersManager extends MainManager
 
 	}
 
-
 	public function setVerified($login)
 	{	
 
@@ -161,9 +147,5 @@ class UsersManager extends MainManager
 		return $req;
     	
 	}
-
-	
-
-
 }
 

@@ -1,17 +1,12 @@
 <?php
-
 namespace P5\entities;
 
 class Networks
 
 {
-
 	private $id;
 	private $networkName;
 	private $address; 
-
-
-// GETTERS ------------------------------
 
 	public function getId()
 	{
@@ -28,9 +23,6 @@ class Networks
 		return $this->address;
 	}
 
-
-// SETTERS -------------------------------
-
 	public function setNetworkName($name)
 	{
 		if(is_string($name))
@@ -46,7 +38,5 @@ class Networks
 			$this->address = $address;
 		}
 	}
-
-
 }
 

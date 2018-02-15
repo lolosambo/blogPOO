@@ -39,42 +39,26 @@ class PostsPaginationController
 
 		//Pagination
 		$this->postsNbr = $this->postman->countAllPosts();
-
-
 		$this->pagesNbr = ceil($this->postsNbr/self::POST_PER_PAGE);
 
-
-		if(isset($match[1]))
-    	{ 
+		if(isset($match[1])) { 
     		$this->currentPage=intval($match[1]);
-
- 
-     			if($this->currentPage > $this->pagesNbr)
-     			{
+     			if($this->currentPage > $this->pagesNbr) {
         		  	$this->currentPage = $this->pagesNbr;
-    			}
-    			else if($this->currentPage < 1)
-     			{
+    			} else if($this->currentPage < 1) {
         		  	$this->currentPage = 1;
     			}
-		}
-		else
-		{
+		} else {
      		$this->currentPage = 1;   
 		}
 
 		$this->firstEntry = ($this->currentPage-1) * self::POST_PER_PAGE;
-
 		// Show all posts from the database
 		$post = $this->postman->allPosts($this->firstEntry, self::POST_PER_PAGE);
-
 		// show sidebar
 		$connection = $this->factory->getFrontController('loginController');
-
 		$social = $this->factory->getFrontController('SocialNetworksController');
-
 		$role = $this->session->get('id_role');
-
 		// Render Twig
 		echo $this->twig->render('views/frontend/list_posts_view.twig', 
 			[

@@ -1,5 +1,6 @@
 <?php
 namespace P5\controllers\frontend;
+
 use P5\core\factories\ControllerFactory;
 
 class PresentationController
@@ -16,12 +17,11 @@ class PresentationController
 
 	public function __invoke()
 	{
-
 		$sidebar = $this->factory->getFrontController('loginController');
-
 		$networks = $this->factory->getFrontController('SocialNetworksController');
-
-		echo $this->factory->getTwig()->render('views/frontend/presentation.twig', ['sidebarContent' => $sidebar,'network' => $networks] );
+		echo $this->factory->getTwig()->render('views/frontend/presentation.twig', 
+		['sidebarContent' => $sidebar,
+		 'network' => $networks] );
 	}
 
 }

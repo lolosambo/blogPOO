@@ -1,6 +1,6 @@
-<?php
-	
-namespace p5\controllers\frontend;
+<?php	
+namespace P5\controllers\frontend;
+
 use P5\core\factories\ControllerFactory;
 
 
@@ -25,21 +25,15 @@ class UserConnectionController
 
 
 	public function login($pseudo, $password)
-	{
-		
+	{	
 		$res = $this->userman->login($pseudo, $password);
-
-
-		if (isset($res['pseudo']))
-		{
+		if (isset($res['pseudo'])) {
 			$user = $this->builder->create($res)->build();
-			
 			$this->session->set('id', $user->getId());
 			$this->session->set('pseudo', $user->getPseudo());
 			$this->session->set('id_role', $user->getIdRole());
 			$this->session->set('verified', $user->getVerified());
-			return $user;
-			
+			return $user;	
 		}			
 	}
 

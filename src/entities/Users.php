@@ -1,11 +1,10 @@
 <?php
-
 namespace P5\entities;
+
 use P5\core\interfaces\hydrateInterface;
 
 class Users implements hydrateInterface
 {
-
 	private $id;
 	private $pseudo;
 	private $mail;
@@ -15,35 +14,21 @@ class Users implements hydrateInterface
 	private $idRole = 1;
 	private $inscrDate;
 
+	public function hydrate(array $donnees)
+	{
+   		foreach ($donnees as $key => $value) {
+      		$method = 'set'.ucfirst($key);
 
-
-
-// INTERFACE METHOD
-
-public function hydrate(array $donnees)
-{
-   foreach ($donnees as $key => $value)
-   {
-       $method = 'set'.ucfirst($key);
-
-       if (method_exists($this, $method))
-       {
-         $this->$method($value);
-       }
-   }
-}
-
-
-// CONSTRUCTOR & HYDRATATION
+      		 if (method_exists($this, $method)) {
+       		  $this->$method($value);
+      		 }
+  		 }
+	}
 
 	public function __construct(array $data)
 	{
-
 		$this->hydrate($data);
-
 	}
-
-// GETTERS---------------------------------
 
 	public function getId()
 	{
@@ -84,9 +69,6 @@ public function hydrate(array $donnees)
 	{
 		return $this->inscrDate;
 	}
-
-
-// SETTERS-----------------------------------
 
 	
 	public function setId($id)
@@ -153,11 +135,6 @@ public function hydrate(array $donnees)
 			$this->inscrDate = $date;
 		}
 	}
-
-
-
-
-
 }
 
 

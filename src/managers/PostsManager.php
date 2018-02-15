@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\managers;
+
 use P5\core\factories\DbFactory;
 use P5\managers\MainManager;
 use \PDO;
@@ -8,7 +8,6 @@ use \PDO;
 
 class PostsManager extends MainManager
 {
-
 	protected $db;
 
 	public function __construct()
@@ -17,8 +16,6 @@ class PostsManager extends MainManager
   	 	return $this->db;
 	}
 
-	
-	
 	public function countAllPosts()
 	{
 
@@ -27,7 +24,6 @@ class PostsManager extends MainManager
 		$total=$data['total'];
 		return $total;
 	}
-
 
 	public function allPosts($firstEntry, $postsPerPage)
 	{
@@ -49,7 +45,6 @@ class PostsManager extends MainManager
 		
 	}
 
-	
 	public function onePost($title)
 	{
 		$post = $this->db->getPdo()->prepare
@@ -66,7 +61,6 @@ class PostsManager extends MainManager
 		$data = $post->fetch();
 		return $data;
 	}
-
 
 	public function insertPost($user_id, $title, $heading, $post_content, $img)
 	{
@@ -85,7 +79,6 @@ class PostsManager extends MainManager
 		return $newPost;
 
 	}
-
 
 	public function get3LastPosts()
 	{
@@ -133,8 +126,7 @@ class PostsManager extends MainManager
 		$req->bindParam(':param', $postId);
 		$req->execute();
 
-	}
-	
+	}	
 }
 
 

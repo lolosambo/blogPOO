@@ -1,6 +1,6 @@
 <?php
-
 namespace P5\managers;
+
 use P5\core\factories\DbFactory;
 use P5\managers\MainManager;
 use \PDO;
@@ -17,15 +17,12 @@ class NetworksManager extends MainManager
   	 	return $this->db;
 	}
 
-
-
 	public function networkList()
 	{
 		$req = $this->getDb()->getPdo()->query('SELECT * FROM Networks ORDER BY id');
 		$res = $req->fetchAll();
 		return $res;
 	}
-
 
 	public function createNetwork($name, $address, $img)
 	{
@@ -59,5 +56,4 @@ class NetworksManager extends MainManager
 		$req->bindParam(':param', $networkId);
 		$req->execute();
 	}
-
 }
