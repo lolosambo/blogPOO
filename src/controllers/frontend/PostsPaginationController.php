@@ -2,8 +2,7 @@
 namespace P5\controllers\frontend;
 use P5\core\factories\ControllerFactory;
 
-class PostsPaginationController
-{
+class PostsPaginationController {
 
 	const POST_PER_PAGE = 4;
 
@@ -18,8 +17,7 @@ class PostsPaginationController
 	private $request;
 
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->postman = $factory->getTable()->Table('posts');
@@ -29,8 +27,7 @@ class PostsPaginationController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		// Instance of HttpFoundation for $_SERVER[] values from the URL
 		$url = $this->request->server->get('REQUEST_URI');
 

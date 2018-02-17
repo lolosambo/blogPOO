@@ -3,19 +3,16 @@ namespace P5\core\router;
 
 use P5\core\factories\ControllerFactory;
 
-class Router
-{
+class Router {
 
   private $routes = [];  
 
-  public function __construct()
-  {
+  public function __construct() {
     $this->loadRoutes(); 
     
   }
 
-  public function loadRoutes()
-  {
+  public function loadRoutes() {
     $routes = require __DIR__ . '../../../../config/Routes.php'; 
 
     foreach ($routes as $route) {
@@ -24,8 +21,7 @@ class Router
   }
 
 
-  public function match($url)
-  {
+  public function match($url) {
     preg_match('#^/(([a-z-A-Z0-9_-]*)/)*#', $url, $path);  // URL with slash 
     preg_match('#([0-9a-zA-Z-_]+)$#', $url, $params); // URL last parameter without slash
     
@@ -63,21 +59,12 @@ class Router
   }
 
 
-  public function handleRequest($url, $method)
-  {
-    
-    
+  public function handleRequest($url, $method) {
     $route = $this->match($url, $method);
- 
 
-    if ($route === false)
-    {
+    if ($route === false) {
       echo 'Pas de route pour cette URL';
-    }
-
-
-    else
-    {
+    } else {
       $action = $route->getAction();
       $controller = new $action();
       $controller();

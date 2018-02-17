@@ -1,16 +1,12 @@
 <?php
 namespace P5\core\router;
 
-
-
-class Route
-{
+class Route {
   private $path; 
   private $action; 
   private $params = []; 
 
-  public function __construct($path, $action, $params = null)
-  {
+  public function __construct($path, $action, $params = null) {
     $this->path = $path;
     $this->action = $action;
     $this->params = $params;

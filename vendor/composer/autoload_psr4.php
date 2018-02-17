@@ -7,10 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Symfony\\Polyfill\\Php70\\' => array($vendorDir . '/symfony/polyfill-php70'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
-    'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
     'P5\\' => array($baseDir . '/src'),
-    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Config\\' => array($baseDir . '/config'),
 );

@@ -4,10 +4,9 @@ namespace P5\entities;
 use P5\core\interfaces\hydrateInterface;
 
 
-class Comments implements HydrateInterface
+class Comments implements HydrateInterface {
 
-{
-	private $commentId;
+    private $commentId;
 	private $idUser;
 	private $idPost;
 	private $commentContent;
@@ -15,8 +14,7 @@ class Comments implements HydrateInterface
 	private $commentUpdate;
 	private $validated = 0;
 
-	public function hydrate(array $donnees)
-	{
+	public function hydrate(array $donnees) {
    		foreach ($donnees as $key => $value) {
       		$method = 'set'.ucfirst($key);
        		if (method_exists($this, $method)) {
@@ -25,45 +23,37 @@ class Comments implements HydrateInterface
    		}
 	}
 
-	public function __construct(array $data)
-	{
+	public function __construct(array $data) {
 
 		$this->hydrate($data);
 
 	}
 
-	public function getCommentId()
-	{
+	public function getCommentId() {
 		return $this->commentId;
 	}
 
-	public function getIdUser()
-	{
+	public function getIdUser() {
 		return $this->idUser;
 	}
 
-	public function getIdPost()
-	{
+	public function getIdPost() {
 		return $this->idPost;
 	}
 
-	public function getCommentContent()
-	{
+	public function getCommentContent() {
 		return $this->commentContent;
 	}
 
-	public function getCommentDate()
-	{
+	public function getCommentDate() {
 		return $this->commentDate;
 	}
 
-	public function getCommentUpdate()
-	{	
+	public function getCommentUpdate() {
 		return $this->commentUpdate;
 	}
 
-	public function getValidated()
-	{
+	public function getValidated() {
 		return $this->validated;
 	}
 
@@ -71,52 +61,40 @@ class Comments implements HydrateInterface
 // SETTERS --------------------------------------
 
 
-	public function setCommentId($commentId)
-	{
-		if(intval($commentId))
-		{
+	public function setCommentId($commentId) {
+		if(intval($commentId)) {
 			$this->commentId = $commentId;
 		}
 	}
 
-	public function setIdUser($idUser)
-	{
-		if(intval($idUser))
-		{
+	public function setIdUser($idUser) {
+		if(intval($idUser))  {
 			$this->idUser = $idUser;
 		}
 	}
 
-	public function setIdPost($idPost)
-	{
-		if(intval($idPost))
-		{
+	public function setIdPost($idPost) {
+		if(intval($idPost))  {
 			$this->idPost = $idPost;
 		}
 	}
 
-	public function setCommentUpdate($date)
-	{
-		if(is_string($date))
-		{
+	public function setCommentUpdate($date) {
+		if(is_string($date))  {
 			$this->commentUpdate = $date;
 		}
 	}
 
-	public function setCommentContent($content)
-	{
-		if(is_string($content))
-		{
+	public function setCommentContent($content) {
+		if(is_string($content))  {
 			$this->commentContent = $content;
 		}
 	}
 
 	
 
-	public function setValidated($validated)
-	{
-		if(intval($validated) && (($validated == 0) || ($validated == 1)))
-		{
+	public function setValidated($validated) {
+		if(intval($validated) && (($validated == 0) || ($validated == 1)))  {
 			$this->validated = $validated;
 		}
 	}

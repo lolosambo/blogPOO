@@ -6,30 +6,23 @@ use P5\managers\MainManager;
 use \PDO;
 
 
-class CommentsManager extends MainManager
-{
+class CommentsManager extends MainManager {
 
 	protected $db;
 
-	public function __construct()
-	{
-		$this->getDb(); 
-  	 	return $this->db;
+	public function __construct() {
+        $this->db =$this->getDb();
 	}
 
 
-	public function getTotalComments() //Only non-validated comments
-	{
-		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated  = 0');
+	public function getTotalComments() //Only non-validated comments {
+		$req= $this->db->getPdo()->query('SELECT COUNT(*) AS total FROM Comments WHERE validated  = 0');
 		$data = $req->fetch();
 		$total=$data['total'];
 		return $total;
 	}
 	
-	public function getComments($post_id)
-	{
-		
-		
+	public function getComments($post_id) {
 		$comments = $this->db->getPdo()->prepare
 			('
 	
@@ -47,8 +40,7 @@ class CommentsManager extends MainManager
 
 	}
 
-	public function addCommentMembers($post_id, $user_id, $comment)
-	{
+	public function addCommentMembers($post_id, $user_id, $comment) {
 		$req = $this->db->getPdo()->prepare
 			("
 				INSERT INTO Comments (idPost, idUser, commentContent, commentDate, commentUpdate, validated) 
@@ -63,8 +55,7 @@ class CommentsManager extends MainManager
 		
 	}
 
-	public function addCommentAdmin($post_id, $user_id, $comment)
-	{
+	public function addCommentAdmin($post_id, $user_id, $comment) {
 		
 		$req = $this->db->getPdo()->prepare
 			("
@@ -80,29 +71,26 @@ class CommentsManager extends MainManager
 
 	}
 
-	public function deleteComment($comment_id)
-	{
+	public function deleteComment($comment_id) {
 		
-		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Comments WHERE id = :param');
+		$req = $this->db->getPdo()->prepare('DELETE FROM Comments WHERE id = :param');
 		$req->bindParam(':param', $comment_id);
 		$req->execute();
 
 	}
 
-	public function publishComment($comment_id)
-	{
+	public function publishComment($comment_id) {
 		
 		$req= $this->update('Comments', 'validated', 1, 'id', $comment_id);
 			
-		$req = $this->getDb()->getPdo()->prepare('UPDATE Comments SET validated = 1 WHERE id = :param');
+		$req = $this->db->getPdo()->prepare('UPDATE Comments SET validated = 1 WHERE id = :param');
 		$req->bindParam(':param', $comment_id);
 		$req->execute();
 		return $req;
 
 	}
 
-	public function get3LastValidComments()
-	{
+	public function get3LastValidComments() {
 
 		$req= $this->db->getPdo()->query
 		('
@@ -122,8 +110,7 @@ class CommentsManager extends MainManager
 
 	}
 
-	public function get3LastUnvalidComments()
-	{
+	public function get3LastUnvalidComments() {
 
 		$req= $this->db->getPdo()->query
 		('
@@ -142,8 +129,7 @@ class CommentsManager extends MainManager
 	}
 
 
-	public function getUnvalidComments($commentsFirstEntry, $commentsPerPage)
-	{
+	public function getUnvalidComments($commentsFirstEntry, $commentsPerPage) {
 
 		$req= $this->db->getPdo()->prepare
 		('

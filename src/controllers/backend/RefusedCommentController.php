@@ -3,16 +3,14 @@ namespace p5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class RefusedCommentController
-{
+class RefusedCommentController {
 
 	private $factory;
 	private $commentman;
 	private $request;
 
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->commentman = $this->factory->getTable()->table('Comments');
@@ -22,8 +20,7 @@ class RefusedCommentController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 
 		$url = $this->request->server->get('REQUEST_URI');
 		preg_match('#/([0-9]+)$#', $url, $match);

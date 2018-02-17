@@ -4,8 +4,7 @@ namespace P5\controllers\backend;
 use P5\core\factories\ControllerFactory;
 
 
-class SearchUserController
-{
+class SearchUserController {
 
 	
 	private $factory;
@@ -14,8 +13,7 @@ class SearchUserController
 	private $request;
 	private $builder;
 	
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->userman = $this->factory->getTable()->table('Users');
@@ -25,8 +23,7 @@ class SearchUserController
 	}
 
 
-	public function __invoke()
-	{	
+	public function __invoke() {
 		$req = $this->request->request->get('search');
 		$res = $this->userman->searchUser($req);
 		$user = $this->builder->builder('user')->create($res)->build();

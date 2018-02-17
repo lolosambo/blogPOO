@@ -5,14 +5,12 @@ use P5\core\factories\ControllerFactory;
 use P5\core\interfaces\InscrMailerInterface;
 
 
-class UserInscriptionController implements InscrMailerInterface
-{
+class UserInscriptionController implements InscrMailerInterface {
 
 	protected $userman;
 	protected $session;
 
-	public function __construct()
-	{
+	public function __construct() {
 
 		$factory = new ControllerFactory();
 		$userman = $factory->getTable()->Table('users');
@@ -23,15 +21,14 @@ class UserInscriptionController implements InscrMailerInterface
 	}
 
 	
-	public function addUser($pseudo, $password1, $password2, $mail)
-	{
+	public function addUser($pseudo, $password1, $password2, $mail) {
 		
-		$res = $this->userman->compareUsers('pseudo', $pseudo);
+		$res = $this->userman->compareUsers($pseudo);
 		$this->session->set('db_pseudo', $res['pseudo']);
 		
 		if ($pseudo == $res['pseudo']) {
 		} elseif (empty($pseudo) || empty($password1) || empty($password2) || empty($mail)) {
-		} else if ($password1 !== $password2) {
+		} elseif ($password1 !== $password2) {
 		} else {
 			$activKey = $this->userman->insertUser($pseudo, $password1, $mail);
 			$this->session->set('activation_key', $activKey);
@@ -41,8 +38,7 @@ class UserInscriptionController implements InscrMailerInterface
 	}
 
 
-	public function sendMailInscr($pseudo, $mail_add, $activKey)
-	{
+	public function sendMailInscr($pseudo, $mail_add, $activKey) {
 
 		$objet = 'Confirmation de votre inscription sur le blog de Laurent BERTON' ;
 		$to = $mail_add;
@@ -57,7 +53,7 @@ class UserInscriptionController implements InscrMailerInterface
  
 		<p>Pour activer votre compte, veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur.</p>
  
-		<p><a href="http://www.b-log-lille.fr/activation/'.$pseudo.'/'.$activKey.'">Activez votre compte</a></p><br><br>
+		<p><a href="http://www.tutoocr.fr/activation/'.$activKey.'">Activez votre compte</a></p><br><br>
  
  
 		---------------<br>

@@ -4,8 +4,7 @@ namespace P5\controllers\backend;
 use P5\core\factories\ControllerFactory;
 
 
-class AddedPostController
-{
+class AddedPostControlle {
 
 	use \P5\core\traits\ImgTrait;
 	
@@ -15,8 +14,7 @@ class AddedPostController
 	private $request;
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->request = $this->factory->getRequest();
@@ -25,8 +23,7 @@ class AddedPostController
 	
 	}
 
-	public function __invoke()
-	{		
+	public function __invoke() {
 		$title = $this->request->request->get('title');
 		$heading = $this->request->request->get('heading');
 		$post_content = $this->request->request->get('content');

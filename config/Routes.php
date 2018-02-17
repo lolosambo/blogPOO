@@ -45,6 +45,13 @@ return [
     'params' => []
   ],
 
+  'activation' => [
+    'path' => '/activation/:id',
+    'method' => 'POST',
+    'action' => P5\controllers\frontend\AccountController::class,
+    'params' => [':id' => '#([0-9]+)$#']
+  ],
+
   'connectionStatus' => [
     'path' => '/connectionStatus/',
     'method' => 'GET',
@@ -62,7 +69,7 @@ return [
 'contact' => [
     'path' => '/contact/',
     'method' => 'POST',
-    'action' => P5\controllers\frontend\PostsPaginationController::class,
+    'action' => P5\controllers\frontend\ContactController::class,
     'params' => []
   ],
 

@@ -3,16 +3,14 @@ namespace P5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class UpdatePostController
-{
+class UpdatePostController {
 
 	private $factory;
 	private $postman;
 	private $request;
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->postman = $this->factory->getTable()->table('Posts');
@@ -20,8 +18,7 @@ class UpdatePostController
 	
 	}
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		$url = urldecode($this->request->server->get('REQUEST_URI'));
 
 		preg_match('#([^/]+)$#', $url, $match);

@@ -3,8 +3,7 @@ namespace P5\controllers\frontend;
 
 use P5\core\factories\ControllerFactory;
 
-class OnePostController
-{
+class OnePostController {
 
 	private $postman;
 	private $factory;
@@ -12,8 +11,7 @@ class OnePostController
 	private $request;
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$manager = $factory->getTable()->table('Posts');
@@ -22,8 +20,7 @@ class OnePostController
 		$this->request = $factory->getRequest();
 	}
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		// turn "_" into " " to find the same title as the postTitle value 
 		$url = urldecode($this->request->server->get('REQUEST_URI'));
 		preg_match('#([^/]+)$#', $url, $match);

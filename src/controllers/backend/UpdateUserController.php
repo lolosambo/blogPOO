@@ -3,16 +3,14 @@ namespace P5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class UpdateUserController
-{
+class UpdateUserController {
 
 	private $factory;
 	private $userman;
 	private $session;
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->userman = $this->factory->getTable()->table('Users');
@@ -20,8 +18,7 @@ class UpdateUserController
 	
 	}
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		$foundUser = $this->session->get('foundUser');
 
 		if ($this->session->get('foundUserRole') == 1) {
@@ -33,14 +30,12 @@ class UpdateUserController
 
 	}
 
-	public function changeToAdmin($pseudo)
-	{	
+	public function changeToAdmin($pseudo) {
 		$this->userman->updateToAdmin($pseudo);
 		echo $this->factory->getTwig()->render('views/backend/updatedUsers.twig', ['foundUser' => $pseudo]);
 	}
 
-	public function changeToUser($pseudo)
-	{
+	public function changeToUser($pseudo) {
 		$this->userman->updateToUser($pseudo);
 		echo $this->factory->getTwig()->render('views/backend/updatedUsers.twig', ['foundUser' => $pseudo]);
 	}

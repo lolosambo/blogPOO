@@ -6,18 +6,15 @@ use P5\managers\MainManager;
 use \PDO;
 
 
-class PostsManager extends MainManager
-{
+class PostsManager extends MainManager {
 	protected $db;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$this->getDb(); 
   	 	return $this->db;
 	}
 
-	public function countAllPosts()
-	{
+	public function countAllPosts() {
 
 		$req= $this->getDb()->getPdo()->query('SELECT COUNT(*) AS total FROM Posts');
 		$data = $req->fetch();
@@ -25,8 +22,7 @@ class PostsManager extends MainManager
 		return $total;
 	}
 
-	public function allPosts($firstEntry, $postsPerPage)
-	{
+	public function allPosts($firstEntry, $postsPerPage) {
 
 		$posts = $this->db->getPdo()->prepare
 		('
@@ -45,8 +41,7 @@ class PostsManager extends MainManager
 		
 	}
 
-	public function onePost($title)
-	{
+	public function onePost($title) {
 		$post = $this->db->getPdo()->prepare
 		('
 	
@@ -62,8 +57,7 @@ class PostsManager extends MainManager
 		return $data;
 	}
 
-	public function insertPost($user_id, $title, $heading, $post_content, $img)
-	{
+	public function insertPost($user_id, $title, $heading, $post_content, $img) {
 		$newPost = $this->db->getPdo()->prepare
 		("
 			INSERT INTO Posts (idUser, postTitle, postHeading, postContent, postDate, postUpdate, postImgUrl) 
@@ -80,8 +74,7 @@ class PostsManager extends MainManager
 
 	}
 
-	public function get3LastPosts()
-	{
+	public function get3LastPosts() {
 
 		$req = $this->db->getPdo()->query 
 		('
@@ -97,8 +90,7 @@ class PostsManager extends MainManager
 		return $req;
 	}
 
-	public function updatePost($postId, $title, $heading, $content)
-	{
+	public function updatePost($postId, $title, $heading, $content) {
 
 		$req = $this->db->getPdo()->prepare
 		('
@@ -120,8 +112,7 @@ class PostsManager extends MainManager
 	}
 
 
-	public function deletePost($postId)
-	{
+	public function deletePost($postId) {
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Posts WHERE id = :param');
 		$req->bindParam(':param', $postId);
 		$req->execute();

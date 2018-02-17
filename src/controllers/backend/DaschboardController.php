@@ -3,16 +3,14 @@ namespace P5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class DaschboardController
-{
+class DaschboardController {
 	private $factory;
 	private $postman;
 	private $userman;
 	private $commentman;
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->postman = $factory->getTable()->table('Posts');
@@ -21,8 +19,7 @@ class DaschboardController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		$users = $this->userman->get5LastUsers();
 		$posts = $this->postman->get3LastPosts();
 		$comments1 = $this->commentman->get3LastValidComments();

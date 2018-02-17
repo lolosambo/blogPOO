@@ -3,8 +3,7 @@ namespace P5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class ShowPostsController
-{
+class ShowPostsController {
 	const POST_PER_PAGE = 4;
 
 	private $factory;
@@ -16,8 +15,7 @@ class ShowPostsController
 	private $currentPage;
 	private $request;
 	
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->postman = $this->factory->getTable()->table('Posts');
@@ -28,8 +26,7 @@ class ShowPostsController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 
 		$url = $this->request->server->get('REQUEST_URI');
 

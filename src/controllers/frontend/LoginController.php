@@ -3,14 +3,12 @@ namespace P5\controllers\frontend;
 
 use P5\core\factories\ControllerFactory;
 
-class LoginController
-{	
+class LoginController {
 	private $controller;
 	private $session;
 	private $twig;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$controller = new ControllerFactory();
 		$this->controller = $controller; 
 		$this->session = $controller->getSession(); 
@@ -19,8 +17,7 @@ class LoginController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		$url = $this->request->server->get('REQUEST_URI');
 		$connecter = $this->request->request->get('connecter');
 		$inscrire = $this->request->request->get('inscrire');

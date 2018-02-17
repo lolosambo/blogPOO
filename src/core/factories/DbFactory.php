@@ -5,17 +5,14 @@ use P5\core\database\DbConfig;
 use \PDO;
 
 
-class DbFactory
-{
+class DbFactory {
 	private $config;
 
-  public function __construct()
-  {
+  public function __construct() {
   	$this->config = new DbConfig;
   }
   	
-  public function getPdo()
-  {
+  public function getPdo() {
       $db =  new PDO('mysql:host='.$this->config->getConfig()['host'].';dbname='.$this->config->getConfig()['dbname'], 
       $this->config->getConfig()['user'], $this->config->getConfig()['pass']);
       $db->exec("SET CHARACTER SET utf8");

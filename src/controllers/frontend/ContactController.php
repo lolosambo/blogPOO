@@ -3,29 +3,25 @@ namespace P5\controllers\frontend;
 
 use P5\core\factories\ControllerFactory;
 
-class ContactController 
-{
+class ContactController {
 	
-
+	private $factory;
 	private $request;
 	
-	public function __construct()
-	{
-		$factory = new ControllerFactory();
-		$this->request = $factory->getRequest();
+	public function __construct() {
+		$this->factory = new ControllerFactory();
+		$this->request = $this->factory->getRequest();
 		
 	}
 
-	public function __invoke($name, $mail, $phone, $subject, $message)
-	{
+	public function __invoke() {
 	
 		$name = $this->request->request->get('name');
-		$mail = $this->request->request->get('mail');
+		$mail = $this->request->request->get('email');
 		$phone = $this->request->request->get('phone');
-		$subject = $this->request->request->get('object');
 		$message = $this->request->request->get('message');
 
-		$objet = 'Message de B-LOG : '.$subject ;
+		$objet = 'Message de B-LOG : ';
 		$to = 'contact@b-log-lille.fr';
 		$header =
 		'Content-type: text/html; charset=utf-8' . "\r\n" .
@@ -37,11 +33,12 @@ class ContactController
 		'<p>Message en provenance de '.$name.'.</p>
 		<p>Numéro de téléphone : '.$phone.'</p>
 		<p>Adresse mail : '.$mail.'</p>
-		<p>Sujet du message : '.$object.'</p>
 		<p>Message : '.$message.'</p>';
           
 		//Send mail
-		mail($to, $objet, $message, $header);	
+		mail($to, $objet, $message, $header);
+
+		echo $this->factory->getTwig()->render('views/frontend/contactOk.twig');
 
 	}
 

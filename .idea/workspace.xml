@@ -2,76 +2,828 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e83c5b-94fe-441b-9795-c83802881268" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/public/admin/index.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" afterPath="$PROJECT_DIR$/.idea/blog.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config/DbLogin.php" afterPath="$PROJECT_DIR$/config/DbLogin.php" />
+      <change beforePath="$PROJECT_DIR$/config/Routes.php" afterPath="$PROJECT_DIR$/config/Routes.php" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.babelrc.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/.babelrc.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.editorconfig" afterPath="$PROJECT_DIR$/public/css/bootstrap/.editorconfig" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.eslintignore" afterPath="$PROJECT_DIR$/public/css/bootstrap/.eslintignore" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.gitattributes" afterPath="$PROJECT_DIR$/public/css/bootstrap/.gitattributes" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.github/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/.github/CONTRIBUTING.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/.github/ISSUE_TEMPLATE.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.gitignore" afterPath="$PROJECT_DIR$/public/css/bootstrap/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.hound.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/.hound.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.houndignore" afterPath="$PROJECT_DIR$/public/css/bootstrap/.houndignore" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/.travis.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/.travis.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/CNAME" afterPath="$PROJECT_DIR$/public/css/bootstrap/CNAME" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/Gemfile" afterPath="$PROJECT_DIR$/public/css/bootstrap/Gemfile" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/Gemfile.lock" afterPath="$PROJECT_DIR$/public/css/bootstrap/Gemfile.lock" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/public/css/bootstrap/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/README.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/README.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_config.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_config.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/breakpoints.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/breakpoints.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/browser-bugs.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/browser-bugs.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/browser-features.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/browser-features.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/colors.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/colors.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/core-team.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/core-team.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/grays.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/grays.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/nav.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/nav.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/showcase.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/showcase.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/theme-colors.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/theme-colors.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_data/translations.yml" afterPath="$PROJECT_DIR$/public/css/bootstrap/_data/translations.yml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/ads.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/ads.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/callout-danger-async-methods.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/callout-danger-async-methods.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/callout-warning-color-assistive-technologies.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/callout-warning-color-assistive-technologies.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/docs-navbar.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/docs-navbar.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/docs-sidebar.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/docs-sidebar.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/favicons.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/favicons.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/footer.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/footer.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/header.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/header.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/bootstrap.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/bootstrap.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/download.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/download.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/github.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/github.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/import.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/import.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/lightning.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/lightning.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/menu.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/menu.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/slack.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/slack.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/twitter.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/icons/twitter.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/scripts.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/scripts.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_includes/social.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_includes/social.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_layouts/default.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_layouts/default.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_layouts/docs.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_layouts/docs.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_layouts/home.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_layouts/home.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_layouts/redirect.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_layouts/redirect.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_layouts/simple.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/_layouts/simple.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_plugins/bugify.rb" afterPath="$PROJECT_DIR$/public/css/bootstrap/_plugins/bugify.rb" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_plugins/callout.rb" afterPath="$PROJECT_DIR$/public/css/bootstrap/_plugins/callout.rb" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_plugins/example.rb" afterPath="$PROJECT_DIR$/public/css/bootstrap/_plugins/example.rb" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/_plugins/markdown-block.rb" afterPath="$PROJECT_DIR$/public/css/bootstrap/_plugins/markdown-block.rb" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-outline.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-outline.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-punchout.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-punchout.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-social-logo.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-social-logo.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-social.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-social.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-solid.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/brand/bootstrap-solid.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/css/docs.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/css/docs.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/css/docs.min.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/css/docs.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/bootstrap-stack.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/bootstrap-stack.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/bootstrap-themes.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/bootstrap-themes.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/android-chrome-192x192.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/android-chrome-192x192.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/android-chrome-512x512.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/android-chrome-512x512.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/apple-touch-icon.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/apple-touch-icon.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/browserconfig.xml" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/browserconfig.xml" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/favicon-16x16.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/favicon-16x16.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/favicon-32x32.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/favicon-32x32.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/manifest.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/manifest.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-144x144.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-144x144.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-150x150.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-150x150.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-310x150.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-310x150.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-310x310.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-310x310.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-70x70.png" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/mstile-70x70.png" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/safari-pinned-tab.svg" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/img/favicons/safari-pinned-tab.svg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/docs.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/docs.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/ie-emulation-modes-warning.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/ie-emulation-modes-warning.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/ie10-viewport-bug-workaround.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/ie10-viewport-bug-workaround.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/src/application.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/src/application.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/src/pwa.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/src/pwa.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/anchor.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/anchor.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/clipboard.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/clipboard.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/holder.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/holder.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/jquery-slim.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/jquery-slim.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/popper.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/js/vendor/popper.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_ads.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_ads.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_algolia.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_algolia.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_anchor.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_anchor.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_brand.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_brand.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_browser-bugs.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_browser-bugs.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_buttons.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_buttons.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_callouts.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_callouts.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_clipboard-js.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_clipboard-js.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_colors.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_colors.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_component-examples.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_component-examples.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_content.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_content.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_examples.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_examples.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_featured-sites.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_featured-sites.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_footer.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_footer.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_masthead.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_masthead.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_nav.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_nav.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_page-header.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_page-header.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_responsive-tests.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_responsive-tests.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_sidebar.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_sidebar.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_skiplink.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_skiplink.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_syntax.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_syntax.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_team.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_team.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/docs.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/assets/scss/docs.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/bower.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/bower.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/.htmllintrc" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/.htmllintrc" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/.stylelintrc" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/.stylelintrc" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/change-version.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/change-version.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/gcp-key.json.enc" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/gcp-key.json.enc" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/htmllint.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/htmllint.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/lint-vars.sh" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/lint-vars.sh" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/postcss.config.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/postcss.config.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/rollup.config.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/rollup.config.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/sauce_browsers.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/sauce_browsers.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/saucelabs-unit-test.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/saucelabs-unit-test.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/ship.sh" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/ship.sh" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/upload-preview.sh" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/upload-preview.sh" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/workbox.config.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/workbox.config.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/build/workbox.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/build/workbox.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/composer.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/composer.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.min.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-grid.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/css/bootstrap.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.bundle.min.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.min.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/dist/js/bootstrap.min.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/brand.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/brand.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/history.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/history.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/license.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/license.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/team.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/team.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/translations.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/about/translations.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/browser-bugs.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/browser-bugs.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/alerts.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/alerts.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/badge.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/badge.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/breadcrumb.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/breadcrumb.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/button-group.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/button-group.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/buttons.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/buttons.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/card.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/card.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/carousel.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/carousel.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/collapse.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/collapse.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/dropdowns.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/dropdowns.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/forms.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/forms.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/input-group.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/input-group.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/jumbotron.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/jumbotron.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/list-group.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/list-group.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/modal.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/modal.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/navbar.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/navbar.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/navs.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/navs.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/pagination.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/pagination.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/popovers.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/popovers.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/progress.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/progress.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/scrollspy.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/scrollspy.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/tooltips.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/components/tooltips.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/code.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/code.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/figures.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/figures.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/images.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/images.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/reboot.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/reboot.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/tables.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/tables.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/typography.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/content/typography.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/.stylelintrc" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/.stylelintrc" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/album/album.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/album/album.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/album/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/album/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/blog/blog.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/blog/blog.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/blog/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/blog/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/carousel/carousel.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/carousel/carousel.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/carousel/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/carousel/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/cover/cover.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/cover/cover.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/cover/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/cover/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/dashboard/dashboard.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/dashboard/dashboard.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/dashboard/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/dashboard/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/grid/grid.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/grid/grid.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/grid/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/grid/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/index.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/index.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/jumbotron/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/jumbotron/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/jumbotron/jumbotron.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/jumbotron/jumbotron.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/justified-nav/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/justified-nav/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/justified-nav/justified-nav.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/justified-nav/justified-nav.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/narrow-jumbotron/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/narrow-jumbotron/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/narrow-jumbotron/narrow-jumbotron.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/narrow-jumbotron/narrow-jumbotron.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-bottom/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-bottom/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top-fixed/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top-fixed/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top-fixed/navbar-top-fixed.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top-fixed/navbar-top-fixed.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top/navbar-top.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbar-top/navbar-top.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbars/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbars/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbars/navbar.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/navbars/navbar.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/offcanvas.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/offcanvas.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/offcanvas.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/offcanvas/offcanvas.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/album.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/album.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/blog.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/blog.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/carousel.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/carousel.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/cover.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/cover.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/dashboard.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/dashboard.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/grid.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/grid.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/jumbotron-narrow.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/jumbotron-narrow.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/jumbotron.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/jumbotron.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/justified-nav.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/justified-nav.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-bottom.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-bottom.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-fixed.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-fixed.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-static.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar-static.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/navbar.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/offcanvas.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/offcanvas.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sign-in.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sign-in.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/starter-template.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/starter-template.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sticky-footer-navbar.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sticky-footer-navbar.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sticky-footer.jpg" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/screenshots/sticky-footer.jpg" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/signin/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/signin/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/signin/signin.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/signin/signin.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/starter-template/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/starter-template/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/starter-template/starter-template.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/starter-template/starter-template.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer-navbar/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer-navbar/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer/sticky-footer.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/sticky-footer/sticky-footer.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/tooltip-viewport.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/tooltip-viewport.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/tooltip-viewport.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/examples/tooltip-viewport/tooltip-viewport.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/approach.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/approach.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/icons.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/icons.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/index.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/extend/index.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/accessibility.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/accessibility.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/best-practices.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/best-practices.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/browsers-devices.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/browsers-devices.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/build-tools.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/build-tools.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/contents.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/contents.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/download.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/download.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/introduction.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/introduction.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/javascript.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/javascript.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/theming.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/theming.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/webpack.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/getting-started/webpack.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/grid.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/grid.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/media-object.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/media-object.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/overview.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/overview.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/utilities-for-layout.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/layout/utilities-for-layout.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/migration.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/migration.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/borders.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/borders.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/clearfix.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/clearfix.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/close-icon.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/close-icon.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/colors.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/colors.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/display.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/display.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/embed.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/embed.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/flex.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/flex.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/float.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/float.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/image-replacement.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/image-replacement.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/position.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/position.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/screenreaders.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/screenreaders.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/sizing.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/sizing.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/spacing.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/spacing.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/text.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/text.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/vertical-align.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/vertical-align.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/visibility.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/docs/4.0/utilities/visibility.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/favicon.ico" afterPath="$PROJECT_DIR$/public/css/bootstrap/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/.eslintrc.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/.eslintrc.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/alert.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/alert.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/alert.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/alert.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/button.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/button.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/button.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/button.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/carousel.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/carousel.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/carousel.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/carousel.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/collapse.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/collapse.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/collapse.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/collapse.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/dropdown.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/dropdown.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/dropdown.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/dropdown.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/index.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/index.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/index.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/index.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/modal.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/modal.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/modal.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/modal.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/popover.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/popover.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/popover.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/popover.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/scrollspy.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/scrollspy.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/scrollspy.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/scrollspy.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tab.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tab.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tab.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tab.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tooltip.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tooltip.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tooltip.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/tooltip.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/util.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/util.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/dist/util.js.map" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/dist/util.js.map" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/alert.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/alert.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/button.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/button.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/carousel.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/carousel.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/collapse.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/collapse.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/dropdown.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/dropdown.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/index.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/index.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/modal.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/modal.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/popover.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/popover.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/scrollspy.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/scrollspy.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/tab.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/tab.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/tooltip.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/tooltip.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/src/util.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/src/util.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/.eslintrc.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/.eslintrc.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/README.md" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/README.md" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/index.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/alert.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/alert.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/button.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/button.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/carousel.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/carousel.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/collapse.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/collapse.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/dropdown.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/dropdown.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/modal.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/modal.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/popover.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/popover.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/scrollspy.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/scrollspy.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/tab.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/tab.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/tooltip.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/unit/tooltip.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/vendor/qunit.css" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/vendor/qunit.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/vendor/qunit.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/vendor/qunit.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/alert.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/alert.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/button.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/button.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/carousel.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/carousel.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/collapse.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/collapse.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/dropdown.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/dropdown.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/modal.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/modal.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/popover.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/popover.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/scrollspy.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/scrollspy.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/tab.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/tab.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/tooltip.html" afterPath="$PROJECT_DIR$/public/css/bootstrap/js/tests/visual/tooltip.html" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/nuget/MyGet.ps1" afterPath="$PROJECT_DIR$/public/css/bootstrap/nuget/MyGet.ps1" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/nuget/bootstrap.nuspec" afterPath="$PROJECT_DIR$/public/css/bootstrap/nuget/bootstrap.nuspec" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/nuget/bootstrap.sass.nuspec" afterPath="$PROJECT_DIR$/public/css/bootstrap/nuget/bootstrap.sass.nuspec" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/package-lock.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/package.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/package.js" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/package.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/package.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/robots.txt" afterPath="$PROJECT_DIR$/public/css/bootstrap/robots.txt" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/sache.json" afterPath="$PROJECT_DIR$/public/css/bootstrap/sache.json" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_alert.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_alert.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_badge.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_badge.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_breadcrumb.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_breadcrumb.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_button-group.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_button-group.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_buttons.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_buttons.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_card.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_card.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_carousel.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_carousel.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_close.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_close.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_code.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_code.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_custom-forms.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_custom-forms.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_dropdown.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_dropdown.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_forms.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_forms.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_functions.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_functions.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_grid.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_grid.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_images.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_images.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_input-group.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_input-group.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_jumbotron.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_jumbotron.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_list-group.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_list-group.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_media.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_media.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_mixins.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_modal.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_modal.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_nav.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_nav.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_navbar.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_navbar.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_pagination.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_pagination.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_popover.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_popover.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_print.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_print.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_progress.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_progress.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_reboot.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_reboot.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_root.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_root.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_tables.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_tables.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_tooltip.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_tooltip.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_transitions.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_transitions.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_type.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_type.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_utilities.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_utilities.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap-grid.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap-grid.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap-reboot.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap-reboot.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/bootstrap.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_alert.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_alert.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_background-variant.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_background-variant.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_badge.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_badge.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_border-radius.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_border-radius.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_box-shadow.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_box-shadow.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_breakpoints.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_breakpoints.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_buttons.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_caret.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_caret.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_clearfix.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_clearfix.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_float.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_float.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_forms.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_forms.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_gradients.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_gradients.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_grid-framework.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_grid-framework.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_grid.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_grid.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_hover.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_hover.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_image.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_image.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_list-group.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_list-group.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_lists.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_lists.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_nav-divider.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_nav-divider.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_navbar-align.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_navbar-align.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_pagination.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_pagination.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_reset-text.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_reset-text.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_resize.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_resize.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_screen-reader.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_screen-reader.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_size.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_size.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_table-row.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_table-row.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-emphasis.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-emphasis.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-hide.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-hide.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-truncate.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_text-truncate.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_transition.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_transition.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_visibility.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/mixins/_visibility.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_align.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_align.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_background.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_background.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_borders.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_borders.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_clearfix.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_clearfix.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_display.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_display.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_embed.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_embed.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_flex.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_flex.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_float.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_float.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_position.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_position.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_screenreaders.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_screenreaders.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_sizing.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_sizing.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_spacing.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_spacing.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_text.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_text.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_visibility.scss" afterPath="$PROJECT_DIR$/public/css/bootstrap/scss/utilities/_visibility.scss" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap/sw.js" afterPath="$PROJECT_DIR$/public/css/bootstrap/sw.js" />
       <change beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/Session.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AdminCommentsController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AdminPostsController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AdminUsersController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/backend/ImagesController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/CommentsController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/NetworksController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/PaginationController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/PostsController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/UsersController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/database/DbConfig.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/database/DbFactory.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/database/DbLogin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AddNetworkController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/AddNetworkController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AddPostFormController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/AddPostFormController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AddedNetworkController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/AddedNetworkController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AddedPostController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/AddedPostController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/AllUnvalidCommentsController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/AllUnvalidCommentsController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/DaschboardController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/DaschboardController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/DeleteNetworkController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/DeleteNetworkController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/DeletePostController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/DeletePostController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/DeleteUserController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/DeleteUserController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/NetworksController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/NetworksController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/PublishedCommentController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/PublishedCommentController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/RefusedCommentController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/RefusedCommentController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/ShowPostsController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/ShowPostsController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/UpdateNetworkController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/UpdateNetworkController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/UpdatePostController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/UpdatePostController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/UpdateUserController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/UpdateUserController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/UpdatedPostController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/UpdatedPostController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/UserFormController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/UserFormController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/AccountController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/AccountController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/AddCommentController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/AddCommentController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/AllCommentsController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/AllCommentsController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/ContactController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/ContactController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/CvController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/CvController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/LoginController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/LoginController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/OnePostController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/OnePostController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/PostsPaginationController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/PostsPaginationController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/PresentationController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/PresentationController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/SocialNetworksController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/SocialNetworksController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/UserConnectionController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/UserConnectionController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/UserInscriptionController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/UserInscriptionController.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/builders/CommentBuilder.php" afterPath="$PROJECT_DIR$/src/core/builders/CommentBuilder.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/builders/NetworkBuilder.php" afterPath="$PROJECT_DIR$/src/core/builders/NetworkBuilder.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/builders/PostBuilder.php" afterPath="$PROJECT_DIR$/src/core/builders/PostBuilder.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/builders/UserBuilder.php" afterPath="$PROJECT_DIR$/src/core/builders/UserBuilder.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/database/DbConfig.php" afterPath="$PROJECT_DIR$/src/core/database/DbConfig.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/factories/BuilderFactory.php" afterPath="$PROJECT_DIR$/src/core/factories/BuilderFactory.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/factories/ControllerFactory.php" afterPath="$PROJECT_DIR$/src/core/factories/ControllerFactory.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/factories/DbFactory.php" afterPath="$PROJECT_DIR$/src/core/factories/DbFactory.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/factories/TableFactory.php" afterPath="$PROJECT_DIR$/src/core/factories/TableFactory.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/interfaces/CheckImageInterface.php" afterPath="$PROJECT_DIR$/src/core/interfaces/CheckImageInterface.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/interfaces/ContactmailerInterface.php" afterPath="$PROJECT_DIR$/src/core/interfaces/ContactmailerInterface.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php" afterPath="$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/interfaces/hydrateInterface.php" afterPath="$PROJECT_DIR$/src/core/interfaces/hydrateInterface.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/router/Route.php" afterPath="$PROJECT_DIR$/src/core/router/Route.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/router/Router.php" afterPath="$PROJECT_DIR$/src/core/router/Router.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/router/RouterException.php" afterPath="$PROJECT_DIR$/src/core/router/RouterException.php" />
+      <change beforePath="$PROJECT_DIR$/src/core/traits/ImgTrait.php" afterPath="$PROJECT_DIR$/src/core/traits/ImgTrait.php" />
       <change beforePath="$PROJECT_DIR$/src/entities/Comments.php" afterPath="$PROJECT_DIR$/src/entities/Comments.php" />
       <change beforePath="$PROJECT_DIR$/src/entities/Networks.php" afterPath="$PROJECT_DIR$/src/entities/Networks.php" />
       <change beforePath="$PROJECT_DIR$/src/entities/Posts.php" afterPath="$PROJECT_DIR$/src/entities/Posts.php" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Roles.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/entities/Users.php" afterPath="$PROJECT_DIR$/src/entities/Users.php" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/hydrateInterface.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/mailerInterface.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/managers/CommentsManager.php" afterPath="$PROJECT_DIR$/src/managers/CommentsManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/MainManager.php" afterPath="$PROJECT_DIR$/src/managers/MainManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/ManagerValidator.php" afterPath="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
       <change beforePath="$PROJECT_DIR$/src/managers/NetworksManager.php" afterPath="$PROJECT_DIR$/src/managers/NetworksManager.php" />
       <change beforePath="$PROJECT_DIR$/src/managers/PostsManager.php" afterPath="$PROJECT_DIR$/src/managers/PostsManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/SessionManager.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/managers/UsersManager.php" afterPath="$PROJECT_DIR$/src/managers/UsersManager.php" />
-      <change beforePath="$PROJECT_DIR$/test.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test2.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change beforePath="$PROJECT_DIR$/views/backend/add_network_form.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/add_post.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/add_post_form.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/added_network.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/comments.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/daschboard.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/delete_network.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/delete_post.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/err_post.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/img_message.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/menu.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/networks.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/posts.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/published_comment.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/refused_comment.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/searchUserForm.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/update_network.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/update_post.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/updatedUsers.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/updated_post.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/backend/users.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/add_comment_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/comments_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/connexion_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/contact_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/inscription_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/list_posts_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/post_view.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/includes/footer.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/includes/header.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/includes/sidebar.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/templates/admin_template.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/templates/daschboard_template.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/templates/default.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/.github/ISSUE_TEMPLATE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/.travis.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/CHANGELOG.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/CONTRIBUTING.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/LICENSE.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/examples/example.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/lib/Client.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/lib/Response.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/test/unit/ClientTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/test/unit/MockClient.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/test/unit/ResponseTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/test/unit/bootstrap.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/.github/ISSUE_TEMPLATE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/.travis.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/CHANGELOG.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/CONTRIBUTING.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/LICENSE.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/TROUBLESHOOTING.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/USAGE.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/USE_CASES.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/accesssettings/accesssettings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/alerts/alerts.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/apikeys/apikeys.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/asm/asm.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/browsers/browsers.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/campaigns/campaigns.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/categories/categories.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/clients/clients.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/contactdb/contactdb.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/devices/devices.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/geo/geo.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/helpers/mail/example.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/ips/ips.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/mail/mail.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/mailboxproviders/mailboxproviders.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/mailsettings/mailsettings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/partnersettings/partnersettings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/scopes/scopes.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/senders/senders.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/stats/stats.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/subusers/subusers.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/suppression/suppression.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/templates/templates.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/trackingsettings/trackingsettings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/user/user.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/examples/whitelabel/whitelabel.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/SendGrid.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/helpers/mail/Mail.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/helpers/mail/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/loader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/scripts/generate_upload_policy.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/scripts/s3policy.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/scripts/s3upload.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/sendgrid-php.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/test/prism.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/test/unit/SendGridTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/test/unit/bootstrap.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/test/unit/helpers/mail/MailTest.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/test/unit/phpunit.xml.dist" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/CHANGELOG.md" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcher.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/CookieTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/CookieTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/AbstractSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/AbstractSessionHandlerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MongoDbSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MongoDbSessionHandlerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeFileSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeFileSessionHandlerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/PhpBridgeSessionStorageTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/PhpBridgeSessionStorageTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/composer.json" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/.gitignore" afterPath="$PROJECT_DIR$/vendor/twig/twig/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/.php_cs.dist" afterPath="$PROJECT_DIR$/vendor/twig/twig/.php_cs.dist" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/.travis.yml" afterPath="$PROJECT_DIR$/vendor/twig/twig/.travis.yml" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/CHANGELOG" afterPath="$PROJECT_DIR$/vendor/twig/twig/CHANGELOG" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/composer.json" afterPath="$PROJECT_DIR$/vendor/twig/twig/composer.json" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/advanced.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/advanced.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/api.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/api.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/deprecated.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/deprecated.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/batch.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/batch.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/convert_encoding.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/convert_encoding.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/date.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/date.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/date_modify.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/date_modify.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/escape.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/escape.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/first.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/first.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/last.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/last.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/length.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/length.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/nl2br.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/nl2br.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/number_format.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/number_format.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/reverse.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/reverse.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/round.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/round.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/slice.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/slice.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/split.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/split.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/trim.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/trim.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/url_encode.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/url_encode.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/attribute.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/attribute.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/block.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/block.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/constant.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/constant.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/date.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/date.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/dump.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/dump.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/include.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/include.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/max.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/max.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/min.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/min.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/random.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/random.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/source.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/source.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/template_from_string.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/functions/template_from_string.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/index.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/index.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/installation.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/installation.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/internals.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/internals.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/intro.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/intro.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/recipes.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/recipes.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/autoescape.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/autoescape.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/do.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/do.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/embed.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/embed.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/extends.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/extends.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/flush.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/flush.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/for.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/for.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/include.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/include.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/macro.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/macro.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/use.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/use.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/verbatim.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/verbatim.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/with.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/with.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/templates.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/templates.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/constant.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/constant.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/divisibleby.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/divisibleby.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/empty.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/empty.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/iterable.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/iterable.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/sameas.rst" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tests/sameas.rst" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/BaseNodeVisitor.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/BaseNodeVisitor.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Cache/Filesystem.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Cache/Filesystem.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Cache/Null.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Cache/Null.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Compiler.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Compiler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Environment.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Environment.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Loader.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Loader.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Syntax.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Syntax.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExistsLoaderInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExistsLoaderInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExpressionParser.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExpressionParser.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Core.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Core.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Debug.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Debug.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Escaper.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Escaper.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/GlobalsInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/GlobalsInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/InitRuntimeInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/InitRuntimeInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Optimizer.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Optimizer.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Profiler.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Profiler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Sandbox.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Staging.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Staging.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/StringLoader.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/StringLoader.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExtensionInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExtensionInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExtensionSet.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Lexer.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Lexer.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Array.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Array.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Chain.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Chain.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Filesystem.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Filesystem.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/LoaderInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/LoaderInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Markup.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Markup.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/AutoEscape.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/AutoEscape.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Block.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Block.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/CheckSecurity.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/CheckSecurity.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Embed.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Embed.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Array.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Array.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Power.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Power.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/BlockReference.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/BlockReference.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Call.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Call.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Filter.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Filter.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Filter/Default.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Filter/Default.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Function.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Function.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/GetAttr.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/GetAttr.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Name.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Name.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/NullCoalesce.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/NullCoalesce.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test/Defined.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test/Defined.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Unary.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Unary.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/For.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/For.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/If.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/If.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Macro.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Macro.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Module.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Module.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Sandbox.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SandboxedPrint.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SandboxedPrint.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Set.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Set.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Spaceless.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Spaceless.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeTraverser.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeTraverser.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Escaper.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Escaper.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Optimizer.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Optimizer.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitor/Sandbox.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitorInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeVisitorInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Parser.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Parser.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Blackfire.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Blackfire.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Text.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Dumper/Text.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Profile.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Profiler/Profile.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Sandbox/SecurityPolicy.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Sandbox/SecurityPolicy.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleFilter.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleFilter.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleFunction.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleFunction.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SimpleTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Source.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Source.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SourceContextLoaderInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/SourceContextLoaderInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Template.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Template.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TemplateWrapper.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TemplateWrapper.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/IntegrationTestCase.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/IntegrationTestCase.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/NodeTestCase.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/NodeTestCase.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Token.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Token.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/AutoEscape.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/AutoEscape.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Block.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Block.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Do.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Do.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Embed.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Embed.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Extends.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Extends.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Filter.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Filter.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Flush.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Flush.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/For.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/For.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/From.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/From.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/If.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/If.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Import.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Import.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Macro.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Macro.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Sandbox.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Set.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Set.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Spaceless.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Spaceless.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Use.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Use.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/With.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/With.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserInterface.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenStream.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenStream.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Util/DeprecationCollector.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Util/DeprecationCollector.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/ExtensionSet.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Cache/FilesystemTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Cache/FilesystemTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ContainerRuntimeLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ContainerRuntimeLoaderTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/CustomExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/CustomExtensionTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/EnvironmentTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/EnvironmentTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ErrorTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ErrorTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Extension/CoreTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Extension/CoreTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/FilesystemHelper.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/FilesystemHelper.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/extensions/anonymous_functions.test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/convert_encoding.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/convert_encoding.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_default_format_interval.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_default_format_interval.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_immutable.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_immutable.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_interval.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/date_interval.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/length_utf8.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/length_utf8.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/split_utf8.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/split_utf8.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/urlencode.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/filters/urlencode.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/functions/block_without_parent.test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/functions/magic_static_call.test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/regression/simple_xml_element.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/regression/simple_xml_element.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/tags/autoescape/basic.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/tags/autoescape/basic.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/tests/in.test" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/tests/in.test" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/IntegrationTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/IntegrationTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/LexerTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/LexerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/ArrayTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/ArrayTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/ChainTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/ChainTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/FilesystemTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/FilesystemTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/NativeExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/NativeExtensionTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/CallTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/CallTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/FilterTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/FilterTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/FunctionTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/FunctionTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/NameTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/NameTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/NullCoalesceTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/NullCoalesceTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/TestTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/Expression/TestTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/MacroTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/MacroTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/ModuleTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/ModuleTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ParserTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/ParserTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/TokenStreamTest.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/TokenStreamTest.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/LICENSE.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/composer.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Dotenv.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ExceptionInterface.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Loader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Validator.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/accountAllreadyActived.twig" afterPath="$PROJECT_DIR$/views/frontend/accountAllreadyActived.twig" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/activationOk.twig" afterPath="$PROJECT_DIR$/views/frontend/activationOk.twig" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/contact_view.twig" afterPath="$PROJECT_DIR$/views/frontend/contact_view.twig" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/errorActivation.twig" afterPath="$PROJECT_DIR$/views/frontend/errorActivation.twig" />
+      <change beforePath="$PROJECT_DIR$/views/menu/backend/menu.twig" afterPath="$PROJECT_DIR$/views/menu/backend/menu.twig" />
+      <change beforePath="$PROJECT_DIR$/views/templates/admin_template.twig" afterPath="$PROJECT_DIR$/views/templates/admin_template.twig" />
+      <change beforePath="$PROJECT_DIR$/views/templates/cv.twig" afterPath="$PROJECT_DIR$/views/templates/cv.twig" />
+      <change beforePath="$PROJECT_DIR$/views/templates/daschboard_template.twig" afterPath="$PROJECT_DIR$/views/templates/daschboard_template.twig" />
+      <change beforePath="$PROJECT_DIR$/views/templates/default.twig" afterPath="$PROJECT_DIR$/views/templates/default.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,72 +835,26 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+      <file leaf-file-name="DbLogin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/DbLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="23">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddedNetworkController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/backend/AddedNetworkController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddedPostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/backend/AddedPostController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-              <folding>
-                <element signature="e#40#80#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Networks.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entities/Networks.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnePostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/frontend/OnePostController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainManager.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/managers/MainManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-430">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1518100947000" expanded="true" signature="466:552" ph="SELECT * FRO... ${$table}" />
-                <marker date="1518100947000" expanded="true" signature="1046:1100" ph="SELECT * FRO... ${$table}" />
-                <marker date="1518100947000" expanded="true" signature="1594:1646" ph="DELETE FROM ${$table}... " />
-                <marker date="1518100947000" expanded="true" signature="1861:1929" ph="SELECT COUNT... ${$table}" />
-                <marker date="1518100947000" expanded="true" signature="2119:2160" ph="SELECT COUNT... ${$table}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -161,7 +867,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/DeletePostController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/DeleteUserController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/NetworksController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/PublishedCommentController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/RefusedCommentController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/ShowPostsController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/UpdatedPostController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/UpdateNetworkController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/UpdateUserController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/UserFormController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/AccountController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/AddCommentController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/AllCommentsController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/ContactController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/CvController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/LoginController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/OnePostController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/PostsPaginationController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/PresentationController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/SocialNetworksController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/UserConnectionController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/UserInscriptionController.php" />
+        <option value="$PROJECT_DIR$/src/core/builders/CommentBuilder.php" />
+        <option value="$PROJECT_DIR$/src/core/builders/NetworkBuilder.php" />
+        <option value="$PROJECT_DIR$/src/core/builders/PostBuilder.php" />
+        <option value="$PROJECT_DIR$/src/core/builders/UserBuilder.php" />
+        <option value="$PROJECT_DIR$/src/core/database/DbConfig.php" />
+        <option value="$PROJECT_DIR$/src/core/factories/BuilderFactory.php" />
+        <option value="$PROJECT_DIR$/src/core/factories/ControllerFactory.php" />
+        <option value="$PROJECT_DIR$/src/core/factories/DbFactory.php" />
+        <option value="$PROJECT_DIR$/src/core/factories/TableFactory.php" />
+        <option value="$PROJECT_DIR$/src/core/interfaces/CheckImageInterface.php" />
+        <option value="$PROJECT_DIR$/src/core/interfaces/ContactmailerInterface.php" />
+        <option value="$PROJECT_DIR$/src/core/interfaces/hydrateInterface.php" />
+        <option value="$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php" />
+        <option value="$PROJECT_DIR$/src/core/router/Route.php" />
+        <option value="$PROJECT_DIR$/src/core/router/Router.php" />
+        <option value="$PROJECT_DIR$/src/core/router/RouterException.php" />
+        <option value="$PROJECT_DIR$/src/core/traits/ImgTrait.php" />
+        <option value="$PROJECT_DIR$/src/entities/Comments.php" />
+        <option value="$PROJECT_DIR$/src/entities/Networks.php" />
+        <option value="$PROJECT_DIR$/src/entities/Posts.php" />
+        <option value="$PROJECT_DIR$/src/entities/Users.php" />
+        <option value="$PROJECT_DIR$/src/managers/CommentsManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/MainManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
+        <option value="$PROJECT_DIR$/src/managers/NetworksManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/PostsManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/UsersManager.php" />
+        <option value="$PROJECT_DIR$/config/DbLogin.php" />
       </list>
     </option>
   </component>
@@ -180,13 +936,44 @@
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/sendgrid/php-http-client" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="214" />
-    <option name="y" value="25" />
-    <option name="width" value="1828" />
-    <option name="height" value="1341" />
+    <option name="x" value="204" />
+    <option name="y" value="137" />
+    <option name="width" value="1861" />
+    <option name="height" value="1256" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Vue</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -213,7 +1000,7 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -230,8 +1017,7 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -249,14 +1035,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -285,24 +1072,29 @@
       <updated>1516296358597</updated>
       <workItem from="1516296360515" duration="267000" />
       <workItem from="1518101528839" duration="354000" />
+      <workItem from="1518729512147" duration="2919000" />
+      <workItem from="1518767048816" duration="10450000" />
+      <workItem from="1518886833771" duration="6000" />
+      <workItem from="1518894825566" duration="1144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621000" />
+    <option name="totallyTimeSpent" value="15140000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="214" y="25" width="1828" height="1341" extended-state="0" />
+    <frame x="204" y="137" width="1861" height="1256" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19146608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19900498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -325,85 +1117,463 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/public/index.php</url>
-          <line>13</line>
+          <line>10</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/managers/PostsManager.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/DeletePostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="46">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/backend/AddedNetworkController.php">
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/NetworksController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="414">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/backend/AddedPostController.php">
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/PublishedCommentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#80#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Networks.php">
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/RefusedCommentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/SearchUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/ShowPostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/UpdatedPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/UpdateNetworkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/UpdatePostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/UpdateUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/UserFormController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/AddCommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/AllCommentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/ContactController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/CvController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/frontend/OnePostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="33">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/PresentationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/SocialNetworksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/UserConnectionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/UserInscriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+          <folding>
+            <element signature="e#42#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/builders/CommentBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/builders/NetworkBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/builders/PostBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/builders/UserBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/database/DbConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/factories/ControllerFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/factories/DbFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/factories/TableFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/interfaces/CheckImageInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/interfaces/ContactmailerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/interfaces/hydrateInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/router/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/router/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/traits/ImgTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/router/RouterException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/PostsPaginationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/factories/BuilderFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="96" column="76" lean-forward="false" selection-start-line="96" selection-start-column="76" selection-end-line="96" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Networks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="110" column="32" lean-forward="false" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="95" column="48" lean-forward="true" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/CommentsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2967">
+          <caret line="131" column="78" lean-forward="false" selection-start-line="131" selection-start-column="78" selection-end-line="131" selection-end-column="78" />
+          <folding>
+            <marker date="1518895745000" expanded="true" signature="343:402" ph="SELECT COUNT... Comments" />
+            <marker date="1518895745000" expanded="true" signature="574:776" ph="SELECT *, DA... Users" />
+            <marker date="1518895745000" expanded="true" signature="1021:1173" ph="INSERT INTO Comments... " />
+            <marker date="1518895745000" expanded="true" signature="1467:1619" ph="INSERT INTO Comments... " />
+            <marker date="1518895745000" expanded="true" signature="1883:1921" ph="DELETE FROM Comments... " />
+            <marker date="1518895745000" expanded="true" signature="2154:2205" ph="UPDATE Comments... " />
+            <marker date="1518895745000" expanded="true" signature="2379:2637" ph="SELECT *, DA... Users" />
+            <marker date="1518895745000" expanded="true" signature="2754:3012" ph="SELECT *, DA... Users" />
+            <marker date="1518895745000" expanded="true" signature="3163:3470" ph="SELECT *, c.... Users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/managers/MainManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-430">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="322">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/ManagerValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/NetworksManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
           <folding>
-            <marker date="1518100947000" expanded="true" signature="466:552" ph="SELECT * FRO... ${$table}" />
-            <marker date="1518100947000" expanded="true" signature="1046:1100" ph="SELECT * FRO... ${$table}" />
-            <marker date="1518100947000" expanded="true" signature="1594:1646" ph="DELETE FROM ${$table}... " />
-            <marker date="1518100947000" expanded="true" signature="1861:1929" ph="SELECT COUNT... ${$table}" />
-            <marker date="1518100947000" expanded="true" signature="2119:2160" ph="SELECT COUNT... ${$table}" />
+            <marker date="1518895804000" expanded="true" signature="346:380" ph="SELECT * FRO... Networks" />
+            <marker date="1518895804000" expanded="true" signature="647:729" ph="INSERT INTO Networks... " />
+            <marker date="1518895804000" expanded="true" signature="1002:1056" ph="UPDATE Networks... " />
+            <marker date="1518895804000" expanded="true" signature="1273:1311" ph="DELETE FROM Networks... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/PostsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+          <folding>
+            <marker date="1518895826000" expanded="true" signature="318:353" ph="SELECT COUNT... Posts" />
+            <marker date="1518895826000" expanded="true" signature="533:750" ph="SELECT *, p.... Posts" />
+            <marker date="1518895826000" expanded="true" signature="1047:1224" ph="SELECT *, p.... Users" />
+            <marker date="1518895826000" expanded="true" signature="1465:1636" ph="INSERT INTO Posts... " />
+            <marker date="1518895826000" expanded="true" signature="1994:2191" ph="SELECT *, DA... Posts" />
+            <marker date="1518895826000" expanded="true" signature="2332:2467" ph="UPDATE Posts... " />
+            <marker date="1518895826000" expanded="true" signature="2773:2808" ph="DELETE FROM Posts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/UsersManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="128" column="40" lean-forward="false" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+          <folding>
+            <marker date="1518895853000" expanded="true" signature="298:351" ph="SELECT * FRO... Users" />
+            <marker date="1518895853000" expanded="true" signature="484:525" ph="SELECT * FRO... Users" />
+            <marker date="1518895853000" expanded="true" signature="707:746" ph="DELETE FROM Users... " />
+            <marker date="1518895853000" expanded="true" signature="974:1041" ph="SELECT * FRO... Users" />
+            <marker date="1518895853000" expanded="true" signature="1523:1678" ph="INSERT INTO Users... " />
+            <marker date="1518895853000" expanded="true" signature="1993:2118" ph="SELECT *, DA... Users" />
+            <marker date="1518895853000" expanded="true" signature="2263:2379" ph="SELECT *, DA... Users" />
+            <marker date="1518895853000" expanded="true" signature="2579:2628" ph="UPDATE Users... " />
+            <marker date="1518895853000" expanded="true" signature="2793:2842" ph="UPDATE Users... " />
+            <marker date="1518895853000" expanded="true" signature="3011:3059" ph="SELECT * FRO... Users" />
+            <marker date="1518895853000" expanded="true" signature="3253:3304" ph="UPDATE Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/DbLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-

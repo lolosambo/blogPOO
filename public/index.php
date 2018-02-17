@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 
-use P5\core\Router\Router;
+use P5\core\router\Router;
 $router = new Router();
 $session = new \Symfony\Component\HttpFoundation\Session\Session();
 

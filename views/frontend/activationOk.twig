@@ -1,3 +1,7 @@
+{% extends 'views/templates/default.twig' %}
+
+{% block sidebar %}
+
 <h3>CONNEXION</h3>
 
 <form method="POST" action="/connectionStatus/" name="connexion">
@@ -20,8 +24,7 @@
 <p>Votre compte a bien été activé !</p>
 <p>Vous pouvez maintenant vous connecter</p>
 
-
-
+{% endblock %}
 
 
 

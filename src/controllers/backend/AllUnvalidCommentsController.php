@@ -3,8 +3,7 @@ namespace p5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class AllUnvalidCommentsController
-{
+class AllUnvalidCommentsController {
 	const COMMENTS_PER_PAGE = 4;
 
 	private $factory;
@@ -16,8 +15,7 @@ class AllUnvalidCommentsController
 	private $currentPage;
 	private $request;
 	
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->commentman = $this->factory->getTable()->table('Comments');
@@ -26,8 +24,7 @@ class AllUnvalidCommentsController
 	}
 
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		
 		$this->pagination();
 		
@@ -45,8 +42,7 @@ class AllUnvalidCommentsController
 			);		
 	}
 
-	private function pagination()
-	{	
+	private function pagination() {
 		$url = $this->request->server->get('REQUEST_URI');
 
 		// URL' Id recuperation

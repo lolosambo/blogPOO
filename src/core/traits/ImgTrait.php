@@ -1,11 +1,9 @@
 <?php
 namespace P5\core\traits;
 
-trait ImgTrait
-{
+trait ImgTrait {
 
-	public function verifyImg()
-	{
+	public function verifyImg() {
 		//Limit file size and location
 		$folder = 'uploads/';
 		$file = basename($_FILES['img']['name']);
@@ -34,7 +32,7 @@ trait ImgTrait
     		$file = preg_replace('/([^.a-z0-9]+)/i', '-', $file);	
     		//Move uploaded file to the final destination folder
     		if(move_uploaded_file($_FILES['img']['tmp_name'], $folder. $file)) {    	
-      		    $site_url = "http://www.b-log-lille.fr/uploads/";
+      		    $site_url = "http://www.tutoocr.fr/uploads/";
       		   	$img_url = $site_url.$file; 
       		   	return $img_url;  
      		}	

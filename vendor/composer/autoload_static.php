@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
+class ComposerStaticInit0c591a9241b4d4b2fc835db1c153e3e3
 {
     public static $files = array (
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
-        '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,17 +19,13 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
-            'SendGrid\\' => 9,
         ),
         'P' => 
         array (
             'P5\\' => 3,
-        ),
-        'D' => 
-        array (
-            'Dotenv\\' => 7,
         ),
         'C' => 
         array (
@@ -42,6 +38,10 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -50,17 +50,9 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
-        'SendGrid\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
-        ),
         'P5\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'Dotenv\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Config\\' => 
         array (
@@ -78,12 +70,23 @@ class ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe
         ),
     );
 
+    public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb15ff9a074ee251f7f91ea94ee644dbe::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0c591a9241b4d4b2fc835db1c153e3e3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0c591a9241b4d4b2fc835db1c153e3e3::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0c591a9241b4d4b2fc835db1c153e3e3::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0c591a9241b4d4b2fc835db1c153e3e3::$classMap;
 
         }, null, ClassLoader::class);
     }

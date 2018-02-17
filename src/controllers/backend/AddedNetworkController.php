@@ -4,8 +4,7 @@ namespace P5\controllers\backend;
 use P5\core\factories\ControllerFactory;
 
 
-class AddedNetworkController
-{
+class AddedNetworkController {
 
 	use \P5\core\traits\ImgTrait;
 
@@ -13,8 +12,7 @@ class AddedNetworkController
 	private $networkman;
 	private $request;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->networkman = $this->factory->getTable()->table('Networks');
@@ -22,8 +20,7 @@ class AddedNetworkController
 		
 	}
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		
 		$name = $this->request->request->get('name');
 		$address = $this->request->request->get('address');

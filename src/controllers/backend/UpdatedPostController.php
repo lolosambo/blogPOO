@@ -3,8 +3,7 @@ namespace P5\controllers\backend;
 
 use P5\core\factories\ControllerFactory;
 
-class UpdatedPostController
-{
+class UpdatedPostController {
 
 	private $factory;
 	private $postman;
@@ -12,8 +11,7 @@ class UpdatedPostController
 	
 	
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->postman = $this->factory->getTable()->table('Posts');
@@ -21,8 +19,7 @@ class UpdatedPostController
 		
 	}
 
-	public function __invoke()
-	{
+	public function __invoke() {
 		$url = $this->request->server->get('REQUEST_URI');
 		preg_match('#/([0-9]+)$#', $url, $match);
 		$postId = $match[1];

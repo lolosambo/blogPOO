@@ -4,16 +4,14 @@ namespace P5\controllers\frontend;
 use P5\core\factories\ControllerFactory;
 
 
-class UserConnectionController
-{
+class UserConnectionController {
 
 	private $userman;
 	private $builder;
 	private $factory;
 	private $session;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$factory = new ControllerFactory();
 		$this->factory = $factory;
 		$this->session = $this->factory->getSession();
@@ -24,8 +22,7 @@ class UserConnectionController
 	}
 
 
-	public function login($pseudo, $password)
-	{	
+	public function login($pseudo, $password) {
 		$res = $this->userman->login($pseudo, $password);
 		if (isset($res['pseudo'])) {
 			$user = $this->builder->create($res)->build();

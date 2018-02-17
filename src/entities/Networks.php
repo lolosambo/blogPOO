@@ -1,40 +1,32 @@
 <?php
 namespace P5\entities;
 
-class Networks
+class Networks {
 
-{
-	private $id;
+    private $id;
 	private $networkName;
 	private $address; 
 
-	public function getId()
-	{
+	public function getId() {
 		return $this->id;
 	}
 
-	public function getNetworkName()
-	{
+	public function getNetworkName() {
 		return $this->networkName;
 	}
 
-	public function getAddress()
-	{	
+	public function getAddress() {
 		return $this->address;
 	}
 
-	public function setNetworkName($name)
-	{
-		if(is_string($name))
-		{
+	public function setNetworkName($name) {
+		if(is_string($name))  {
 			$this->networkName = $name;
 		}
 	}
 
-	public function setAddress($address)
-	{
-		if(is_string($address))
-		{
+	public function setAddress($address) {
+		if(is_string($address))  {
 			$this->address = $address;
 		}
 	}
