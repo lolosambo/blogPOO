@@ -19,7 +19,6 @@ class ManagerValidator {
   private function validateSQL($entry) {
       foreach ($this->sql as $sql) {
           $this->safe = strtr($sql, $entry, '');
-          var_dump($this->safe);
       }
       return $this->safe;
   }
