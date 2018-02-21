@@ -3,6 +3,7 @@ body
 
 	background-color : #1C272f;
 
+
 }
 
 .no-padding > [class*='col-'] {
@@ -13,18 +14,18 @@ body
 .left_col
 {
 	background-color : #5D6162;
-	min-height: 1000px !important;
+	height: 20% !important;
 }
 
 .right_col
 {
 	background-color : #A5AAAD;
-	min-height: 1000px !important;
+	min-height: 100% !important;
 }
 
 .footer
 {
-	background-color : #426276;
+	/*background-color : #426276;*/
 }
 
 .admin_header
