@@ -15,7 +15,7 @@ class UsersManager extends MainManager {
 	}
 
 	public function usersList() {
-		$req = $this->db->getPdo()->query('SELECT * FROM Users ORDER BY pseudo DESC LIMIT 0, 100');
+		$req = $this->db->getPdo()->query('SELECT * FROM Users ORDER BY pseudo DESC');
 		$res = $req->fetchAll();
 		return $res;	 
 	}
@@ -28,6 +28,31 @@ class UsersManager extends MainManager {
 		$res = $req->fetch();
 		return $res;
 	}
+
+    public function compareActivationKey($activationKey) {
+        $req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE activationKey = :param');
+        $req->bindParam(':param', $activationKey);
+        $req->execute();
+        $res = $req->fetch();
+        return $res;
+    }
+
+    public function compareEmail($mail) {
+        $req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE mail = :param');
+        $req->bindParam(':param', $mail);
+        $req->execute();
+        $res = $req->fetch();
+        return $res;
+    }
+
+    public function changePassword($password, $pseudo) {
+        $password = sha1($password);
+        $req = $this->getDb()->getPdo()->prepare('UPDATE Users SET password = :password WHERE pseudo = :pseudo');
+        $req->bindParam(':pseudo', $pseudo);
+        $req->bindParam(':password', $password);
+        $req->execute();
+        return $req;
+    }
 
 	public function deleteUser($pseudo) {
 		$req = $this->db->getPdo()->prepare('DELETE FROM Users WHERE pseudo = :param');

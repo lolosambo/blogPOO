@@ -30,7 +30,6 @@ return [
     'params' => [':id' => '#([a-zA-Z-_0-9]+)$#']
   ],
 
-
   'inscription' => [
     'path' => '/inscriptionForm/',
     'method' => 'GET',
@@ -46,7 +45,7 @@ return [
   ],
 
   'activation' => [
-    'path' => '/activation/:id',
+      'path' => '/activation/:id',
     'method' => 'POST',
     'action' => P5\controllers\frontend\AccountController::class,
     'params' => [':id' => '#([0-9]+)$#']
@@ -58,6 +57,41 @@ return [
     'action' => P5\controllers\frontend\PostsPaginationController::class,
     'params' => []
   ],
+
+    'forgotPasswordForm' => [
+        'path' => '/forgotPasswordForm/',
+        'method' => 'GET',
+        'action' => P5\controllers\frontend\PostsPaginationController::class,
+        'params' => []
+    ],
+
+    'passwordReinitializeForm' => [
+        'path' => '/passwordReinitializeForm/:id',
+        'method' => 'GET',
+        'action' => P5\controllers\frontend\PostsPaginationController::class,
+        'params' => [':id' => '#([0-9]+)$#']
+    ],
+
+    'passwordReinitialize' => [
+        'path' => '/passwordReinitialize/:id',
+        'method' => 'POST',
+        'action' => P5\controllers\frontend\PostsPaginationController::class,
+        'params' => [':id' => '#([a-zA-Z-_0-9]+)$#']
+    ],
+
+    'changePassword' => [
+        'path' => '/changePassword/',
+        'method' => 'POST',
+        'action' => P5\controllers\frontend\PostsPaginationController::class,
+        'params' => []
+    ],
+
+    'ReinitializationError' => [
+        'path' => '/reinitializationError/',
+        'method' => 'GET',
+        'action' => P5\controllers\frontend\PostsPaginationController::class,
+        'params' => []
+    ],
 
   'logout' => [
     'path' => '/logout/',
