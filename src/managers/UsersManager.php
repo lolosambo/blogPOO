@@ -11,6 +11,7 @@ class UsersManager extends MainManager {
 
 	public function __construct() {
 		$this->db = $this->getDb();
+        parent::__construct();
 
 	}
 
@@ -22,65 +23,96 @@ class UsersManager extends MainManager {
 
 
 	public function compareUsers($pseudo) {
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+
 		$req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :param');
-		$req->bindParam(':param', $pseudo);
+		$req->bindParam(':param', $pseudoVal);
 		$req->execute();
 		$res = $req->fetch();
 		return $res;
 	}
 
     public function compareActivationKey($activationKey) {
+
+        $activationKey = $this->validator->validateSQL($activationKey);
+        $activationKeyVal = $this->validator->validateJavascript($activationKey);
+
         $req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE activationKey = :param');
-        $req->bindParam(':param', $activationKey);
+        $req->bindParam(':param', $activationKeyVal);
         $req->execute();
         $res = $req->fetch();
         return $res;
     }
 
     public function compareEmail($mail) {
+        $mail = $this->validator->validateSQL($mail);
+        $mailVal = $this->validator->validateJavascript($mail);
         $req = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE mail = :param');
-        $req->bindParam(':param', $mail);
+        $req->bindParam(':param', $mailVal);
         $req->execute();
         $res = $req->fetch();
         return $res;
     }
 
     public function changePassword($password, $pseudo) {
-        $password = sha1($password);
+
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+        $password = $this->validator->validateSQL($password);
+        $passwordVal = $this->validator->validateJavascript($password);
+
+        $passwordVal = sha1($password);
         $req = $this->getDb()->getPdo()->prepare('UPDATE Users SET password = :password WHERE pseudo = :pseudo');
-        $req->bindParam(':pseudo', $pseudo);
-        $req->bindParam(':password', $password);
+        $req->bindParam(':pseudo', $pseudoVal);
+        $req->bindParam(':password', $passwordVal);
         $req->execute();
         return $req;
     }
 
 	public function deleteUser($pseudo) {
+
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+
 		$req = $this->db->getPdo()->prepare('DELETE FROM Users WHERE pseudo = :param');
-		$req->bindParam(':param', $pseudo);
+		$req->bindParam(':param', $pseudoVal);
 		$req->execute();
 	}
 
 	public function login($pseudo, $password) {
 
-  		$password = sha1($password);
-  		$pseudo = htmlspecialchars($pseudo);
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+        $password = $this->validator->validateSQL($password);
+        $passwordVal = $this->validator->validateJavascript($password);
+
+  		$passwordVal = sha1($passwordVal);
+  		$pseudoVal = htmlspecialchars($pseudoVal);
 
   		$user = $this->db->getPdo()->prepare('SELECT * FROM Users WHERE pseudo = :pseudo AND password = :password');
 
-  		$user->bindParam(':pseudo', $pseudo);
-		$user->bindParam(':password', $password);
+  		$user->bindParam(':pseudo', $pseudoVal);
+		$user->bindParam(':password', $passwordVal);
 		$user->execute();
 		$user_data=$user->fetch();
 		return $user_data;
 	}
 
 	public function insertUser($pseudo, $password, $mail) {
+
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+        $password = $this->validator->validateSQL($password);
+        $passwordVal = $this->validator->validateJavascript($password);
+        $mail = $this->validator->validateSQL($mail);
+        $mailVal = $this->validator->validateJavascript($mail);
   		 
   		 // Creation of a Random Activation Key
 		$activation_key = random_int(100000000, 999999999);
-		$password = sha1($password);
-  		$pseudo = htmlspecialchars($pseudo);
-  		$mail = htmlspecialchars($mail);
+		$passwordVal = sha1($passwordVal);
+  		$pseudoVal = htmlspecialchars($pseudoVal);
+  		$mailVal = htmlspecialchars($mailVal);
 
 		$req = $this->db->getPdo()->prepare
 		("
@@ -88,9 +120,9 @@ class UsersManager extends MainManager {
 			VALUES (:pseudo, :password, :mail, :activation_key, 0, 1, NOW())
 		");
 
-		$req->bindParam(':pseudo', $pseudo);
-		$req->bindParam(':password', $password);
-		$req->bindParam(':mail', $mail);
+		$req->bindParam(':pseudo', $pseudoVal);
+		$req->bindParam(':password', $passwordVal);
+		$req->bindParam(':mail', $mailVal);
 		$req->bindParam(':activation_key', $activation_key);
 		$req->execute();
 		return $activation_key;
@@ -111,6 +143,9 @@ class UsersManager extends MainManager {
 
 	public function searchUser($pseudo) {
 
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+
 		$req = $this->db->getPdo()->prepare 
 		('
 			SELECT *, DATE_FORMAT(u.inscrDate, "%d/%m/%Y à %Hh%i") AS inscrDate  
@@ -119,7 +154,7 @@ class UsersManager extends MainManager {
 	
 		');
 
-		$req->bindParam(':pseudo', $pseudo);
+		$req->bindParam(':pseudo', $pseudoVal);
 		$req->execute();
 		$data=$req->fetch();
 
@@ -128,23 +163,35 @@ class UsersManager extends MainManager {
 	}	
 
 	public function updateToAdmin($pseudo) {
+
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+
 		$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET idRole = 2 WHERE pseudo = :param');
-		$req->bindParam(':param', $pseudo);
+		$req->bindParam(':param', $pseudoVal);
 		$req->execute();
 		return $req;
 	}
 
 	public function updateToUser($pseudo) {
+
+        $pseudo = $this->validator->validateSQL($pseudo);
+        $pseudoVal = $this->validator->validateJavascript($pseudo);
+
+
 		$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET idRole = 1 WHERE pseudo = :param');
-		$req->bindParam(':param', $pseudo);
+		$req->bindParam(':param', $pseudoVal);
 		$req->execute();
 		return $req;
 	}
 
 	public function accActivation($activKey) {
 
+        $activKey = $this->validator->validateSQL($activKey);
+        $activKeyVal = $this->validator->validateJavascript($activKey);
+
 		$req = $this->getDb()->getPdo()->prepare('SELECT * FROM Users WHERE activationKey = :param');
-		$req->bindParam(':param', $activKey);
+		$req->bindParam(':param', $activKeyVal);
 		$req->execute();
 		$res = $req->fetch();
 		return $res;
@@ -153,8 +200,11 @@ class UsersManager extends MainManager {
 
 	public function setVerified($login) {
 
+        $login = $this->validator->validateSQL($login);
+        $loginVal = $this->validator->validateJavascript($login);
+
     	$req = $this->getDb()->getPdo()->prepare('UPDATE Users SET verified = 1 WHERE pseudo = :param');
-		$req->bindParam(':param', $login);
+		$req->bindParam(':param', $loginVal);
 		$req->execute();
 		return $req;
     	

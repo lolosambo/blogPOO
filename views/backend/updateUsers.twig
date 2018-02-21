@@ -1,52 +1,44 @@
 {% extends 'views/templates/admin_template.twig' %}
 
-
 {% block title %} GESTION DES UTILISATEURS {% endblock %}
-
 
 {% block content %}
 
 
 {% if valider == 1 %}
 
-
 	{% if user is not empty %}
-	
 
 		<p>{{user.getPseudo}} - Inscrit(e) le : {{user.getInscrDate}}</p>
 		<p>Adresse mail : {{user.getMail}}</p>
 
 		{% if user.getIdRole() == 1 %}
-		
-			
+
 			<a href="/admin/changeToAdmin/"><button type="button" class=" btn btn-dark">Passer en administrateur</button> </a>
 			<a href="/admin/deleteUser/"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>
 
 		{% endif %}
-		
-	
+
 		{% if user.getIdRole() == 2 %}
-		
-			
+
 			<a href="/admin/changeToUser/"><button type="button" class=" btn btn-dark">Passer en utilisateur</button> </a>
 			<a href="/admin/deleteUser/"><button type="button" class=" btn btn-dark">Supprimer cet utilisateur</button> </a>
 			
 		{% endif %}
-		
-
-	{% endif %}
-
-	{% if user is empty %}
-	
-		<p>Cet utilisateur n\'existe pas.</p>
 
 	{% endif %}
 
 {% endif %}
 
+	{% if user is empty %}
 
+		<p>Cet utilisateur n'existe pas.</p>
+
+    {% endif %}
 
 {% endblock %}
+
+
 
 
 

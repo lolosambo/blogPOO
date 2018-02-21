@@ -3,32 +3,19 @@ namespace P5\managers;
 
 class ManagerValidator {
 
-  private $sql = ['INSERT', 'UPDATE', 'DELETE', 'WHERE', 'JOIN', 'LIKE', 'OR', 'AND'];
+  private $sql = ['INSERT', 'INTO', 'ORDER BY', 'LIMIT', 'FROM', 'SET', 'UPDATE', 'DELETE', 'WHERE', 'JOIN', 'LIKE', 'OR', 'AND'];
   private $javascript = ['<script>', '</script>'];
   private $safe;
 
-  public function validate($entry) {
 
-      $entryVal = $this->validateSQL($entry);
-
-      $entryVal = $this->validateJavascript($entry);
-      return $entryVal;
-  }
-
-
-  private function validateSQL($entry) {
-      foreach ($this->sql as $sql) {
-          $this->safe = strtr($sql, $entry, '');
-      }
+  public function validateSQL($entry) {
+      $this->safe = str_replace($this->sql, "", $entry);
       return $this->safe;
   }
 
-  private function validateJavascript($entry) {
-    foreach ($this->javascript as $js) {
-        $this->safe = strtr($js, $entry, '');
-    }
-
-    return $this->safe;
+  public function validateJavascript($entry) {
+      $this->safe = str_replace($this->javascript, "", $entry);
+      return $this->safe;
   }
 }
 

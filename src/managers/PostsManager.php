@@ -10,8 +10,8 @@ class PostsManager extends MainManager {
 	protected $db;
 
 	public function __construct() {
-		$this->getDb(); 
-  	 	return $this->db;
+		$this->getDb();
+        parent::__construct();
 	}
 
 	public function countAllPosts() {
@@ -42,6 +42,9 @@ class PostsManager extends MainManager {
 	}
 
 	public function onePost($title) {
+
+        $title = $this->validator->validateSQL($title);
+        $titleVal = $this->validator->validateJavascript($title);
 		$post = $this->db->getPdo()->prepare
 		('
 	
@@ -51,23 +54,32 @@ class PostsManager extends MainManager {
 			AND p.postTitle = :title
 		');
 
-		$post->bindParam(':title', $title);
+		$post->bindParam(':title', $titleVal);
 		$post->execute();
 		$data = $post->fetch();
 		return $data;
 	}
 
 	public function insertPost($user_id, $title, $heading, $post_content, $img) {
+        $title = $this->validator->validateSQL($title);
+        $titleVal = $this->validator->validateJavascript($title);
+        $user_id = $this->validator->validateSQL($user_id);
+        $user_idVal = $this->validator->validateJavascript($user_id);
+        $heading = $this->validator->validateSQL($heading);
+        $headingVal = $this->validator->validateJavascript($heading);
+        $post_content = $this->validator->validateSQL($post_content);
+        $post_contentVal = $this->validator->validateJavascript($post_content);
+
 		$newPost = $this->db->getPdo()->prepare
 		("
 			INSERT INTO Posts (idUser, postTitle, postHeading, postContent, postDate, postUpdate, postImgUrl) 
 			VALUES (:id_user, :title, :heading, :content, NOW(), NOW(), :img_url)
 		");
 
-		$newPost->bindParam(':id_user', $user_id);
-		$newPost->bindParam(':title', $title);
-		$newPost->bindParam(':heading', $heading);
-		$newPost->bindParam(':content', $post_content);
+		$newPost->bindParam(':id_user', $user_idVal);
+		$newPost->bindParam(':title', $titleVal);
+		$newPost->bindParam(':heading', $headingVal);
+		$newPost->bindParam(':content', $post_contentVal);
 		$newPost->bindParam(':img_url', $img);
 		$newPost->execute();
 		return $newPost;
@@ -92,6 +104,15 @@ class PostsManager extends MainManager {
 
 	public function updatePost($postId, $title, $heading, $content) {
 
+        $title = $this->validator->validateSQL($title);
+        $titleVal = $this->validator->validateJavascript($title);
+        $postId = $this->validator->validateSQL($postId);
+        $postIdVal = $this->validator->validateJavascript($postId);
+        $heading = $this->validator->validateSQL($heading);
+        $headingVal = $this->validator->validateJavascript($heading);
+        $content = $this->validator->validateSQL($content);
+        $contentVal = $this->validator->validateJavascript($content);
+
 		$req = $this->db->getPdo()->prepare
 		('
 			UPDATE Posts 
@@ -102,10 +123,10 @@ class PostsManager extends MainManager {
 			WHERE id = :post_id
 		');
 
-		$req->bindParam(':post_id', $postId);
-		$req->bindParam(':post_title', $title);
-		$req->bindParam(':post_heading', $heading);
-		$req->bindParam(':post_content', $content);
+		$req->bindParam(':post_id', $postIdVal);
+		$req->bindParam(':post_title', $titleVal);
+		$req->bindParam(':post_heading', $headingVal);
+		$req->bindParam(':post_content', $contentVal);
 	
 		$req->execute();
 		return $req;
@@ -113,8 +134,12 @@ class PostsManager extends MainManager {
 
 
 	public function deletePost($postId) {
+
+        $postId = $this->validator->validateSQL($postId);
+        $postIdVal = $this->validator->validateJavascript($postId);
+
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Posts WHERE id = :param');
-		$req->bindParam(':param', $postId);
+		$req->bindParam(':param', $postIdVal);
 		$req->execute();
 
 	}	

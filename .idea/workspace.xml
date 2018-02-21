@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e83c5b-94fe-441b-9795-c83802881268" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/admin_style.css" afterPath="$PROJECT_DIR$/public/css/admin_style.css" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/CommentsManager.php" afterPath="$PROJECT_DIR$/src/managers/CommentsManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/MainManager.php" afterPath="$PROJECT_DIR$/src/managers/MainManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/ManagerValidator.php" afterPath="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/NetworksManager.php" afterPath="$PROJECT_DIR$/src/managers/NetworksManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/PostsManager.php" afterPath="$PROJECT_DIR$/src/managers/PostsManager.php" />
+      <change beforePath="$PROJECT_DIR$/src/managers/UsersManager.php" afterPath="$PROJECT_DIR$/src/managers/UsersManager.php" />
+      <change beforePath="$PROJECT_DIR$/views/backend/updateUsers.twig" afterPath="$PROJECT_DIR$/views/backend/updateUsers.twig" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/errorReinitialization.twig" afterPath="$PROJECT_DIR$/views/frontend/errorReinitialization.twig" />
+      <change beforePath="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" afterPath="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,31 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/frontend/LoginController.php">
+      <file leaf-file-name="SearchUserController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/backend/SearchUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact_view.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/frontend/contact_view.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_post_form.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/backend/add_post_form.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="787">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,9 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/core/builders/CommentBuilder.php" />
-        <option value="$PROJECT_DIR$/src/core/builders/NetworkBuilder.php" />
-        <option value="$PROJECT_DIR$/src/core/builders/PostBuilder.php" />
         <option value="$PROJECT_DIR$/src/core/builders/UserBuilder.php" />
         <option value="$PROJECT_DIR$/src/core/database/DbConfig.php" />
         <option value="$PROJECT_DIR$/src/core/factories/BuilderFactory.php" />
@@ -94,11 +81,6 @@
         <option value="$PROJECT_DIR$/src/entities/Networks.php" />
         <option value="$PROJECT_DIR$/src/entities/Posts.php" />
         <option value="$PROJECT_DIR$/src/entities/Users.php" />
-        <option value="$PROJECT_DIR$/src/managers/CommentsManager.php" />
-        <option value="$PROJECT_DIR$/src/managers/MainManager.php" />
-        <option value="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
-        <option value="$PROJECT_DIR$/src/managers/NetworksManager.php" />
-        <option value="$PROJECT_DIR$/src/managers/PostsManager.php" />
         <option value="$PROJECT_DIR$/config/DbLogin.php" />
         <option value="$PROJECT_DIR$/views/frontend/forgotPassword.twig" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.twig" />
@@ -108,16 +90,13 @@
         <option value="$PROJECT_DIR$/src/controllers/frontend/PasswordFormUncomplete.twig.html" />
         <option value="$PROJECT_DIR$/src/controllers/frontend/PasswordFormUncomplete.twig" />
         <option value="$PROJECT_DIR$/src/controllers/frontend/confirmeMail.twig.html" />
-        <option value="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" />
         <option value="$PROJECT_DIR$/views/frontend/forgotPasswordForm.twig" />
         <option value="$PROJECT_DIR$/src/controllers/frontend/forgotPasswordController.php" />
         <option value="$PROJECT_DIR$/views/frontend/confirmeMail.twig" />
         <option value="$PROJECT_DIR$/src/core/interfaces/PasswordMailerInterface.php" />
         <option value="$PROJECT_DIR$/views/frontend/forgotPasswordInvalidMail.twig" />
         <option value="$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php" />
-        <option value="$PROJECT_DIR$/src/managers/UsersManager.php" />
         <option value="$PROJECT_DIR$/src/controllers/frontend/errorReinitialization.twig" />
-        <option value="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" />
         <option value="$PROJECT_DIR$/views/frontend/reinitializeDifferentPasswords.twig" />
         <option value="$PROJECT_DIR$/views/frontend/reinitializeFormUncomplete.twig" />
         <option value="$PROJECT_DIR$/views/frontend/PasswordFormUncomplete.twig" />
@@ -125,6 +104,17 @@
         <option value="$PROJECT_DIR$/config/Routes.php" />
         <option value="$PROJECT_DIR$/src/controllers/frontend/LoginController.php" />
         <option value="$PROJECT_DIR$/public/css/admin_style.css" />
+        <option value="$PROJECT_DIR$/src/managers/MainManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
+        <option value="$PROJECT_DIR$/src/managers/NetworksManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/UsersManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/CommentsManager.php" />
+        <option value="$PROJECT_DIR$/src/managers/PostsManager.php" />
+        <option value="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" />
+        <option value="$PROJECT_DIR$/views/backend/updateUsers.twig" />
+        <option value="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" />
+        <option value="$PROJECT_DIR$/views/frontend/errorReinitialization.twig" />
+        <option value="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" />
       </list>
     </option>
   </component>
@@ -207,7 +197,13 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -265,17 +261,18 @@
       <workItem from="1518767048816" duration="10450000" />
       <workItem from="1518886833771" duration="6000" />
       <workItem from="1518894825566" duration="1144000" />
-      <workItem from="1519071641561" duration="27533000" />
+      <workItem from="1519071641561" duration="33801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42673000" />
+    <option name="totallyTimeSpent" value="48941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="187" y="63" width="2248" height="1256" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1848816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1848816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -319,20 +316,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/core/router/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/traits/ImgTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/router/RouterException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -384,35 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/CommentsManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2967">
-          <caret line="131" column="78" lean-forward="false" selection-start-line="131" selection-start-column="78" selection-end-line="131" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/MainManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/ManagerValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/NetworksManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/DbLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -453,22 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/PostsManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2576">
-          <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
-          <folding>
-            <marker date="1518895826000" expanded="true" signature="318:353" ph="SELECT COUNT... Posts" />
-            <marker date="1518895826000" expanded="true" signature="533:750" ph="SELECT *, p.... Posts" />
-            <marker date="1518895826000" expanded="true" signature="1047:1224" ph="SELECT *, p.... Users" />
-            <marker date="1518895826000" expanded="true" signature="1465:1636" ph="INSERT INTO Posts... " />
-            <marker date="1518895826000" expanded="true" signature="1994:2191" ph="SELECT *, DA... Posts" />
-            <marker date="1518895826000" expanded="true" signature="2332:2467" ph="UPDATE Posts... " />
-            <marker date="1518895826000" expanded="true" signature="2773:2808" ph="DELETE FROM Posts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/frontend/OnePostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -505,14 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/reinitializationOk.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -569,14 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/interfaces/PasswordMailerInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/interfaces/InscrMailerInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -597,14 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/errorReinitialization.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -641,44 +555,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/UsersManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <marker date="1519199301000" expanded="true" signature="298:338" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="471:512" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="720:768" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="993:1032" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="1305:1365" ph="UPDATE Users... " />
-            <marker date="1519199301000" expanded="true" signature="1594:1633" ph="DELETE FROM Users... " />
-            <marker date="1519199301000" expanded="true" signature="1861:1928" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="2410:2565" ph="INSERT INTO Users... " />
-            <marker date="1519199301000" expanded="true" signature="2880:3005" ph="SELECT *, DA... Users" />
-            <marker date="1519199301000" expanded="true" signature="3150:3266" ph="SELECT *, DA... Users" />
-            <marker date="1519199301000" expanded="true" signature="3466:3515" ph="UPDATE Users... " />
-            <marker date="1519199301000" expanded="true" signature="3680:3729" ph="UPDATE Users... " />
-            <marker date="1519199301000" expanded="true" signature="3898:3946" ph="SELECT * FRO... Users" />
-            <marker date="1519199301000" expanded="true" signature="4140:4191" ph="UPDATE Users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/Routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1794">
           <caret line="78" column="49" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="e#44#84#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,6 +631,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/ManagerValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/NetworksManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+            <marker date="1519217619000" expanded="true" signature="346:380" ph="SELECT * FRO... Networks" />
+            <marker date="1519217619000" expanded="true" signature="781:866" ph="INSERT INTO Networks... " />
+            <marker date="1519217619000" expanded="true" signature="1439:1493" ph="UPDATE Networks... " />
+            <marker date="1519217619000" expanded="true" signature="1855:1893" ph="DELETE FROM Networks... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/MainManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/CommentsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2368">
+          <caret line="158" column="70" lean-forward="false" selection-start-line="158" selection-start-column="70" selection-end-line="158" selection-end-column="70" />
+          <folding>
+            <marker date="1519221443000" expanded="true" signature="344:403" ph="SELECT COUNT... Comments" />
+            <marker date="1519221443000" expanded="true" signature="705:907" ph="SELECT *, DA... Users" />
+            <marker date="1519221443000" expanded="true" signature="1523:1675" ph="INSERT INTO Comments... " />
+            <marker date="1519221443000" expanded="true" signature="2345:2497" ph="INSERT INTO Comments... " />
+            <marker date="1519221443000" expanded="true" signature="2905:2943" ph="DELETE FROM Comments... " />
+            <marker date="1519221443000" expanded="true" signature="3249:3300" ph="UPDATE Comments... " />
+            <marker date="1519221443000" expanded="true" signature="3477:3735" ph="SELECT *, DA... Users" />
+            <marker date="1519221443000" expanded="true" signature="3852:4110" ph="SELECT *, DA... Users" />
+            <marker date="1519221443000" expanded="true" signature="4582:4889" ph="SELECT *, c.... Users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/UsersManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <marker date="1519221163000" expanded="true" signature="329:369" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="629:670" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="1037:1085" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="1431:1470" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="2011:2071" ph="UPDATE Users... " />
+            <marker date="1519221163000" expanded="true" signature="2434:2473" ph="DELETE FROM Users... " />
+            <marker date="1519221163000" expanded="true" signature="2977:3044" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="3929:4084" ph="INSERT INTO Users... " />
+            <marker date="1519221163000" expanded="true" signature="4408:4533" ph="SELECT *, DA... Users" />
+            <marker date="1519221163000" expanded="true" signature="4805:4921" ph="SELECT *, DA... Users" />
+            <marker date="1519221163000" expanded="true" signature="5252:5301" ph="UPDATE Users... " />
+            <marker date="1519221163000" expanded="true" signature="5598:5647" ph="UPDATE Users... " />
+            <marker date="1519221163000" expanded="true" signature="5954:6002" ph="SELECT * FRO... Users" />
+            <marker date="1519221163000" expanded="true" signature="6322:6373" ph="UPDATE Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/PostsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+            <marker date="1519221930000" expanded="true" signature="325:360" ph="SELECT COUNT... Posts" />
+            <marker date="1519221930000" expanded="true" signature="540:757" ph="SELECT *, p.... Posts" />
+            <marker date="1519221930000" expanded="true" signature="1177:1354" ph="SELECT *, p.... Users" />
+            <marker date="1519221930000" expanded="true" signature="2131:2302" ph="INSERT INTO Posts... " />
+            <marker date="1519221930000" expanded="true" signature="2672:2869" ph="SELECT *, DA... Posts" />
+            <marker date="1519221930000" expanded="true" signature="3519:3654" ph="UPDATE Posts... " />
+            <marker date="1519221930000" expanded="true" signature="4100:4135" ph="DELETE FROM Posts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/interfaces/PasswordMailerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="71" lean-forward="false" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/errorReinitialization.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/reinitializationOk.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/updateUsers.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/backend/SearchUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>

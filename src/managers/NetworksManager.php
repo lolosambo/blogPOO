@@ -23,17 +23,19 @@ class NetworksManager extends MainManager {
 	}
 
 	public function createNetwork($name, $address, $img) {
-	    $nameVal = $this->validator->validate($name);
-        $addressVal = $this->validator->validate($address);
+	    $name = $this->validator->validateSQL($name);
+        $address = $this->validator->validateSQL($address);
+        $nameVal = $this->validator->validateJavascript($name);
+        $addressVal = $this->validator->validateJavascript($address);
 
 		$req = $this->db->getPdo()->prepare
 		('
 		
-			INSERT INTO Networks (networkName, address, imgUrl) VALUES (:name, :address, :img)
+			INSERT INTO Networks (networkName, address, imgUrl) VALUES (:nameVal, :address, :img)
 		
 		');
 		$req->bindParam(':address', $addressVal);
-		$req->bindParam(':name', $nameVal);
+		$req->bindParam(':nameVal', $nameVal);
 		$req->bindParam(':img', $img);
 		$req->execute();
 		return $req;
@@ -41,17 +43,25 @@ class NetworksManager extends MainManager {
 	}
 
 	public function changeNetwork($networkId, $networkAddress) {
+
+        $networkId = $this->validator->validateSQL($networkId);
+        $networkAddress = $this->validator->validateSQL($networkAddress);
+        $networkIdVal = $this->validator->validateJavascript($networkId);
+        $networkAddressVal = $this->validator->validateJavascript($networkAddress);
 		
 		$req = $this->getDb()->getPdo()->prepare('UPDATE Networks SET address = :value WHERE id = :param');
-		$req->bindParam(':value', $networkAddress);
-		$req->bindParam(':param', $networkId);
+		$req->bindParam(':value', $networkAddressVal);
+		$req->bindParam(':param', $networkIdVal);
 		$req->execute();
 		return $req;
 	}
 
 	public function eraseNetwork($networkId) {
+        $networkId = $this->validator->validateSQL($networkId);
+        $networkIdVal = $this->validator->validateJavascript($networkId);
+
 		$req = $this->getDb()->getPdo()->prepare('DELETE FROM Networks WHERE id = :param');
-		$req->bindParam(':param', $networkId);
+		$req->bindParam(':param', $networkIdVal);
 		$req->execute();
 	}
 }

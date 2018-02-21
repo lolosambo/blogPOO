@@ -26,11 +26,13 @@ class SearchUserController {
 	public function __invoke() {
 		$req = $this->request->request->get('search');
 		$res = $this->userman->searchUser($req);
-		$user = $this->builder->builder('user')->create($res)->build();
-		$valider = $this->request->request->get('valider');
+		if ($res != null) {
+            $user = $this->builder->builder('user')->create($res)->build();
+            $valider = $this->request->request->get('valider');
 
-		$this->session->set('foundUser', $user->getPseudo());
-		$this->session->set('foundUserRole', $user->getIdrole());
+            $this->session->set('foundUser', $user->getPseudo());
+            $this->session->set('foundUserRole', $user->getIdrole());
+        }
 
 		echo $this->factory->getTwig()->render('views/backend/updateUsers.twig', 
 			['user' => $user, 

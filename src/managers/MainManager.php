@@ -2,6 +2,7 @@
 namespace P5\managers;
 
 use P5\core\factories\DbFactory;
+use P5\managers\ManagerValidator;
 use \PDO;
 
 abstract class MainManager {
