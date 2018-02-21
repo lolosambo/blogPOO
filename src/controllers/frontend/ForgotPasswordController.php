@@ -9,7 +9,6 @@ use P5\core\interfaces\PasswordMailerInterface;
 class ForgotPasswordController implements PasswordMailerInterface {
 
     private $userman;
-    private $builder;
     private $factory;
 
     public function __construct() {
@@ -17,8 +16,6 @@ class ForgotPasswordController implements PasswordMailerInterface {
         $this->factory = $factory;
         $manager = $factory->getTable()->Table('Users');
         $this->userman = $manager;
-        $builder = $factory->getBuilder()->Builder('User');
-        $this->builder = $builder;
     }
 
     public function checkMail($mail) {
