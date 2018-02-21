@@ -26,7 +26,7 @@ class SearchUserController {
 	public function __invoke() {
 		$req = $this->request->request->get('search');
 		$res = $this->userman->searchUser($req);
-		if ($res != null) {
+		if ($res !== null) {
             $user = $this->builder->builder('user')->create($res)->build();
             $valider = $this->request->request->get('valider');
 
