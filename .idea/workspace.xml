@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e83c5b-94fe-441b-9795-c83802881268" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" afterPath="$PROJECT_DIR$/src/controllers/backend/SearchUserController.php" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/src/controllers/frontend/ForgotPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/CommentsManager.php" afterPath="$PROJECT_DIR$/src/managers/CommentsManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/MainManager.php" afterPath="$PROJECT_DIR$/src/managers/MainManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/ManagerValidator.php" afterPath="$PROJECT_DIR$/src/managers/ManagerValidator.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/NetworksManager.php" afterPath="$PROJECT_DIR$/src/managers/NetworksManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/PostsManager.php" afterPath="$PROJECT_DIR$/src/managers/PostsManager.php" />
-      <change beforePath="$PROJECT_DIR$/src/managers/UsersManager.php" afterPath="$PROJECT_DIR$/src/managers/UsersManager.php" />
-      <change beforePath="$PROJECT_DIR$/views/backend/updateUsers.twig" afterPath="$PROJECT_DIR$/views/backend/updateUsers.twig" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/errorReinitialization.twig" afterPath="$PROJECT_DIR$/views/frontend/errorReinitialization.twig" />
-      <change beforePath="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" afterPath="$PROJECT_DIR$/views/frontend/reinitializationOk.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -138,8 +129,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="187" />
-    <option name="y" value="63" />
+    <option name="x" value="84" />
+    <option name="y" value="45" />
     <option name="width" value="2248" />
     <option name="height" value="1256" />
   </component>
@@ -193,6 +184,17 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="managers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -261,15 +263,15 @@
       <workItem from="1518767048816" duration="10450000" />
       <workItem from="1518886833771" duration="6000" />
       <workItem from="1518894825566" duration="1144000" />
-      <workItem from="1519071641561" duration="33801000" />
+      <workItem from="1519071641561" duration="33992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48941000" />
+    <option name="totallyTimeSpent" value="49132000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="187" y="63" width="2248" height="1256" extended-state="0" />
+    <frame x="84" y="45" width="2248" height="1256" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1848816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -708,23 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/managers/PostsManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-            <marker date="1519221930000" expanded="true" signature="325:360" ph="SELECT COUNT... Posts" />
-            <marker date="1519221930000" expanded="true" signature="540:757" ph="SELECT *, p.... Posts" />
-            <marker date="1519221930000" expanded="true" signature="1177:1354" ph="SELECT *, p.... Users" />
-            <marker date="1519221930000" expanded="true" signature="2131:2302" ph="INSERT INTO Posts... " />
-            <marker date="1519221930000" expanded="true" signature="2672:2869" ph="SELECT *, DA... Posts" />
-            <marker date="1519221930000" expanded="true" signature="3519:3654" ph="UPDATE Posts... " />
-            <marker date="1519221930000" expanded="true" signature="4100:4135" ph="DELETE FROM Posts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/interfaces/PasswordMailerInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -762,6 +747,23 @@
         <state relative-caret-position="736">
           <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/managers/PostsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1472">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+            <marker date="1519221930000" expanded="true" signature="325:360" ph="SELECT COUNT... Posts" />
+            <marker date="1519221930000" expanded="true" signature="540:757" ph="SELECT *, p.... Posts" />
+            <marker date="1519221930000" expanded="true" signature="1177:1354" ph="SELECT *, p.... Users" />
+            <marker date="1519221930000" expanded="true" signature="2131:2302" ph="INSERT INTO Posts... " />
+            <marker date="1519221930000" expanded="true" signature="2672:2869" ph="SELECT *, DA... Posts" />
+            <marker date="1519221930000" expanded="true" signature="3519:3654" ph="UPDATE Posts... " />
+            <marker date="1519221930000" expanded="true" signature="4100:4135" ph="DELETE FROM Posts... " />
+          </folding>
         </state>
       </provider>
     </entry>
