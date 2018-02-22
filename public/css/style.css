@@ -483,10 +483,10 @@ color: #000000;
 .comment
 {
 background-color : #ffffff;
-width: 50%;
+width: 100%;
 border: 2px #375472 solid; 
 border-radius: 10px;
-margin-left : 17px;
+margin-left : 3px;
 
 
 }

@@ -9,58 +9,35 @@
 	</head>
 	
 <body>
-
 <div class="container-fluid">
-
 	<div class="row content">
-
 		<div class="col-lg-3 col-md-12 col-sm-12 col-12 lolo"></div>
-
 		<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-
 			<div class="row">
-			
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12 header"><h2>Blog professionnel de</h2></div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12 header"><h1>LAURENT BERTON</h1></div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12 header"><h5>Développeur web
 				HTML / CSS / PHP- Symfony</h5><br></div>
-
 				<div class="col-lg-6 col-md-12 col-sm-12 col-12 networks">
-
 					<center>{% block network %} 
 					{% endblock %} </center>
-
 				</div>
-
-
 				<div class="col-lg-6 col-md-12 col-sm-12 col-12 header">
 					<blockquote class="quote">
            				<p>Si la simple vue d'une balise HTML te donne envie d'avaler une boîte complète de Dolipranes, alors appelle moi !</p><cite>Laurent BERTON</cite>
         			</blockquote>
         		</div>
-
-        		
-			</div>	
-	
+			</div>
 		</div>
-
 		<div class="col-lg-3 col-md-12 col-sm-12 col-12 connexion">
-			
 					{% block sidebar %} 
 					{% endblock %}
-
 		</div>
-
-	
-		<div class="col-lg-12 col-md-12 col-sm-12">
-
+		<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 			{{ include ('views/menu/frontend/menu_view.twig') }}
-
 		</div>
 
-				
 		<div class="col-lg-12 col-md-12 col-sm-12 content">
-
 			{% block content %} 
 			{% endblock %} 
 
@@ -69,28 +46,20 @@
 
 			{% block pagination %} 
 			{% endblock %}
-
 		</div>
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-12 contactForm">
-			
 			{{ include ('views/frontend/contact_view.twig') }}
-		
 		</div>	
-		
-		
-	
+
 		<div class="col-lg-12 col-md-12 col-sm-12 col-12 footer">
-
 			{{ include ('views/includes/footer.twig') }}
-			
 		</div>
-
 	</div>
-
 </div>
-
 
 </body>
 </html>
+
+
 

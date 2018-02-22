@@ -64,17 +64,16 @@
 
 {% block comments %}
 {% for comments in comments %}
-
-	<div class="comment">
-		<div class="comment_info">
-					
-			<p>Publié par : <b>{{comments.pseudo}} </b><em>le {{comments.commentUpdate}}</em></p>
-						
-		</div>
-					
-		<p> {{comments.commentContent}}</p><br>
-
+<div class="row>">
+	<div class="col-lg-7 col-md-7 col-sm-12">
+		<div class="comment" style="margin-right: 20px;">
+			<div class="comment_info">
+				<p>Publié par : <b>{{comments.pseudo}} </b><em>le {{comments.commentUpdate}}</em></p>
+			</div>
+			<p> {{comments.commentContent}}</p><br>
 	</div><br>
+	</div>
+</div>
 
 {% endfor %}
 

@@ -22,10 +22,10 @@ class ContactController {
 		$message = $this->request->request->get('message');
 
 		$objet = 'Message de B-LOG : ';
-		$to = 'contact@b-log-lille.fr';
+		$to = 'blogwattignies@gmail.com';
 		$header =
 		'Content-type: text/html; charset=utf-8' . "\r\n" .
-		'From: contact@b-log-lille.fr' . "\r\n" .
+		'From: blogwattignies@gmail.com' . "\r\n" .
 		'Reply-To: '.$mail."\r\n" .
 		'X-Mailer: PHP/' . phpversion();
 

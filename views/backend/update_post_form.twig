@@ -4,22 +4,28 @@
 
 {% block content %}
 
-<form method="POST" action="/admin/updatedPost/{{post.postId}}" enctype="multipart/form-data" name="update_post">
+<form method="POST" action="/admin/updatedPost/{{post.postId}}" enctype="multipart/form-data" name="update_post" style="margin-right: 20px;">
 
+		<div class="form-group">
 		<label for="title">Titre : </label>
-		<input type="text" name="title" lenght=400 value="{{post.postTitle}}"></input><br><br>
+		<input type="text" name="title" class="form-control" value="{{post.postTitle}}"></input><br><br>
+		</div>
 
+		<div class="form-group">
 		<label for="heading">Chapô : </label>
-		<textarea name="heading" cols=60 rows=10>{{post.postHeading}}</textarea><br><br>
+		<textarea name="heading" rows=10 class="form-control">{{post.postHeading}}</textarea><br><br>
+		</div>
 
+		<div class="form-group">
 		<label for="content">Contenu : </label>
-		<textarea name="content" cols=60 rows=20>{{post.postContent}}</textarea><br><br>
+		<textarea name="content" rows=20 class="form-control">{{post.postContent}}</textarea><br><br>
+		</div>
   
 		<button type="submit" class="btn btn-warning btn-sm" name="publier">Publier</button><br><br>
-
+	<a href="/admin/posts/"><button type="button" class=" btn btn-warning">Retour à la liste des articles</button></a><br><br>
 	</form>
 
-<a href="/admin/posts/"><button type="button" class=" btn btn-warning">Retour à la liste des articles</button></a>
-
 {% endblock %}
+
+
 
